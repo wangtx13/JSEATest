@@ -106,7 +106,7 @@ public class ParseJavaFile {
 }
 
 //comment visitor
-class CommentVisitor extends ASTVisitor {
+class   CommentVisitor extends ASTVisitor {
 
     CompilationUnit cu;
     String source;
