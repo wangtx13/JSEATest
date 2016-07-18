@@ -47,13 +47,7 @@ public class PreProcess {
         this.libraryTypeCondition = libraryTypeCondition;
     }
     
-    /**
-     * @param inputRootFilePath
-     * @param timeStampStr
-     * @param ifGeneral
-     * @param libraryTypeCondition
-     * @param args the command line arguments
-     */
+
     public void preProcess() {
         
         //Create a new folder
