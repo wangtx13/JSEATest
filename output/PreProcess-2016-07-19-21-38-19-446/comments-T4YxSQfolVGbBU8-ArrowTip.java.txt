@@ -1,1 +1,0 @@
-fixme f i x m e this should take the stroke join an the outer radius into account to compute the offset properly 

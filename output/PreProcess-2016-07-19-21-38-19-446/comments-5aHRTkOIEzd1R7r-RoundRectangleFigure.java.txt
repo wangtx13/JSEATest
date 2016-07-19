@@ -1,4 +1,0 @@
-/*
- fill_color set this color white 
- stroke_color set this color black 
- */ 

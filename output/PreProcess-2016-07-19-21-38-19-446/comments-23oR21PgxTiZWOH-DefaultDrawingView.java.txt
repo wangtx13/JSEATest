@@ -1,6 +1,0 @@
-haspermanentfocus has permanent focus gen g e n begin b e g i n initcomponents init components gen g e n end e n d initcomponents init components g setrenderinghint set rendering hint renderinghints rendering hints key_antialiasing renderinghints rendering hints value_antialias_off g setrenderinghint set rendering hint renderinghints rendering hints key_stroke_control renderinghints rendering hints value_stroke_pure /*
- rainbow = rainbow + 10 % 360 
- g setcolor set color 
- new color color hsbtorgb h s bto r g b rainbow / 360f 0 3f 1 0f 
- 
- */ position of the zero coordinate point on the view draw a gray background for the area which is at negative view coordinates repaint the whole drawing to remove the message label repaint the whole drawing to draw the message label validatehandles validate handles notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event validatehandles validate handles if e gethandle get handle != secondaryhandleowner secondary handle owner { } variables declaration do not modify gen g e n begin b e g i n variables end of variables declaration gen g e n end e n d variables 

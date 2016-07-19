@@ -1,5 +1,0 @@
-/*
- componentresized component resized componentevent component event evt {
- prefs putint put name+ width evt getcomponent get component getwidth get width 
- prefs putint put name+ height evt getcomponent get component getheight get height 
- }*/ 

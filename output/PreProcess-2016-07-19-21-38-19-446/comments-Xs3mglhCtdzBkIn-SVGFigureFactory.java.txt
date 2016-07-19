@@ -1,1 +1,0 @@
-svc s v c circle element is presented by an svgellipse s v g ellipse figure svc s v c polyline and polygon elements are presented by an svgpath s v g path figure 

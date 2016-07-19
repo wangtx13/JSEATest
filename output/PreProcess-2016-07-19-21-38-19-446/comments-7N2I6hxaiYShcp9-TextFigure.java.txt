@@ -1,1 +1,0 @@
-cache of the textfigure's text figure's layout grow by two pixels to take antialiasing into account 

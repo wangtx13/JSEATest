@@ -1,1 +1,0 @@
-out selectareatracker select area tracker mousemoved mouse moved +evt getx get x + +evt gety get y 

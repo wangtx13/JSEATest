@@ -1,6 +1,0 @@
-update view so the created figure is drawn before the floating text figure is overlaid note fdamage f damage should be in standarddrawingview standard drawing view when the overlay figure is drawn because a jtextfield j text field cannot be scrolled view checkdamage check damage /*
- textholder text holder = textholder text holder getcreatedfigure get created figure 
- beginedit begin edit textholder text holder */ /*
- mousedragged mouse dragged event mouseevent mouse event e {
- }
- */ textarea text area addactionlistener add action listener this fixme f i x m e find a way to determine the for grow r grow 1 2 r width += 16 nothing to undo 	 setundoactivity set undo activity 	 view checkdamage check damage 

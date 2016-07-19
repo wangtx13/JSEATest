@@ -1,4 +1,0 @@
-/*
- if ! element current getname get name equals tagname tag name {
- throw new illegalargumentexception illegal argument attempt to close wrong element +tagname +tag name + != + element current getname get name 
- }*/ remove the awkard 0 at the end of each number remove the awkard 0 at the end of each number 

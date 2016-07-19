@@ -1,4 +1,0 @@
-/*
- setfillcolor set fill color color white 
- setstrokecolor set stroke color color black 
- */ drawing d r a w i n g shape s h a p e and a n d bounds b o u n d s if r contains p { attributes a t t r i b u t e s editing e d i t i n g connecting c o n n e c t i n g composite c o m p o s i t e figures f i g u r e s cloning c l o n i n g event e v e n t handling h a n d l i n g 

@@ -1,8 +1,0 @@
-search for an empty project /*
- for project aproject a project app projects {
- if aproject a project getfile get == 
- ! aproject a project hasunsavedchanges has unsaved changes {
- emptyproject empty project = aproject a project 
- break 
- }
- }*/ if there is another project with we set the multiple open of our project to max multiple open + 1 open the app dispose project 

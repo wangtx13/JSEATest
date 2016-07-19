@@ -1,1 +1,0 @@
-move control point independently move control point and opposite control point on same line move control point and opposite control point on same line 

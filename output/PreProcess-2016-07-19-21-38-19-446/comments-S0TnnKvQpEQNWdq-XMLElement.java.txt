@@ -1,9 +1,0 @@
-/* werner randelshofer 2006 05 26 
- * replaced 1 1 collections by 1 2 collections 
- * removed all deprecated 
- * added createelement create element name 
- * added getintattribute get attribute name min max defaultvalue default value 
- * added getbooleanattribute get attribute name defaultvalue default value 
- * added print writer w 
- * writeencoded write encoded can be changed to not encode unicode characters 2006 05 02
- */ this never happens however some compilers are so braindead that they require this clause /*startinglinenr*/ /*starting line nr*/ /*startinglinenr*/ /*starting line nr*/ handling suxx handling suxx /*startinglinenr*/ /*starting line nr*/ this will never happen handling suxx one has already been read < 

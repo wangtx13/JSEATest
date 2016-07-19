@@ -1,1 +1,0 @@
-logger info u + + u getpriority get priority logger info + u logger info insert + v + at + priority 

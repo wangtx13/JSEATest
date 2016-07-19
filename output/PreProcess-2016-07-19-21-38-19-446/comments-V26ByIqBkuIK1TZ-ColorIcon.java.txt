@@ -1,1 +1,0 @@
-graphics2d graphics2 d g = graphics2d graphics2 d gr draw the rectangle using drawline draw line to work around a drawing bug in apples mrj m r j for 1 5 g drawrect draw rect x y geticonwidth get icon width 1 geticonheight get icon height 1 

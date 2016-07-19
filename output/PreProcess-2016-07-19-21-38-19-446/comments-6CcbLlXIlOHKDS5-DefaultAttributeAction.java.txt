@@ -1,1 +1,0 @@
-setenabled set enabled getview get view getselectioncount get selection count > 0 

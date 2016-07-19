@@ -1,1 +1,0 @@
-xxx x x x this is messy we should something on view if out != out close <editor fold defaultstate= collapsed desc= generated > gen g e n begin b e g i n initcomponents init components </editor fold> gen g e n end e n d initcomponents init components variables declaration do not modify gen g e n begin b e g i n variables end of variables declaration gen g e n end e n d variables 

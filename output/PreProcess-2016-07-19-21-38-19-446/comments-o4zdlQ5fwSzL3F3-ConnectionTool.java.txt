@@ -1,1 +1,0 @@
-new rectangle2d rectangle2 d viewtodrawing view to drawing anchor p getview get view clearselection clear selection ! target includes start track the figure containing the mouse view checkdamage check damage 

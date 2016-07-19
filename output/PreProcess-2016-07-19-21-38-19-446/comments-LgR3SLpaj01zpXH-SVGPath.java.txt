@@ -1,2 +1,0 @@
-g drawstring draw this tostring to + +getchildcount +get child count getbounds get bounds x getbounds get bounds y /* 
- bezierfigure bezier figure getchildren get children get 0 isclosed is closed */ 

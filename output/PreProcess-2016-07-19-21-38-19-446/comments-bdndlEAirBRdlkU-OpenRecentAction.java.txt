@@ -1,1 +1,0 @@
-search for an empty project if there is another project with we set the multiple open of our project to max multiple open + 1 open the app dispose project 
