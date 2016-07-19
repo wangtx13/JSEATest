@@ -1,0 +1,1 @@
+don't interprete chars in the buffer don't interprete chars in the buffer 

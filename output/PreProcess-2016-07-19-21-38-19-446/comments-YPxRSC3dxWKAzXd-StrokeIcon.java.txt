@@ -1,0 +1,5 @@
+/*
+ g setstroke set stroke new basicstroke basic stroke 
+ g setcolor set color color red 
+ g drawline draw line x y x + geticonwidth get icon width y + geticonheight get icon height 
+ */ 

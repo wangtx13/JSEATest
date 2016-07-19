@@ -1,0 +1,9 @@
+/*
+ if anedit an edit instanceof compositetransformedit composite transform edit {
+ compositetransformedit composite transform edit that = compositetransformedit composite transform edit anedit an edit 
+ if that owner == this owner {
+ this tx concatenate that tx 
+ that die 
+ 
+ }
+ }*/ 

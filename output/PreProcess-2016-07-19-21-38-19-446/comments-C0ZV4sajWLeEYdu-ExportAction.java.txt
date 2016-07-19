@@ -1,0 +1,11 @@
+/*
+ project setfile set 
+ project markchangesassaved mark changes as saved 
+ multiopenid multi open = 1 
+ for project p project getapplication get application documents {
+ if p != project p getfile get != p getfile get equals {
+ multiopenid multi open = math max multiopenid multi open p getmultipleopenid get multiple open + 1 
+ }
+ }
+ project setmultipleopenid set multiple open multiopenid multi open 
+ */ fixme f i x m e localize this messsage 

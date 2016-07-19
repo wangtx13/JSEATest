@@ -1,0 +1,1 @@
+xxx x x x when we want to support multiple views we have to implement this setview set view drawingview drawing view e getsource get source v sethandledetaillevel set handle detail level v gethandledetaillevel get handle detail level == 1 ? 0 1 

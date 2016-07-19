@@ -1,0 +1,1 @@
+putvalue put value abstractaction action mnemonic_key new 'v' ' v' setenabled set enabled getview get view getselectioncount get selection count > 0 

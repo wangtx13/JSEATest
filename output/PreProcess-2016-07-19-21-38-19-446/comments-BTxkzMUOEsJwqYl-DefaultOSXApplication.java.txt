@@ -1,0 +1,1 @@
+jdialog j dialog d = new jdialog j dialog palettes add d d settitle set title tb getname get name 

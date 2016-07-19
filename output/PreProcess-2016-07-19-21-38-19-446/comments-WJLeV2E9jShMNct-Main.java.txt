@@ -1,0 +1,1 @@
+app = new defaultmdiapplication default m d i application 

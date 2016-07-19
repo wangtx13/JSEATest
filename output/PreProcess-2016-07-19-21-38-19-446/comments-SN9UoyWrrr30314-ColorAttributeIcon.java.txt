@@ -1,0 +1,1 @@
+rectangle colorrect color rect = new rectangle 0 12 16 4 g setcolor set color color red g drawline draw line x y + 12 + 3 x + 15 y + 13 

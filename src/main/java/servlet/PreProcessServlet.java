@@ -23,8 +23,9 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import preprocess.PreProcess;
-import static utility.Tools.createDir;
+import preprocess.PreProcessTool;
+
+import static utility.Tools.createDirectoryIfNotExisting;
 import static utility.Tools.randomString;
 /**
  *
@@ -33,15 +34,24 @@ import static utility.Tools.randomString;
 public class PreProcessServlet extends HttpServlet {
 
     private boolean isMultipart;
-    private String filePath;
+    private String uploadRootPath;
     private int maxFileSize = 50 * 1024 * 1024;
     private int maxMemSize = 4 * 1024;
     private File file;
+    private static Map<String, Boolean> libraryTypeCondition = new HashMap<String, Boolean>() {
+        {
+            put("Drawing", false);
+            put("Modeling", false);
+            put("Need_to_do_2", false);
+            put("Need_to_do_3", false);
+            put("Need_to_do_4", false);
+        }
+    };
 
     public void init() {
         // 获取文件将被存储的位置
-        filePath
-                = getServletContext().getInitParameter("file-upload");
+        uploadRootPath = getServletContext().getInitParameter("file-upload");
+        createDirectoryIfNotExisting(uploadRootPath);
     }
 
     /**
@@ -55,25 +65,18 @@ public class PreProcessServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        boolean ifGeneral = false;
-        Map<String, Boolean> libraryTypeCondition = new HashMap<String, Boolean>() {
-            {
-                put("Drawing", false);
-                put("Modeling", false);
-                put("Need_to_do_2", false);
-                put("Need_to_do_3", false);
-                put("Need_to_do_4", false);
-            }
-        };
-//        //Add timestamp to folder name
-        Timestamp ts = new Timestamp(System.currentTimeMillis());
-        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS");
-        String timeStampStr = sdf.format(ts);
-//        String timeStampStr = new IPTimeStamp().getIPTimeStampRandom(); 
+        String programRootPath = getServletContext().getInitParameter("program-root-path");
+        boolean isGeneral = false;
+        // Add timestamp to folder name.
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS");
+        Timestamp currentTimeStamp = new Timestamp(System.currentTimeMillis());
+        String timeStamp = dateFormat.format(currentTimeStamp);
 
-        //Create a new folder
-        String inputRootFilePath = filePath + timeStampStr + "/";
-        createDir(inputRootFilePath);
+        // Create a new folder.
+        String inputRootFilePath = uploadRootPath + timeStamp + "/";
+        createDirectoryIfNotExisting(inputRootFilePath);
+
+        String outputFilePath = programRootPath + "output/PreProcessTool-" + timeStamp + "/";
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -126,7 +129,7 @@ public class PreProcessServlet extends HttpServlet {
             out.println("<div class=\"row featurette files\" id=\"fileList\">");
             out.println("<h3>MALLET import data directory: </h3>");
             out.println("<p>");
-            out.println("./output/PreProcess-" + timeStampStr);
+            out.println("./output/PreProcessTool-" + timeStamp);
             out.println("</p>");
             out.println("<h3>Uploaded Files: </h3>");
 
@@ -141,8 +144,7 @@ public class PreProcessServlet extends HttpServlet {
             // 文件大小的最大值将被存储在内存中
             factory.setSizeThreshold(maxMemSize);
             // Location to save data that is larger than maxMemSize.
-            factory.setRepository(new File("/Users/wangtianxia1/IdeaProjects/NewProgrammerAssistor/temp"));
-//            factory.setRepository(new File("/Users/u/Documents/NetBeansProject/ProgrammerAssistor/temp"));
+            factory.setRepository(new File(programRootPath, "temp"));
 
             // 创建一个新的文件上传处理程序
             ServletFileUpload upload = new ServletFileUpload(factory);
@@ -177,7 +179,7 @@ public class PreProcessServlet extends HttpServlet {
                         String fieldName = fi.getFieldName();
                         String fieldValue = fi.getString();
                         if (fieldName.equals("general") && fieldValue.equals("on")) {
-                            ifGeneral = true;
+                            isGeneral = true;
                         } else if (fieldName.equals("project_type")) {
                             if (fieldValue.equals("Drawing")) {
                                 libraryTypeCondition.remove("Drawing");
@@ -206,7 +208,7 @@ public class PreProcessServlet extends HttpServlet {
 
             }
 
-            PreProcess preProcessTool = new PreProcess(inputRootFilePath, timeStampStr, ifGeneral, libraryTypeCondition);
+            PreProcessTool preProcessTool = new PreProcessTool(inputRootFilePath, outputFilePath, isGeneral, libraryTypeCondition);
             preProcessTool.preProcess();
 
             out.println("</div>");
@@ -268,7 +270,7 @@ public class PreProcessServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    // public static boolean createDir(String dirPath) {
+    // public static boolean createDirectoryIfNotExisting(String dirPath) {
     //     File dir = new File(dirPath);
     //     if (dir.exists()) {
     //         System.out.println("The folder has existed");

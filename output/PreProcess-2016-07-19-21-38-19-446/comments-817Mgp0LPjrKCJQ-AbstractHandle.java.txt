@@ -1,0 +1,15 @@
+notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event /*
+ undoableeditevent undoable edit event event = 
+ notify all listeners that have registered interest for
+ guaranteed to a non array
+ listeners = listenerlist listener list getlistenerlist get listener list 
+ process the listeners last to first notifying
+ those that are interested in this event
+ for i = listeners length 2 i>=0 i =2 {
+ if listeners i == undoableeditlistener undoable edit listener {
+ lazily create the event 
+ if event == 
+ event = new undoableeditevent undoable edit event this edit 
+ undoableeditlistener undoable edit listener listeners i+1 undoableedithappened undoable edit happened event 
+ }
+ }*/ notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event empty empty empty grow by two pixels to take antialiasing into account 

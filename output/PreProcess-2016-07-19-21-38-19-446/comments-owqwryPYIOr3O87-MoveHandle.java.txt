@@ -1,0 +1,1 @@
+geometry = owner getgeometry get geometry 

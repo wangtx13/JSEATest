@@ -1,0 +1,9 @@
+drawing d r a w i n g shape s h a p e and a n d bounds b o u n d s attributes a t t r i b u t e s editing e d i t i n g connecting c o n n e c t i n g composite c o m p o s i t e figures f i g u r e s cloning c l o n i n g event e v e n t handling h a n d l i n g notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event lazily create the event notify all listeners that have registered interest for guaranteed to a non process the listeners last to first notifying those that are interested in this event /*
+ set createhandles create handles {
+ new hashset hash set 
+ }
+ */ xxx x x x delete me /*
+ rectangle2d rectangle2 d gethitbounds get hit bounds {
+ getbounds get bounds 
+ }
+ */ 

@@ -1,0 +1,14 @@
+setenabled set enabled /*
+ jframe j frame frame = getframe get frame 
+ if frame != {
+ frame setextendedstate set extended state frame getextendedstate get extended state ~frame ~ frame iconified i c o n i f i e d 
+ frame tofront to front 
+ frame requestfocus request focus 
+ jrootpane j root pane rp = swingutilities utilities getrootpane get root pane project getcomponent get component 
+ if rp != rp getparent get parent instanceof jinternalframe j internal frame {
+ jinternalframe j internal frame rp getparent get parent tofront to front 
+ }
+ project getcomponent get component requestfocus request focus 
+ } else {
+ toolkit getdefaulttoolkit get default toolkit beep 
+ }*/ don't care 

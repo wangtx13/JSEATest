@@ -1,0 +1,1 @@
+getview get view clearselection clear selection getview get view setcursor set cursor cursor getpredefinedcursor get predefined cursor cursor crosshair_cursor fixme f i x m e localize this label 

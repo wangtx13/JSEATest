@@ -1,0 +1,7 @@
+owner remove evt getfigure get figure /*else {
+ linkedlist<handle> linked list< handle> handles = new linkedlist<handle> linked list< handle> 
+ for figure child children {
+ handles addall add all child createhandles create handles detaillevel detail level 1 
+ }
+ handles 
+ }*/ copy children collection to avoid concurrent modification do nothing 

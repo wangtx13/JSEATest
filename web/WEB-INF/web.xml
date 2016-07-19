@@ -19,6 +19,13 @@
             /Users/wangtianxia1/Documents/apache-tomcat-9.0.0.M4/data/
         </param-value>
     </context-param>
+    <context-param>
+        <description>The location of the program</description>
+        <param-name>program-root-path</param-name>
+        <param-value>
+            /Users/wangtianxia1/IdeaProjects/NewProgrammerAssistor/
+        </param-value>
+    </context-param>
     <servlet-mapping>
         <servlet-name>GenerateViewServlet</servlet-name>
         <url-pattern>/GenerateViewServlet</url-pattern>

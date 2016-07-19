@@ -1,0 +1,18 @@
+update view so the created figure is drawn before the floating text figure is overlaid note fdamage f damage should be in standarddrawingview standard drawing view when the overlay figure is drawn because a jtextfield j text field cannot be scrolled view checkdamage check damage /*
+ rectangle box = getview get view drawingtoview drawing to view figure getbounds get bounds 
+ nchars n chars = figure gettextcolumns get text columns 
+ dimension d = textfield text field getpreferredsize get preferred size nchars n chars 
+ d width = math max box width d width 
+ new rectangle box x 6 box y 4 d width d height 
+ */ dimension d = textfield text field getpreferredsize get preferred size 3 d width = math max box width d width /*
+ if createdfigure created figure != {
+ rectangle bounds = createdfigure created figure getbounds get bounds 
+ if bounds width == 0 bounds height == 0 {
+ getdrawing get drawing remove createdfigure created figure 
+ } else {
+ getview get view addtoselection add to selection createdfigure created figure 
+ }
+ createdfigure created figure = 
+ getdrawing get drawing fireundoableedithappened fire undoable edit happened creationedit creation edit 
+ firetooldone fire tool done 
+ }*/ typingtarget typing target willchange will change nothing to undo 	 setundoactivity set undo activity typingtarget typing target changed 	 view checkdamage check damage 

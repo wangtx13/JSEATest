@@ -1,0 +1,1 @@
+we ignore defs elements for now we ignore use elements for now we ignore script elements for now we ignore style elements for now we ignore radialgradient radial gradient elements for now svgutil s v g readattributes read attributes this in 

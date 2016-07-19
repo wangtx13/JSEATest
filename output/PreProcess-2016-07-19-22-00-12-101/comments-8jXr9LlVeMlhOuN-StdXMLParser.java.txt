@@ -1,0 +1,1 @@
+throw new xmlexception xml e don't allow cdata c d a t a no default namespace skip whitespace begin b e g i n patch p a t c h w randelshofer don't read dtd d t d end e n d patch p a t c h w randelshofer don't read dtd d t d < ^/ cdata c d a t a allowed ^< 

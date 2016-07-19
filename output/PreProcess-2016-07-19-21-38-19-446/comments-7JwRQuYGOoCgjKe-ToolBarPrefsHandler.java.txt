@@ -1,0 +1,20 @@
+/*
+ if prefs getboolean get prefsprefix+ prefs prefix+ isfloating is floating {
+ maketoolbarfloat make tool bar 
+ }*/ /*
+ * xxx x x x this does not work
+ maketoolbarfloat make tool bar {
+ basictoolbarui basic tool bar u i ui = basictoolbarui basic tool bar u i toolbar getui get u i 
+ window window = swingutilities utilities getwindowancestor get window ancestor toolbar 
+ out window ancestor +window+ instanceof frame + window instanceof frame 
+ ui setfloating set floating new point 
+ prefs getint get prefsprefix+ prefs prefix+ floatingx floating x 0 
+ prefs getint get prefsprefix+ prefs prefix+ floatingy floating y 0 
+ 
+ window = swingutilities utilities getwindowancestor get window ancestor toolbar 
+ window setlocation set location 
+ prefs getint get prefsprefix+ prefs prefix+ floatingx floating x 0 
+ prefs getint get prefsprefix+ prefs prefix+ floatingy floating y 0 
+ 
+ window tofront to front 
+ }*/ fixme f i x m e use reflection to get hold of 'isfloating' 'is floating' 

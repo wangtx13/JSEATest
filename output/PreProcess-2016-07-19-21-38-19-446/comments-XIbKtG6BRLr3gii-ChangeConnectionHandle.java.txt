@@ -1,0 +1,1 @@
+disconnect track the figure containing the mouse getconnection get connection canconnect can connect getsource get source getowner get owner targetfigure target figure { if connection getpointcount get point count == 0 new rectangle 0 0 gethandlesize get handlesize gethandlesize get handlesize 

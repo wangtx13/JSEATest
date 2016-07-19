@@ -1,0 +1,1 @@
+do we have to split? we put an into our hashtable if we are a leaf or if the bounds of the contain our bounds 

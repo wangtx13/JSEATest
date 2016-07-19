@@ -1,0 +1,4 @@
+/*
+ if ! element current gettagname get tag name equals tagname tag name {
+ throw new illegalargumentexception illegal argument attempt to close wrong element +tagname +tag name + != + element current gettagname get tag name 
+ }*/ keep track of which have an 

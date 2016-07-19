@@ -1,0 +1,4 @@
+/*
+ mo putaction put action maximizeaction maximize action new maximizeaction maximize action this 
+ mo putaction put action minimizeaction minimize action new minimizeaction minimize action this 
+ */ palettehandler palette handler add f p f setjmenubar set j menu bar createmenubar create menu bar p don't care 

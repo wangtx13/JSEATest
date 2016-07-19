@@ -1,0 +1,1 @@
+attributekeys attribute keys for the entitie sets fixme f i x m e add for unconfiguring the menus!! we leak memory! jmenubar j menu bar mb = new jmenubar j menu bar 

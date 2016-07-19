@@ -1,0 +1,1 @@
+out attributedfigure attributed figure setattribute set attribute +key+ = +newvalue +new value 

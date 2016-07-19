@@ -15,7 +15,7 @@ import java.util.Random;
  */
 public class Tools {
 
-    public static boolean createDir(String dirPath) {
+    public static boolean createDirectoryIfNotExisting(String dirPath) {
         File dir = new File(dirPath);
         if(dir.exists()) {
             System.out.println("The folder has existed");

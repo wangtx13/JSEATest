@@ -21,7 +21,7 @@ import org.apache.commons.io.FilenameUtils;
 public class TraversalFiles {
     
     //traversal all files
-    public static void fileList(File inputFile, int node, ArrayList<String> path, String folderPath, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition) {
+    public static void fileList(File inputFile, int node, ArrayList<String> path, String outputFilePath, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition) {
         node ++;
         File[] files = inputFile.listFiles();
         if (!inputFile.exists()){
@@ -43,13 +43,7 @@ public class TraversalFiles {
                         //Get extracted file location and add it to output file name,
                         //in order to avoid files in different folder 
                         //have the same name.
-//                        String fileLocation = "";
-//                        for(String tmpPath: path) {
-//                            fileLocation += "-" + tmpPath ;
-//                        }
-                        
-//                        String extractedCommentsFilePath = folderPath + "/" + "comments-" + f.getName() + fileLocation + ".txt";
-                        String extractedCommentsFilePath = folderPath + "/" + "comments-" + f.getName() + ".txt";
+                        String extractedCommentsFilePath = outputFilePath + "/" + "comments-" + f.getName() + ".txt";
                         
                         //create output file for extracted comments
                         File extractedCommentsFile = new File(extractedCommentsFilePath);
@@ -76,7 +70,7 @@ public class TraversalFiles {
 //                        }
 //                        
 //                        String usefulJavadocFilePath = folderPath + "/" + "javadoc-" + f.getName() + fileLocation + ".txt";
-                        String usefulJavadocFilePath = folderPath + "/" + "javadoc-" + f.getName() + ".txt";
+                        String usefulJavadocFilePath = outputFilePath + "/" + "javadoc-" + f.getName() + ".txt";
                         
                         //create output file for usefuljavadoc
                         File usefulJavadocFile = new File(usefulJavadocFilePath);
@@ -93,7 +87,7 @@ public class TraversalFiles {
                 } else {
                    System.out.println(" isn't a java file or html file.");
                 } 
-                fileList(f, node, path, folderPath, ifGeneral, libraryTypeCondition);
+                fileList(f, node, path, outputFilePath, ifGeneral, libraryTypeCondition);
             }
             path.remove(node - 1);
         }

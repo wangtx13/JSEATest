@@ -1,0 +1,7 @@
+change node type /*
+ if super iscombinablewith is combinable with h {
+ beziernodehandle bezier node handle that = beziernodehandle bezier node handle h 
+ that index == this index 
+ that getbezierfigure get bezier figure getnodecount get node count ==
+ this getbezierfigure get bezier figure getnodecount get node count 
+ }*/ 
