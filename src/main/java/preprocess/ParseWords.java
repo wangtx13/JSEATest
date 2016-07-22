@@ -5,6 +5,7 @@
  */
 package preprocess;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -16,15 +17,18 @@ import java.util.regex.Pattern;
  * @author apple
  */
 public class ParseWords {
-
     private StringBuffer originalWords;
     private boolean ifGeneral;
     private Map<String, Boolean> libraryTypeCondition;
+    private Map<String, Integer> documentWordsCountList;
+    private File extractedFile;
 
-    public ParseWords(StringBuffer originalWords, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition) {
+    public ParseWords(StringBuffer originalWords, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, Map<String, Integer> documentWordsCountList, File extractedFile) {
         this.originalWords = originalWords;
         this.ifGeneral = ifGeneral;
         this.libraryTypeCondition = libraryTypeCondition;
+        this.documentWordsCountList = documentWordsCountList;
+        this.extractedFile = extractedFile;
     }
 
     public StringBuffer parseAllWords() {
@@ -32,7 +36,8 @@ public class ParseWords {
 
         /*分隔符：空格、引号"、左小括号(、右小括号)、左中括号[、有中括号]、点.、&、冒号:、分号;、换行符号\r\n、逗号*/
         String[] allWords = originalWords.toString().split(" |\"|\\(|\\)|\\[|\\]|\\.|&|:|;|\r\n|,|-|//");
-        
+
+        int wordCount = 0;
         for (String word : allWords) {
             if (!word.equals("")) {
                 String[] splitWords = splitCamelWords(word);
@@ -57,8 +62,10 @@ public class ParseWords {
                     }
                 }
             }
+            wordCount++;
         }
 
+        documentWordsCountList.put(extractedFile.getName(), wordCount);
         return outputWords;
     }
 

@@ -6,9 +6,17 @@
 
 package preprocess;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import static utility.Tools.createDirectoryIfNotExisting;
 
 /**
@@ -21,6 +29,7 @@ public class PreProcessTool {
     private String timeStampStr;
     private boolean ifGeneral;
     private Map<String, Boolean> libraryTypeCondition;
+    private Map<String, Integer> documentWordsCountList;
 
     public PreProcessTool(String inputRootFilePath, String outputFilePath, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition) {
         this.inputRootFilePath = inputRootFilePath;
@@ -28,23 +37,44 @@ public class PreProcessTool {
         this.timeStampStr = timeStampStr;
         this.ifGeneral = ifGeneral;
         this.libraryTypeCondition = libraryTypeCondition;
+        documentWordsCountList = new HashMap<>();
     }
     
 
-    public void preProcess() {
+    public void preProcess() throws IOException {
         
         //Create a new folder
-//        String folderPath = "/Users/wangtianxia1/IdeaProjects/NewProgrammerAssistor/output/PreProcessTool-" + timeStampStr + "/";
-        createDirectoryIfNotExisting(outputFilePath);
+//        createDirectoryIfNotExisting(outputFilePath);
+        createDirectoryIfNotExisting(outputFilePath + "/preprocess");
            
         File inputRootFile = new File(inputRootFilePath);
         ArrayList<String> path = new ArrayList<>();
         if(!inputRootFile.isDirectory()) {
             System.out.println("Please input a extisted directory.");
         } else {
-            TraversalFiles.fileList(inputRootFile, 0, path, outputFilePath, ifGeneral, libraryTypeCondition);
+            TraversalFiles.fileList(inputRootFile, 0, path, outputFilePath, ifGeneral, libraryTypeCondition, documentWordsCountList);
         }
-        
-        
+
+        File documentWordsCountFile = new File(outputFilePath + "/documentsWordsCount.txt");
+        if(documentWordsCountFile.createNewFile()) {
+            System.out.println("Create successful: " + documentWordsCountFile.getName());
+        }
+        //sort the map by key
+        documentWordsCountList = new TreeMap<>(documentWordsCountList);
+        writeToFile(documentWordsCountFile, documentWordsCountList);
+    }
+
+    private void writeToFile(File documentWordsCountFile, Map<String, Integer> documentWordsCountList) {
+        try {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(documentWordsCountFile.getPath()))) {
+                for(Map.Entry<String, Integer> entry: documentWordsCountList.entrySet()) {
+                    writer.write(entry.getKey() + "\t" + entry.getValue() + "\n");
+                }
+            }
+
+        } catch (IOException ex) {
+            Logger.getLogger(PreProcessTool.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 }

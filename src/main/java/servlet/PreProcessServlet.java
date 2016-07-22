@@ -76,7 +76,7 @@ public class PreProcessServlet extends HttpServlet {
         String inputRootFilePath = uploadRootPath + timeStamp + "/";
         createDirectoryIfNotExisting(inputRootFilePath);
 
-        String outputFilePath = programRootPath + "output/PreProcessTool-" + timeStamp + "/";
+        String outputFilePath = programRootPath + "output/PreProcessTool-" + timeStamp;
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -197,7 +197,7 @@ public class PreProcessServlet extends HttpServlet {
                 }
                 
                 out.println("<h2 id = \"success\" class=\"fileHead\"> Successful Uploading!</h2>");
-                out.println("<h2 id = \"success\" class=\"fileHead\"> Successful Proprocessing!</h2>");
+                out.println("<h2 id = \"success\" class=\"fileHead\"> Successful Preprocessing!</h2>");
 
             } catch (FileUploadException e) {
                 // TODO Auto-generated catch block  

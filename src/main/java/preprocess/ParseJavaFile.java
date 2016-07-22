@@ -34,12 +34,16 @@ public class ParseJavaFile {
     private File outputFile; 
     private boolean ifGeneral;
     private Map<String, Boolean> libraryTypeCondition;
+    private Map<String, Integer> documentWordsCountList;
+    private File extractedFile;
 
-    public ParseJavaFile(File inputFile, File outputFile, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition) {
+    public ParseJavaFile(File inputFile, File outputFile, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, Map<String, Integer> documentWordsCountList, File extractedFile) {
         this.inputFile = inputFile;
         this.outputFile = outputFile;
         this.ifGeneral = ifGeneral;
         this.libraryTypeCondition = libraryTypeCondition;
+        this.documentWordsCountList = documentWordsCountList;
+        this.extractedFile = extractedFile;
     }
 
     public void extractComments() {
@@ -68,7 +72,7 @@ public class ParseJavaFile {
             allComments.append(commentVisitor.getAllComments().toString());
         }
 
-        ParseWords parseWords = new ParseWords(allComments, ifGeneral, libraryTypeCondition);
+        ParseWords parseWords = new ParseWords(allComments, ifGeneral, libraryTypeCondition, documentWordsCountList, extractedFile);
         allComments = parseWords.parseAllWords();
         writeToFile(allComments.toString());
     }
