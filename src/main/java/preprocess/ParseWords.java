@@ -49,6 +49,7 @@ public class ParseWords {
                     if (parsedWords != null) {
                         outputWords.append(word.toLowerCase());
                         outputWords.append(" ");
+                        wordCount++;
                     }
                 }
                 
@@ -59,10 +60,10 @@ public class ParseWords {
                     if (parsedWords != null) {
                         outputWords.append(parsedWords);
                         outputWords.append(" ");
+                        wordCount++;
                     }
                 }
             }
-            wordCount++;
         }
 
         documentWordsCountList.put(extractedFile.getName(), wordCount);
