@@ -43,7 +43,7 @@ public class TraversalFiles {
                         //Get extracted file location and add it to output file name,
                         //in order to avoid files in different folder 
                         //have the same name.
-                        String extractedCommentsFilePath = outputFilePath + "/preprocess/" + "comments-" + f.getName() + ".txt";
+                        String extractedCommentsFilePath = outputFilePath + "/preprocess/" + f.getName() + "-comments.txt";
                         System.out.println(extractedCommentsFilePath);
                         
                         //create output file for extracted comments
@@ -70,8 +70,8 @@ public class TraversalFiles {
 //                            fileLocation += "-" + tmpPath ;
 //                        }
 //                        
-//                        String usefulJavadocFilePath = folderPath + "/" + "javadoc-" + f.getName() + fileLocation + ".txt";
-                        String usefulJavadocFilePath = outputFilePath + "/preprocess/" + "javadoc-" + f.getName() + ".txt";
+
+                        String usefulJavadocFilePath = outputFilePath + "/preprocess/" + f.getName() + "-javadoc.txt";
                         
                         //create output file for usefuljavadoc
                         File usefulJavadocFile = new File(usefulJavadocFilePath);

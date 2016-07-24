@@ -26,7 +26,6 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import preprocess.PreProcessTool;
 
 import static utility.Tools.createDirectoryIfNotExisting;
-import static utility.Tools.randomString;
 /**
  *
  * @author apple
@@ -167,9 +166,9 @@ public class PreProcessServlet extends HttpServlet {
 //                    String contentType = fi.getContentType();
 //                    boolean isInMemory = fi.isInMemory();
 //                    long sizeInBytes = fi.getSize();
-                        // 写入文件 
-                        file = new File(inputRootFilePath + randomString(15) + "-"
-                                + fileName.substring(fileName.lastIndexOf("/") + 1));
+                        // 写入文件
+                        file = new File(inputRootFilePath
+                                + fileName.replace('/', '-'));//replace all / to -
                         fi.write(file);
 
                         out.println("<p>");
@@ -269,34 +268,5 @@ public class PreProcessServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-    // public static boolean createDirectoryIfNotExisting(String dirPath) {
-    //     File dir = new File(dirPath);
-    //     if (dir.exists()) {
-    //         System.out.println("The folder has existed");
-    //         return false;
-    //     }
-    //     if (!dirPath.endsWith(File.separator)) {
-    //         dirPath = dirPath + File.separator;
-    //     }
-    //     if (dir.mkdirs()) {
-    //         System.out.println("create successful: " + dirPath);
-    //         return true;
-    //     } else {
-    //         System.out.println("create fail...");
-    //         return false;
-    //     }
-    // }
-
-    // public static String randomString(int length) {
-    //     String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    //     Random random = new Random();
-    //     StringBuffer buf = new StringBuffer();
-    //     for (int i = 0; i < length; i++) {
-    //         int num = random.nextInt(62);
-    //         buf.append(str.charAt(num));
-    //     }
-    //     return buf.toString();
-    // }
 
 }
