@@ -42,6 +42,7 @@ public class GenerateViewServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
+        String programRootPath = getServletContext().getInitParameter("program-root-path");
         String topic_keys_file_path = request.getParameter("topicKeys");
         String word_counts_file_path = request.getParameter("wordCounts");
         String view_styles = request.getParameter("viewStyle");
@@ -53,7 +54,7 @@ public class GenerateViewServlet extends HttpServlet {
         } else {
 
             GenerateDataForView generateDataTool = new GenerateDataForView(topic_keys_file_path, word_counts_file_path);
-            generateDataTool.generateDataForView();
+            generateDataTool.generateDataForView(programRootPath);
             JSONObject namAndSizeJson = generateDataTool.getJson();
 
             request.setAttribute("sizeJson", namAndSizeJson.toString());

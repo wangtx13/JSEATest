@@ -42,17 +42,18 @@ public class ParseWords {
             if (!word.equals("")) {
                 String[] splitWords = splitCamelWords(word);
                 /*若word被拆分，将原词也加入*/
-                if (splitWords.length > 1) {
-                    String parsedWords = removeStopWords(word.toLowerCase());
-                    if(parsedWords != null)
-                        parsedWords = removeClassLibrary(parsedWords.toLowerCase());
-                    if (parsedWords != null) {
-                        outputWords.append(word.toLowerCase());
-                        outputWords.append(" ");
-                        wordCount++;
-                    }
-                }
-                
+//                if (splitWords.length > 1) {
+//                    String parsedWords = removeStopWords(word.toLowerCase());
+//                    if(parsedWords != null)
+//                        parsedWords = removeClassLibrary(parsedWords.toLowerCase());
+//                    if (parsedWords != null) {
+//                        outputWords.append(word.toLowerCase());
+//                        outputWords.append(" ");
+//                        wordCount++;
+//                    }
+//                }
+
+                /*若word被拆分，将拆分后的词加入*/
                 for (String aSplitWord : splitWords) {
                     String parsedWords = removeStopWords(aSplitWord);
                     if(parsedWords != null)
