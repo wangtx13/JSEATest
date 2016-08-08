@@ -58,20 +58,46 @@ public class ExtractHTMLContent {
                 }
 
                 Document doc = Jsoup.parse(content);
+                Elements title_content = doc.getElementsByTag("TITLE");
+                Elements table_content = doc.getElementsByTag("TABLE");
                 Elements pre_content = doc.getElementsByTag("PRE");
                 Elements dl_content = doc.getElementsByTag("DL");
 
-                for (Element pre : pre_content) {
-                    String tag = pre.tagName();
-                    if (tag.equals("pre")) {
-                        String pre_text = pre.text();
-                        String pre_clean = Jsoup.clean(pre_text, Whitelist.none());
-                        if (pre_clean.length() > 0) {
-                            extractResult.append(pre_clean).append("\r\n");                          
+                for (Element title : title_content) {
+                    String tag = title.tagName();
+                    if (tag.equals("title")) {
+                        String title_text = title.text();
+                        String title_clean = Jsoup.clean(title_text, Whitelist.none());
+                        if (title_clean.length() > 0) {
+                            extractResult.append(title_clean).append("\r\n");
                         }
                     }
 
                 }
+
+                for (Element table : table_content) {
+                    String tag = table.tagName();
+                    if (tag.equals("table")) {
+                        String table_text = table.text();
+                        String table_clean = Jsoup.clean(table_text, Whitelist.none());
+                        if (table_clean.length() > 0) {
+                            extractResult.append(table_clean).append("\r\n");
+                        }
+                    }
+
+                }
+
+//                for (Element pre : pre_content) {
+//                    String tag = pre.tagName();
+//                    if (tag.equals("pre")) {
+//                        String pre_text = pre.text();
+//                        String pre_clean = Jsoup.clean(pre_text, Whitelist.none());
+//                        if (pre_clean.length() > 0) {
+//                            extractResult.append(pre_clean).append("\r\n");
+//                        }
+//                    }
+//
+//                }
 
                 for (Element dl : dl_content) {
                     String tag = dl.tagName();

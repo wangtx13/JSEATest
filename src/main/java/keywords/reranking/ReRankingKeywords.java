@@ -5,7 +5,7 @@ import org.apache.commons.math3.linear.RealMatrix;
 import java.util.HashMap;
 import java.util.Map;
 
-import static tools.Tools.sortMapStringKey;
+import static utility.Tools.sortMapStringKey;
 
 
 /**

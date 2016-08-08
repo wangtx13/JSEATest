@@ -101,4 +101,9 @@ public class TopicWordMatrixReader implements MatrixReader {
     public Map<Integer, String> getRowHeaderList() {
         return null;
     }
+
+    @Override
+    public Map<Integer, String[]> getTopList() {
+        return null;
+    }
 }

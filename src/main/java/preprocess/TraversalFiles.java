@@ -6,13 +6,14 @@
 
 package preprocess;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.commons.io.FilenameUtils;
+
+import static utility.Tools.writeToFile;
 
 /**
  *
@@ -53,24 +54,31 @@ public class TraversalFiles {
                         } 
                         
                         //extract comments
-                        ParseJavaFile parseJavaFile = new ParseJavaFile(f, extractedCommentsFile, ifGeneral, libraryTypeCondition, documentWordsCountList, extractedCommentsFile);
-                        parseJavaFile.extractComments();                   
+//                        ParseJavaFile parseJavaFile = new ParseJavaFile(f, extractedCommentsFile, ifGeneral, libraryTypeCondition, documentWordsCountList, extractedCommentsFile);
+//                        parseJavaFile.extractComments();
+
+                        //extract all codes
+                        StringBuffer allCodes = new StringBuffer();
+                        try (InputStream in = new FileInputStream(f.getPath());
+                             BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
+                            String line = "";
+                            while((line = reader.readLine())!=null) {
+                                allCodes.append(line);
+                            }
+                        }
+                        ParseWords parseWords = new ParseWords(allCodes, ifGeneral, libraryTypeCondition, documentWordsCountList, extractedCommentsFile);
+                        allCodes = parseWords.parseAllWords();
+                        writeToFile(allCodes.toString(), extractedCommentsFile);
                     } catch (IOException ex) {
                         Logger.getLogger(TraversalFiles.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 } else if(ext.equals("html")) {
                     try {
                         System.out.println(" => extracted");
-                        
-                        //Get extracted file location and add it to output file name,
-                        //in order to avoid files in different folder 
-                        //have the same name.
-//                        String fileLocation = "";
-//                        for(String tmpPath: path) {
-//                            fileLocation += "-" + tmpPath ;
-//                        }
-//                        
 
+                        //Get extracted file location and add it to output file name,
+                        //in order to avoid files in different folder
+                        //have the same name.
                         String usefulJavadocFilePath = outputFilePath + "/preprocess/" + f.getName() + "-javadoc.txt";
                         
                         //create output file for usefuljavadoc

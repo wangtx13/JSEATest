@@ -34,8 +34,8 @@ public class ParseWords {
     public StringBuffer parseAllWords() {
         StringBuffer outputWords = new StringBuffer();
 
-        /*分隔符：空格、引号"、左小括号(、右小括号)、左中括号[、有中括号]、点.、&、冒号:、分号;、换行符号\r\n、逗号*/
-        String[] allWords = originalWords.toString().split(" |\"|\\(|\\)|\\[|\\]|\\.|&|:|;|\r\n|,|-|//");
+        /*分隔符：空格、引号"、左小括号(、右小括号)、左中括号[、有中括号]、点.、&、冒号:、分号;、换行符号\r\n、逗号、-、_、//*/
+        String[] allWords = originalWords.toString().split(" |\"|\\(|\\)|\\[|\\]|\\.|&|:|;|\r\n|,|-|_|//");
 
         int wordCount = 0;
         for (String word : allWords) {
@@ -72,12 +72,12 @@ public class ParseWords {
     }
 
     private String[] splitCamelWords(String word) {
-        if (!word.contains("_")) {
+//        if (!word.contains("_")) {
             /*XML、DOM、JHotDraw、ID不分割*/
             word = word.replace("XML", "Xml");
             word = word.replace("DOM", "Dom");
             word = word.replace("JHotDraw", "Jhotdraw");
-            word = word.replace("ID", "id");
+            word = word.replace("ID", "Id");
 
             /*正则表达式：分隔符为大写字母*/
             String regEx = "[A-Z]";
@@ -119,22 +119,21 @@ public class ParseWords {
             /*拷贝list到一个新数组*/
             String[] result = list.toArray(new String[1]);
             return result;
-        } else {
-            String[] result = new String[1];
-            result[0] = word;
-            return result;
-        }
+//        } else {
+//            String[] result = new String[1];
+//            result[0] = word;
+//            return result;
+//        }
     }
 
     private String removeStopWords(String word) {
-        String stopList = "abstract array arg args boolean br class code dd ddouble dl "
-                + "don double dt error exception exist exists extends false file "
-                + "final float gt id implementation implemented import int "
-                + "integer interface interfaces invoke invokes java lead li long "
-                + "main method methodname methods nbsp null object objects "
-                + "overrides package packages param parameters precison println "
-                + "private protected public quot return returned returns static "
-                + "string system throws tilocblob true ul version void";
+        String stopList = "abstract array arg args assert boolean br break byte catch case char class code continue " +
+                "default dd ddouble dl do don double dt else enum error exception exist exists extends false file final " +
+                "finally float for gt id if implementation implemented implements import instanceof int integer interface " +
+                "interfaces invoke invokes java lead li long main method methodname methods native nbsp new null object " +
+                "objects overrides package packages param parameters precison println private protected public quot return " +
+                "returned returns short static string strictfp super switch synchronized system this throw throws transient " +
+                "true try ul version void volatile while";
         String[] stopwords = stopList.split(" ");
         for(String s : stopwords) {
             if(s.equals(word)) {

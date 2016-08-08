@@ -12,7 +12,7 @@ import org.apache.commons.math3.util.FastMath;
 import java.util.HashMap;
 import java.util.Map;
 
-import static tools.Tools.sortMapStringKey;
+import static utility.Tools.sortMapStringKey;
 
 public class TopicSimilarity {
 

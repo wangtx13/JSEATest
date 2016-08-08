@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import static tools.Tools.sortMapIntegerKey;
+import static utility.Tools.sortMapIntegerKey;
 
 /**
  * Created by wangtianxia1 on 16/7/24.

@@ -24,6 +24,8 @@ import org.eclipse.jdt.core.dom.Comment;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.LineComment;
 
+import static utility.Tools.writeToFile;
+
 /**
  *
  * @author apple
@@ -74,7 +76,7 @@ public class ParseJavaFile {
 
         ParseWords parseWords = new ParseWords(allComments, ifGeneral, libraryTypeCondition, documentWordsCountList, extractedFile);
         allComments = parseWords.parseAllWords();
-        writeToFile(allComments.toString());
+        writeToFile(allComments.toString(), outputFile);
     }
 
     // read file content into a string
@@ -92,18 +94,6 @@ public class ParseJavaFile {
 
             reader.close();
             return fileData.toString();
-        }
-
-    }
-
-    private void writeToFile(String words) {
-        try {
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile.getPath()))) {
-                writer.write(words);
-            }
-
-        } catch (IOException ex) {
-            Logger.getLogger(ParseJavaFile.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

@@ -109,44 +109,6 @@ public class GenerateDataForView {
 
                     children.put(topicGroup);
                 }
-//                String countLine = "";
-//                while ((countLine = countReader.readLine()) != null) {
-//                    String[] topics = countLine.split("\t| ");
-//                    int count = 0;
-//                    for(int i = 0; i < topics.length; ++i) {
-//                        if(topics[i].contains(":")) {
-//                            String[] label = topics[i].split(":");
-//                            count = count + Integer.parseInt(label[1]);
-//                        }
-//                    }
-//
-//                    topicMap.put(topics[1], count);
-//
-//                }
-//
-//                String topicsLine = "";
-//                while ((topicsLine = topicsReader.readLine()) != null) {
-//                    JSONObject topicGroup = new JSONObject();//<"name", topic index>
-//                    topicGroup.put("name", randomString(8));
-//
-//                    JSONArray topicArray = new JSONArray();
-//                    topicGroup.put("children", topicArray);
-//
-//                    String[] topics = topicsLine.split("\\s");//topics[0] is topic index, topics[1] is parameter value, topics[2]-[n] is topics
-//                    for (int i = 0; i < topics.length; ++i) {
-//                        if (topics.length > 2) {
-//                            double KR1 =
-//                            if (!NumberUtils.isNumber(topics[i])) {
-//                                JSONObject topic = new JSONObject();
-//                                topic.put("name", topics[i]);
-//                                topic.put("size", topicMap.get(topics[i]));
-//                                topicArray.put(topic);
-//                            }
-//                        }
-//                    }
-//
-//                    children.put(topicGroup);
-//                }
                 
                 json.write(writer);
                

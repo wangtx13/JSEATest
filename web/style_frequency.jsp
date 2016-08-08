@@ -26,7 +26,7 @@
         <meta name="author" content="">
         <link rel="icon" href="./image/analysis.jpg">
 
-        <title>Programmer Assistor</title>
+        <title>JSEA·Java Software Engineers Assister</title>
 
         <!-- Bootstrap core CSS -->
         <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
                 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
                     <div class="container">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="#">Programmer Assistor</a>
+                            <a class="navbar-brand" href="#">JSEA</a>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
@@ -67,6 +67,7 @@
                                     </ul>
                                 </li>
 
+                                <li><a href="search.html">Search </a></li>
                             </ul>
                         </div>
                     </div>
@@ -150,7 +151,7 @@
             <!-- FOOTER -->
             <footer>
                 <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>2015 @Tianxia, Wang</p>
+                <p>2016 @Tianxia, Wang</p>
             </footer>
 
 

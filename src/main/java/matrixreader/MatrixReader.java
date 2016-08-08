@@ -13,4 +13,6 @@ public interface MatrixReader {
     Map<String,Integer> getColumnHeaderList();
 
     Map<Integer, String> getRowHeaderList();
+
+    Map<Integer, String[]> getTopList();
 }
