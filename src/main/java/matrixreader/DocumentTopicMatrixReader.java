@@ -17,17 +17,17 @@ public class DocumentTopicMatrixReader implements MatrixReader{
     private Map<Integer, String> fileList = new HashMap<>();//<row index in document-topic matrix, file name>
     private Map<Integer, String[]> topDocumentList = new HashMap<>();//<topic, top docuemnt list
 
-    public DocumentTopicMatrixReader(String compositionFilePath, int topicCount) {
-        this.docTopicMatrixReader = getDocTopicMatrixReader(compositionFilePath, topicCount);
+    public DocumentTopicMatrixReader(File compositionFile, int topicCount) {
+        this.docTopicMatrixReader = getDocTopicMatrixReader(compositionFile, topicCount);
     }
 
-    private RealMatrix getDocTopicMatrixReader(String compositionFilePath, int topicCount) {
+    private RealMatrix getDocTopicMatrixReader(File compositionFile, int topicCount) {
         RealMatrix docTopicMatrix = null;
         ArrayList<String> composition = new ArrayList<>();
         int docCount = 0;
         try{
             try(
-                    InputStream in = new FileInputStream(compositionFilePath);
+                    InputStream in = new FileInputStream(compositionFile.getPath());
                     BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
                 String line;
                 while((line = reader.readLine())!=null) {

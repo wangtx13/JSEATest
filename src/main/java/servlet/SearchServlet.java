@@ -5,23 +5,23 @@
  */
 package servlet;
 
-import org.apache.commons.lang3.math.NumberUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import processview.GenerateDataForView;
+import matrixreader.DocumentTopicMatrixReader;
+import matrixreader.MatrixReader;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
  *
- * @author tianxia
+ * @author apple
  */
 public class SearchServlet extends HttpServlet {
 
@@ -37,67 +37,55 @@ public class SearchServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            String programRootPath = getServletContext().getInitParameter("program-root-path");
+            request.setAttribute("program-root-path", programRootPath);
+            String searchQuery = request.getParameter("searchQuery");
+//            String compositionFilePath = programRootPath + "show_file/composition.txt";
 
-        String programRootPath = getServletContext().getInitParameter("program-root-path");
-        String topic_keys_file_path = request.getParameter("topicKeys");
-        String word_counts_file_path = request.getParameter("wordCounts");
-        String view_styles = request.getParameter("viewStyle");
-
-        File topic_keys_file = new File(topic_keys_file_path);
-        File word_count_file = new File(word_counts_file_path);
-        if (!topic_keys_file.exists() || !word_count_file.exists()) {
-            request.getRequestDispatcher("./error.jsp").forward(request, response);
-        } else {
-
-            GenerateDataForView generateDataTool = new GenerateDataForView(topic_keys_file_path, word_counts_file_path);
-            generateDataTool.generateDataForView(programRootPath);
-            JSONObject namAndSizeJson = generateDataTool.getJson();
-
-            request.setAttribute("sizeJson", namAndSizeJson.toString());
-            
             try {
+                File topicsKey = new File(programRootPath + "search/show_file/keys.txt");
+                int topicCount = 0;
+//            ArrayList<Integer> matchedTopicIndex = new ArrayList<>();
+                StringBuffer matchedQueryBuffer = new StringBuffer();
                 try (
-                        InputStream topicsIn = new FileInputStream(topic_keys_file_path);
-                        BufferedReader topicsReader = new BufferedReader(new InputStreamReader(topicsIn))) {
-
-                    JSONObject json = new JSONObject();
-                    JSONArray children = new JSONArray();
-                    json.put("parent", children);
-
-                    String topicsLine = "";
-                    while ((topicsLine = topicsReader.readLine()) != null) {
-                        JSONObject topicGroup = new JSONObject();
-                        JSONArray topicArray = new JSONArray();
-                        topicGroup.put("children", topicArray);
-
-                        String[] topics = topicsLine.split("\\s");
-                        for (int i = 0; i < topics.length; ++i) {
-                            if (topics.length > 2) {
-                                if (!NumberUtils.isNumber(topics[i])) {
-                                    JSONObject topic = new JSONObject();
-                                    topic.put("name", topics[i]);
-                                    topicArray.put(topic);
-                                }
-                            }
+                        InputStream inTopicKeys = new FileInputStream(topicsKey.getPath());
+                        BufferedReader readerTopicKeys = new BufferedReader(new InputStreamReader(inTopicKeys))) {
+                    String line = "";
+                    while ((line = readerTopicKeys.readLine()) != null) {
+                        topicCount++;
+                        if (line.contains(searchQuery)) {
+                            matchedQueryBuffer = matchedQueryBuffer.append(line + "\n");
+//                            String[] linePart = line.split("\t| ");
+//                            if(linePart[0]!=null)
+//                                matchedTopicIndex.add(Integer.parseInt(linePart[0]));
                         }
-                        children.put(topicGroup);
                     }
 
-                    request.setAttribute("topicsJson", json.toString());
-                } catch (JSONException ex) {
-                    Logger.getLogger(SearchServlet.class.getName()).log(Level.SEVERE, null, ex);
+                    out.println("<p>test:" + matchedQueryBuffer.toString() + "</p>");
+                    request.setAttribute("matchedQuery", matchedQueryBuffer.toString());
                 }
 
+                request.setAttribute("topicCount", topicCount);
+
+                request.getRequestDispatcher("./searchResults.jsp").forward(request, response);
+            } catch (FileNotFoundException ex) {
+                out.println(ex);
             } catch (IOException ex) {
-                System.out.println("IOException: " + ex);
+                out.println(ex);
             }
-            if (view_styles.equals("Table")) {
-                request.getRequestDispatcher("./style_table.jsp").forward(request, response);
-            } else if (view_styles.equals("Topics Frequency")) {
-                request.getRequestDispatcher("./style_frequency.jsp").forward(request, response);
-            } else if (view_styles.equals("Bubble Chart")) {
-                request.getRequestDispatcher("./style_bubble.jsp").forward(request, response);
-            }
+
+//            MatrixReader docTopicMatrixReader = new DocumentTopicMatrixReader(compositionFilePath, topicCount);
+//            Map<Integer, String[]> topDocumentList = docTopicMatrixReader.getTopList();
+//            Map<Integer, String[]> matchedDocumentList = new HashMap<>();
+//            for(Map.Entry<Integer, String[]> entry:topDocumentList.entrySet()) {
+//                int index = entry.getKey();
+//                if(matchedTopicIndex.contains(index)) {
+//                    matchedDocumentList.put(index, entry.getValue());
+//                }
+//            }
+
+
         }
     }
 

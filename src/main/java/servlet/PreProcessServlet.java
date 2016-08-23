@@ -118,6 +118,9 @@ public class PreProcessServlet extends HttpServlet {
                     + "<li>"
                     + "<a href=\"show.html\">Show </a>"
                     + "</li>"
+                    + "<li>"
+                    + "<a href=\"search.html\">Search </a>"
+                    + "</li>"
                     + "</ul>"
                     + "</div>"
                     + "</div>"
@@ -203,7 +206,7 @@ public class PreProcessServlet extends HttpServlet {
                 out.println("The size of files is too much, please upload files less than 50MB");
                 e.printStackTrace();
             } catch (Exception ex) {
-                System.out.println(ex);
+                out.println(ex);
 
             }
 
@@ -216,7 +219,7 @@ public class PreProcessServlet extends HttpServlet {
                     + "<p class=\"pull-right\">"
                     + "<a href=\"#\">Back to top</a>"
                     + "</p>"
-                    + "<p>2015 @Tianxia, Wang</p>"
+                    + "<p>2016 @Tianxia, Wang</p>"
                     + "</footer>");
             out.println("</div>");
             out.println("<script src=\"./js/jquery.min.js\"></script>");

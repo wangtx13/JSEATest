@@ -52,10 +52,18 @@
                 <h1 class="cover-heading">Java Software Engineers Assister</h1>
                 <!--<p class="lead">You can search a word or a filename of the documents</p>-->
                 <br/>
-                <form action="form-horizontal GenerateViewServlet" method="POST">
+                <form action="SearchServlet" class="form-horizontal" method="POST">
+                    <!--<div class="form-group-lg">-->
+                        <!--<label for="rootFilePath">Root File Path for Mallet's output files:</label>-->
+                    <!--</div>-->
+                    <!--<div class="form-group-lg">-->
+                        <!--<input type="text" class="form-control" name="rootFilePath" id="rootFilePath" placeholder="Please input root file path..." required="">-->
+                    <!--</div>-->
+                    <!--<br/>-->
                     <div class="form-group form-group-lg">
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="searchQuery" placeholder="Please input search query...">
+                            <!--<label for="searchQuery">test</label>-->
+                            <input type="text" class="form-control" for="searchQuery" name="searchQuery" id="searchQuery" placeholder="Please input search query..." required="">
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg">Search</button>
                         <!--<input type="submit" class="btn btn-primary btn-lg" value="Search" />-->

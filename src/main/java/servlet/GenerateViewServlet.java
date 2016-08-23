@@ -43,17 +43,17 @@ public class GenerateViewServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         String programRootPath = getServletContext().getInitParameter("program-root-path");
-        String topic_keys_file_path = request.getParameter("topicKeys");
-        String word_counts_file_path = request.getParameter("wordCounts");
-        String view_styles = request.getParameter("viewStyle");
+        String topicKeysFilePath = request.getParameter("topicKeys");
+        String wordCountsFilePath = request.getParameter("wordCounts");
+        String viewStyles = request.getParameter("viewStyle");
 
-        File topic_keys_file = new File(topic_keys_file_path);
-        File word_count_file = new File(word_counts_file_path);
-        if (!topic_keys_file.exists() || !word_count_file.exists()) {
+        File topicKeysFile = new File(topicKeysFilePath);
+        File wordCountFile = new File(wordCountsFilePath);
+        if (!topicKeysFile.exists() || !wordCountFile.exists()) {
             request.getRequestDispatcher("./error.jsp").forward(request, response);
         } else {
 
-            GenerateDataForView generateDataTool = new GenerateDataForView(topic_keys_file_path, word_counts_file_path);
+            GenerateDataForView generateDataTool = new GenerateDataForView(topicKeysFilePath, wordCountsFilePath);
             generateDataTool.generateDataForView(programRootPath);
             JSONObject namAndSizeJson = generateDataTool.getJson();
 
@@ -61,7 +61,7 @@ public class GenerateViewServlet extends HttpServlet {
             
             try {
                 try (
-                        InputStream topicsIn = new FileInputStream(topic_keys_file_path);
+                        InputStream topicsIn = new FileInputStream(topicKeysFilePath);
                         BufferedReader topicsReader = new BufferedReader(new InputStreamReader(topicsIn))) {
 
                     JSONObject json = new JSONObject();
@@ -95,12 +95,12 @@ public class GenerateViewServlet extends HttpServlet {
             } catch (IOException ex) {
                 System.out.println("IOException: " + ex);
             }
-            if (view_styles.equals("Table")) {
-                request.getRequestDispatcher("./style_table.jsp").forward(request, response);
-            } else if (view_styles.equals("Topics Frequency")) {
-                request.getRequestDispatcher("./style_frequency.jsp").forward(request, response);
-            } else if (view_styles.equals("Bubble Chart")) {
-                request.getRequestDispatcher("./style_bubble.jsp").forward(request, response);
+            if (viewStyles.equals("Table")) {
+                request.getRequestDispatcher("./styleTable.jsp").forward(request, response);
+            } else if (viewStyles.equals("Topics Frequency")) {
+                request.getRequestDispatcher("./styleFrequency.jsp").forward(request, response);
+            } else if (viewStyles.equals("Bubble Chart")) {
+                request.getRequestDispatcher("./styleBubble.jsp").forward(request, response);
             }
         }
     }

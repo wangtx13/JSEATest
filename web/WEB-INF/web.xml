@@ -8,9 +8,21 @@
         <servlet-name>GenerateViewServlet</servlet-name>
         <servlet-class>servlet.GenerateViewServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>servlet.SearchServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>PreProcessServlet</servlet-name>
         <url-pattern>/PreProcessServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GenerateViewServlet</servlet-name>
+        <url-pattern>/GenerateViewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/SearchServlet</url-pattern>
     </servlet-mapping>
     <context-param>
         <description>Location to store uploaded file</description>
@@ -26,10 +38,6 @@
             /Users/wangtianxia1/IdeaProjects/NewProgrammerAssistor/
         </param-value>
     </context-param>
-    <servlet-mapping>
-        <servlet-name>GenerateViewServlet</servlet-name>
-        <url-pattern>/GenerateViewServlet</url-pattern>
-    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
