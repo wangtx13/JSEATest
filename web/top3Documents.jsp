@@ -1,19 +1,13 @@
 <%-- 
     Document   : table
-    Created on : 2016-8-10, 19:18:20
+    Created on : 2015-5-23, 21:57:55
     Author     : tianxia
 --%>
 
 <%@ page import="java.util.Map" %>
+<%@ page import="java.io.File" %>
 <%@ page import="matrixreader.MatrixReader" %>
 <%@ page import="matrixreader.DocumentTopicMatrixReader" %>
-<%@ page import="java.io.File" %>
-<%@ page import="javax.xml.parsers.SAXParser" %>
-<%@ page import="javax.xml.parsers.SAXParserFactory" %>
-<%@ page import="xml.parse.TopicPhraseHandler" %>
-<%@ page import="org.xml.sax.SAXException" %>
-<%@ page import="javax.xml.parsers.ParserConfigurationException" %>
-<%@ page import="java.io.IOException" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,13 +16,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="tianxia">
+    <meta name="author" content="">
     <link rel="icon" href="./image/analysis.jpg">
 
     <title>JSEA·Java Software Engineers Assister</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
     <!-- Custom styles for this template -->
     <link href="./css/show.css" rel="stylesheet">
@@ -45,8 +50,8 @@
                     <ul class="nav navbar-nav">
                         <li><a href="home.html">Home </a></li>
                         <li><a href="help.html">Help </a></li>
-                        <li><a href="show.html">Show </a></li>
-                        <li class="active"><a href="search.html">Search </a></li>
+                        <li class="active"><a href="show.html">Show </a></li>
+                        <li><a href="search.html">Search </a></li>
                     </ul>
                 </div>
             </div>
@@ -60,87 +65,51 @@
 
 <div class="container marketing">
     <div class="row featurette show_divider">
-        <h4>Your search query:</h4>
-        <p><%= request.getParameter("searchQuery")%>
-        </p>
+        <p class="illustrate">If you want to select again, please click <a href="show.html">here</a></p>
         <br/>
-        <h3>Relative topics:</h3>
+        <h3>Topics:</h3>
         <br/>
         <table class="table table-striped">
             <%
-                String searchQuery = request.getParameter("searchQuery");
-                int topicCount = (Integer) request.getAttribute("topicCount");
+                String topics = request.getAttribute("topics").toString();
+                String[] topicsArray = topics.split("\n");
+                String[] labelsArray = (String[]) request.getAttribute("labels");
                 String programRootPath = request.getAttribute("program-root-path").toString();
-                String[] tableResults = request.getAttribute("matchedQuery").toString().split("\n");
-
-                String phraseLabelFilePath = programRootPath + "search/show_file/topic-phrases.xml";
-
                 File compositionFile = new File(programRootPath + "search/show_file/composition.txt");
-                MatrixReader docTopicMatrixReader = new DocumentTopicMatrixReader(compositionFile, topicCount);
+                MatrixReader docTopicMatrixReader = new DocumentTopicMatrixReader(compositionFile, topicsArray.length);
                 Map<Integer, String[]> topDocumentList = docTopicMatrixReader.getTopList();
 
-                for (String topicLine : tableResults) {
-                    String[] strPart = topicLine.split("\t| ");
-                    for(String str : searchQuery.split(" |,|;")) {
-                        topicLine = topicLine.replaceAll(str, "<b style='color:red'>"+str+"</b>");
-                    }
-
+                for (int i = 0; i < topicsArray.length; ++i) {
+                    String[] strPart = topicsArray[i].split("\t| ");
+                    int topicIndex = Integer.parseInt(strPart[0]);
+                    String[] topDocuments = topDocumentList.get(topicIndex);
             %>
             <tr>
                 <td>
                     <p>
-                        <b>Topic: </b>
-                        <%=topicLine%>
+                        <b>Topics: </b>
+                        <%=topicsArray[i]%>
                     </p>
                     <p>
                         <b>Labels: </b>
-                        <%
-                            int topicIndex = Integer.parseInt(strPart[0]);
-                            try {
-
-                                SAXParserFactory factory = SAXParserFactory.newInstance();
-                                SAXParser saxParser = factory.newSAXParser();
-                                TopicPhraseHandler handler = new TopicPhraseHandler(topicIndex);
-                                saxParser.parse(phraseLabelFilePath, handler);
-                                String phrasesLabels = handler.getMatchedPhrases();
-
-                        %>
-                        <%=phrasesLabels%>
-                        <%
-
-                            } catch (SAXException e) {
-                                e.printStackTrace();
-                            } catch (ParserConfigurationException e) {
-                                e.printStackTrace();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                        %>
+                        <%=labelsArray[i]%>
                     </p>
-                    <%
-                        String[] topDocuments = topDocumentList.get(topicIndex);
-                    %>
                     <p>
-                        <b>Top 3 Relative Documents:</b>
+                        <b>Top 3 Documents: </b>
                         <%
                             for (String document : topDocuments) {
                                 String[] nameParts = document.split("/");
                                 String fileName = nameParts[nameParts.length - 1];
                         %>
-                        <%--<a href="./search/preprocess/<%=fileName%>"><%=fileName%></a>;--%>
                         <%=fileName%>;
-                        <%
-                            }
-                        %>
+                        <%}%>
                     </p>
                 </td>
             </tr>
             <%
                 }
             %>
-
         </table>
-
     </div>
 
     <hr class="featurette-divider">

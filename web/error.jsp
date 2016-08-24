@@ -40,7 +40,6 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="home.html">Home </a></li>
                                 <li><a href="help.html">Help </a></li>
-                                <li><a href="about.html">About </a></li>
                                 <li class="active"><a href="show.html">Show </a></li>
                                 <li><a href="search.html">Search </a></li>
                             </ul>

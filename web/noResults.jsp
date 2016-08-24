@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="icon" href="./image/analysis.jpg">
 
-        <title>JSEA·Java Software Engineers Assister</title>
+        <title>JSEA-Java Software Engineers Assister</title>
 
         <!-- Bootstrap core CSS -->
         <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -34,15 +34,14 @@
                 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
                     <div class="container">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="#">JSEA</a>
+                            <a class="navbar-brand" href="home.html">JSEA</a>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 <li><a href="home.html">Home </a></li>
                                 <li><a href="help.html">Help </a></li>
-                                <li class="active"><a href="about.html">About </a></li>
                                 <li><a href="show.html">Show </a></li>
-                                <li><a href="search.html">Search </a></li>
+                                <li class="active"><a href="search.html">Search </a></li>
                             </ul>
                         </div>
                     </div>
@@ -57,13 +56,15 @@
         <div class="container marketing">
 
             <!-- START THE FEATURETTES -->
-
             <div class="row featurette show_divider">
-
-                <br/>
-                <p>Tianxia's Project</p>
-                <p>@Software Engineering School of Tongji University <i class="illustrate">2016</i></p>
-                
+                <h3>No results for "<%=request.getParameter("searchQuery")%>"...</h3>
+                <p>Tips: </p>
+                <ul>
+                    <li>Please check whether the words are spelled correctly</li>
+                    <li>Please try another query words</li>
+                    <li>Please reduce the number of query words</li>
+                </ul>
+                <p class="illustrate">Please come <a href="search.html">back</a> to search again.</p>
             </div>
 
             <hr class="featurette-divider">
@@ -73,6 +74,7 @@
 
             <!-- FOOTER -->
             <footer>
+                <p class="pull-right"><a href="#">Back to top</a></p>
                 <p>2016 @Tianxia, Wang</p>
             </footer>
 

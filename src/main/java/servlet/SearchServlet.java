@@ -33,16 +33,16 @@ public class SearchServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        boolean findMatchedQuery = false;
         try (PrintWriter out = response.getWriter()) {
             String programRootPath = getServletContext().getInitParameter("program-root-path");
             request.setAttribute("program-root-path", programRootPath);
             String searchQuery = request.getParameter("searchQuery");
-//            String compositionFilePath = programRootPath + "show_file/composition.txt";
+            String[] searchQueryList = searchQuery.split(" |,|;");
 
             try {
                 File topicsKey = new File(programRootPath + "search/show_file/keys.txt");
                 int topicCount = 0;
-//            ArrayList<Integer> matchedTopicIndex = new ArrayList<>();
                 StringBuffer matchedQueryBuffer = new StringBuffer();
                 try (
                         InputStream inTopicKeys = new FileInputStream(topicsKey.getPath());
@@ -50,39 +50,34 @@ public class SearchServlet extends HttpServlet {
                     String line = "";
                     while ((line = readerTopicKeys.readLine()) != null) {
                         topicCount++;
-                        if (line.contains(searchQuery)) {
-                            matchedQueryBuffer = matchedQueryBuffer.append(line + "\n");
-//                            String[] linePart = line.split("\t| ");
-//                            if(linePart[0]!=null)
-//                                matchedTopicIndex.add(Integer.parseInt(linePart[0]));
+                        for(String str:searchQueryList) {
+                            if (line.contains(str)) {
+                                matchedQueryBuffer = matchedQueryBuffer.append(line + "\n");
+                                findMatchedQuery = true;
+                            }
                         }
                     }
 
-                    out.println("<p>test:" + matchedQueryBuffer.toString() + "</p>");
                     request.setAttribute("matchedQuery", matchedQueryBuffer.toString());
                 }
 
                 request.setAttribute("topicCount", topicCount);
 
-                request.getRequestDispatcher("./searchResults.jsp").forward(request, response);
             } catch (FileNotFoundException ex) {
                 out.println(ex);
             } catch (IOException ex) {
                 out.println(ex);
             }
 
-//            MatrixReader docTopicMatrixReader = new DocumentTopicMatrixReader(compositionFilePath, topicCount);
-//            Map<Integer, String[]> topDocumentList = docTopicMatrixReader.getTopList();
-//            Map<Integer, String[]> matchedDocumentList = new HashMap<>();
-//            for(Map.Entry<Integer, String[]> entry:topDocumentList.entrySet()) {
-//                int index = entry.getKey();
-//                if(matchedTopicIndex.contains(index)) {
-//                    matchedDocumentList.put(index, entry.getValue());
-//                }
-//            }
-
-
+            if(findMatchedQuery) {
+                request.getRequestDispatcher("./searchResults.jsp").forward(request, response);
+            } else {
+                request.getRequestDispatcher("./noResults.jsp").forward(request, response);
+            }
         }
+
+
+
     }
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
