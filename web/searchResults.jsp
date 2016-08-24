@@ -4,15 +4,16 @@
     Author     : tianxia
 --%>
 
-<%@page import="org.json.JSONObject" %>
-<%@page import="org.json.JSONArray" %>
-<%@page import="java.util.Enumeration" %>
 <%@ page import="java.util.Map" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="matrixreader.MatrixReader" %>
 <%@ page import="matrixreader.DocumentTopicMatrixReader" %>
-<%@ page import="java.io.FileNotFoundException" %>
 <%@ page import="java.io.File" %>
+<%@ page import="javax.xml.parsers.SAXParser" %>
+<%@ page import="javax.xml.parsers.SAXParserFactory" %>
+<%@ page import="xml.parse.TopicPhraseHandler" %>
+<%@ page import="org.xml.sax.SAXException" %>
+<%@ page import="javax.xml.parsers.ParserConfigurationException" %>
+<%@ page import="java.io.IOException" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,13 +73,15 @@
                 String programRootPath = request.getAttribute("program-root-path").toString();
                 String[] tableResults = request.getAttribute("matchedQuery").toString().split("\n");
 
-                    String compositionFilePath = programRootPath + "search/show_file/composition.txt";
-                    File compositionFile = new File(compositionFilePath);
-                    MatrixReader docTopicMatrixReader = new DocumentTopicMatrixReader(compositionFile, topicCount);
-                    Map<Integer, String[]> topDocumentList = docTopicMatrixReader.getTopList();
+                String phraseLabelFilePath = programRootPath + "search/show_file/topic-phrases.xml";
 
-                    for (String topicLine : tableResults) {
-                        String[] strPart = topicLine.split("\t| ");
+                String compositionFilePath = programRootPath + "search/show_file/composition.txt";
+                File compositionFile = new File(compositionFilePath);
+                MatrixReader docTopicMatrixReader = new DocumentTopicMatrixReader(compositionFile, topicCount);
+                Map<Integer, String[]> topDocumentList = docTopicMatrixReader.getTopList();
+
+                for (String topicLine : tableResults) {
+                    String[] strPart = topicLine.split("\t| ");
 
             %>
             <tr>
@@ -87,8 +90,32 @@
                         <b>Topic: </b>
                         <%=topicLine%>
                     </p>
+                    <p>
+                        <b>Labels: </b>
+                        <%
+                            int topicIndex = Integer.parseInt(strPart[0]);
+                            try {
+
+                                SAXParserFactory factory = SAXParserFactory.newInstance();
+                                SAXParser saxParser = factory.newSAXParser();
+                                TopicPhraseHandler handler = new TopicPhraseHandler(topicIndex);
+                                saxParser.parse(phraseLabelFilePath, handler);
+                                String phrasesLabels = handler.getMatchedPhrases();
+
+                        %>
+                        <%=phrasesLabels%>
+                        <%
+
+                            } catch (SAXException e) {
+                                e.printStackTrace();
+                            } catch (ParserConfigurationException e) {
+                                e.printStackTrace();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        %>
+                    </p>
                     <%
-                        int topicIndex = Integer.parseInt(strPart[0]);
                         String[] topDocuments = topDocumentList.get(topicIndex);
                     %>
                     <p>
