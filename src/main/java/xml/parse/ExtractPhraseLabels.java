@@ -14,26 +14,29 @@ public class ExtractPhraseLabels {
 
     private String[] allPhraseLabels;
 
-    public ExtractPhraseLabels(String phraseLabelFilePath, int topicCount, int topicIndex) {
+    public ExtractPhraseLabels(int topicCount) {
         allPhraseLabels = new String[topicCount];
 
-        try {
-            SAXParserFactory factory = SAXParserFactory.newInstance();
-            SAXParser saxParser = factory.newSAXParser();
-            TopicPhraseHandler handler = new TopicPhraseHandler(topicIndex);
-            saxParser.parse(phraseLabelFilePath, handler);
-            String phrasesLabels = handler.getMatchedPhrases();
-            allPhraseLabels[topicIndex] = phrasesLabels;
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
-    public String[] getAllPhraseLabels() {
+    public String[] getAllPhraseLabels(String phraseLabelFilePath,int topicCount) {
+        for(int i = 0; i < topicCount; ++i) {
+            try {
+                SAXParserFactory factory = SAXParserFactory.newInstance();
+                SAXParser saxParser = factory.newSAXParser();
+                TopicPhraseHandler handler = new TopicPhraseHandler(i);
+                saxParser.parse(phraseLabelFilePath, handler);
+                String phrasesLabels = handler.getMatchedPhrases();
+                allPhraseLabels[i] = phrasesLabels;
+            } catch (SAXException e) {
+                e.printStackTrace();
+            } catch (ParserConfigurationException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         return allPhraseLabels;
     }
 }

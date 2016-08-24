@@ -8,6 +8,7 @@ package servlet;
 import matrixreader.DocumentTopicMatrixReader;
 import matrixreader.MatrixReader;
 import org.xml.sax.SAXException;
+import xml.parse.ExtractPhraseLabels;
 import xml.parse.TopicPhraseHandler;
 
 import java.io.*;
@@ -62,32 +63,12 @@ public class GenerateViewServlet extends HttpServlet {
                             topicBuffer = topicBuffer.append(line + "\n");
                         }
                     }
-                } catch (FileNotFoundException ex) {
-                    out.println(ex);
                 } catch (IOException ex) {
                     out.println(ex);
                 }
 
-                String[] allTopics = topicBuffer.toString().split("\n");
-                String[] allPhraseLabels = new String[topicCount];
-                for(String topicLine : allTopics) {
-                    String[] strPart = topicLine.split("\t| ");
-                    int topicIndex = Integer.parseInt(strPart[0]);
-                    try {
-                        SAXParserFactory factory = SAXParserFactory.newInstance();
-                        SAXParser saxParser = factory.newSAXParser();
-                        TopicPhraseHandler handler = new TopicPhraseHandler(topicIndex);
-                        saxParser.parse(phraseLabelFilePath, handler);
-                        String phrasesLabels = handler.getMatchedPhrases();
-                        allPhraseLabels[topicIndex] = phrasesLabels;
-                    } catch (SAXException e) {
-                        e.printStackTrace();
-                    } catch (ParserConfigurationException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
+                ExtractPhraseLabels extractPhraseLabels = new ExtractPhraseLabels(topicCount);
+                String[] allPhraseLabels = extractPhraseLabels.getAllPhraseLabels(phraseLabelFilePath, topicCount);
 
                 request.setAttribute("topics", topicBuffer.toString());
                 if (viewContent.equals("Topics")) {

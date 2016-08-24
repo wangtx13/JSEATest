@@ -7,13 +7,12 @@
 <%@ page import="java.util.Map" %>
 <%@ page import="matrixreader.MatrixReader" %>
 <%@ page import="matrixreader.DocumentTopicMatrixReader" %>
-<%@ page import="java.io.File" %>
 <%@ page import="javax.xml.parsers.SAXParser" %>
 <%@ page import="javax.xml.parsers.SAXParserFactory" %>
 <%@ page import="xml.parse.TopicPhraseHandler" %>
 <%@ page import="org.xml.sax.SAXException" %>
 <%@ page import="javax.xml.parsers.ParserConfigurationException" %>
-<%@ page import="java.io.IOException" %>
+<%@ page import="java.io.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,6 +72,7 @@
                 String programRootPath = request.getAttribute("program-root-path").toString();
                 String[] tableResults = request.getAttribute("matchedQuery").toString().split("\n");
 
+                String topicsFilePath = programRootPath + "search/show_file/keys.txt";
                 String phraseLabelFilePath = programRootPath + "search/show_file/topic-phrases.xml";
 
                 File compositionFile = new File(programRootPath + "search/show_file/composition.txt");
@@ -80,22 +80,24 @@
                 Map<Integer, String[]> topDocumentList = docTopicMatrixReader.getTopList();
 
                 for (String topicLine : tableResults) {
-                    String[] strPart = topicLine.split("\t| ");
-                    for(String str : searchQuery.split(" |,|;")) {
-                        topicLine = topicLine.replaceAll(str, "<b style='color:red'>"+str+"</b>");
+                    for (String str : searchQuery.split(" |,|;")) {
+                        topicLine = topicLine.replaceAll(str, "<b style='color:red'>" + str + "</b>");
                     }
-
             %>
             <tr>
                 <td>
+                    <%
+                        String[] topicLinePart = topicLine.split("::");
+                        int topicIndex = Integer.parseInt(topicLinePart[0]);
+                        if (topicLinePart[1].equals("[TOPIC]")) {
+                    %>
                     <p>
                         <b>Topic: </b>
-                        <%=topicLine%>
+                        <%=topicLinePart[2]%>
                     </p>
                     <p>
                         <b>Labels: </b>
                         <%
-                            int topicIndex = Integer.parseInt(strPart[0]);
                             try {
 
                                 SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -115,9 +117,40 @@
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
+
                         %>
                     </p>
                     <%
+                    } else if (topicLinePart[1].equals("[LABEL]")) {
+                        try {
+                            try (
+                                    InputStream in = new FileInputStream(topicsFilePath);
+                                    BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
+                                String line = "";
+                                while ((line = reader.readLine()) != null) {
+                                    int index = Integer.parseInt(line.split("\t| ")[0]);
+                                    if (index == topicIndex) {
+                    %>
+                    <p>
+                        <b>Topic: </b>
+                        <%=line%>
+                    </p>
+                    <%
+                                    }
+                                }
+
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    %>
+                    <p>
+                        <b>Labels: </b>
+                        <%=topicLinePart[2]%>
+                    </p>
+                    <%
+                        }
+
                         String[] topDocuments = topDocumentList.get(topicIndex);
                     %>
                     <p>
