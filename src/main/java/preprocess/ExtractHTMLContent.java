@@ -32,14 +32,16 @@ public class ExtractHTMLContent {
     private File outputFile;
     private boolean ifGeneral;
     private Map<String, Boolean> libraryTypeCondition;
+    private String copyrightInfoContent;
     private Map<String, Integer> documentWordsCountList;
     private File extractedFile;
 
-    public ExtractHTMLContent(File inputFile, File outputFile, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, Map<String, Integer> documentWordsCountList, File extractedFile) {
+    public ExtractHTMLContent(File inputFile, File outputFile, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, String copyrightInfoContent, Map<String, Integer> documentWordsCountList, File extractedFile) {
         this.inputFile = inputFile;
         this.outputFile = outputFile;
         this.ifGeneral = ifGeneral;
         this.libraryTypeCondition = libraryTypeCondition;
+        this.copyrightInfoContent = copyrightInfoContent;
         this.documentWordsCountList = documentWordsCountList;
         this.extractedFile = extractedFile;
     }
@@ -111,7 +113,7 @@ public class ExtractHTMLContent {
 
                 }
                 
-                ParseWords parseWordsTool = new ParseWords(extractResult, ifGeneral, libraryTypeCondition, documentWordsCountList, extractedFile);
+                ParseWords parseWordsTool = new ParseWords(extractResult, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList, extractedFile);
                 extractResult = parseWordsTool.parseAllWords();
                 writer.write(extractResult.toString());
                 writer.flush();

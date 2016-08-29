@@ -5,7 +5,7 @@
  */
 package utility;
 
-import preprocess.ParseJavaFile;
+import preprocess.ParseJavaComments;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -58,7 +58,7 @@ public class Tools {
             }
 
         } catch (IOException ex) {
-            Logger.getLogger(ParseJavaFile.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ParseJavaComments.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

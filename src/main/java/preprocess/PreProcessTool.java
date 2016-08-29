@@ -26,17 +26,17 @@ import static utility.Tools.createDirectoryIfNotExisting;
 public class PreProcessTool {
     private String inputRootFilePath;
     private String outputFilePath;
-    private String timeStampStr;
+    private String copyrightInfoContent;
     private boolean ifGeneral;
     private Map<String, Boolean> libraryTypeCondition;
     private Map<String, Integer> documentWordsCountList;
 
-    public PreProcessTool(String inputRootFilePath, String outputFilePath, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition) {
+    public PreProcessTool(String inputRootFilePath, String outputFilePath, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, String copyrightInfoContent) {
         this.inputRootFilePath = inputRootFilePath;
         this.outputFilePath = outputFilePath;
-        this.timeStampStr = timeStampStr;
         this.ifGeneral = ifGeneral;
         this.libraryTypeCondition = libraryTypeCondition;
+        this.copyrightInfoContent = copyrightInfoContent;
         documentWordsCountList = new HashMap<>();
     }
     
@@ -52,7 +52,7 @@ public class PreProcessTool {
         if(!inputRootFile.isDirectory()) {
             System.out.println("Please input a extisted directory.");
         } else {
-            TraversalFiles.fileList(inputRootFile, 0, path, outputFilePath, ifGeneral, libraryTypeCondition, documentWordsCountList);
+            TraversalFiles.fileList(inputRootFile, 0, path, outputFilePath, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList);
         }
 
         File documentWordsCountFile = new File(outputFilePath + "/documentsWordsCount.txt");

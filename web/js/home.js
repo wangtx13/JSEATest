@@ -15,3 +15,11 @@ function checkFiles() {
     }
     document.getElementById("upload_form").submit();
 }
+
+function enableTextArea(para) {
+    if (para.checked) {
+        document.getElementById("textarea").disabled = false;
+    } else {
+        document.getElementById("textarea").disabled = true;
+    }
+}

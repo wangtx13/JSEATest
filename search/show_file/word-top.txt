@@ -1,2659 +1,2591 @@
-0 werner 12:290 13:12 14:7 19:3 15:3
-1 randelshofer 12:297 13:21 19:3 11:1 22:1
-2 replaced 20:2 0:1
-3 collections 23:13 13:7 19:4 29:2 7:1
-4 removed 23:44 0:31 8:8 6:5
-5 deprecated 20:2 19:1
-6 added 23:48 12:29 27:25 8:15 0:14 1:7 26:6 19:5 6:3 13:1 15:1
-7 create 23:62 7:60 13:50 25:37 27:34 1:18 20:15 19:13 3:12 26:9 2:9 24:8 15:8 17:5
-8 element 27:498 0:304 20:244 19:155 10:35
-9 attribute 29:639 27:272 19:212 20:197 0:148 7:109 26:96 22:26 18:24 2:6
-10 min 26:28 5:19 22:9 14:7 19:4 15:2
-11 max 21:42 26:28 24:17 5:16 22:14 13:11 19:4
-12 print 19:54 10:23 0:19 4:14 27:10 28:9
-13 writer 19:189 27:24 10:12
-14 write 27:126 19:112 10:15 13:5
-15 encoded 19:16
-16 changed 23:91 8:78 12:37 14:31 2:26 29:21 3:11 26:10 16:9 10:3 19:1 22:1
-17 encode 19:7
-18 unicode 19:12 7:2
-19 characters 19:11 11:5 24:3
-20 xml 0:588 19:177 27:169 11:132 20:120 10:89
-21 revision 0:52
-22 date 0:26
-23 part 0:25 23:17 13:4
-24 nano 10:70 0:60 27:20
-25 lite 10:48 27:5 19:2
-26 copyright 12:320 0:25 21:2
-27 marc 0:51 10:3
-28 scheemaecker 0:51 10:3
-29 rights 12:288 0:24 17:1
-30 reserved 12:289 0:26 4:1
-31 software 12:280 0:174 10:10
-32 provided 0:29 5:9 27:8 23:7 14:2 12:1
-33 express 0:25
-34 implied 0:25
-35 warranty 0:25
-36 event 23:532 4:99 28:91 15:65 16:56 9:50 10:45 0:33 7:31 8:22 14:9
-37 authors 12:276 0:23
-38 held 0:25
-39 liable 0:25
-40 damages 0:25
-41 arising 0:24 11:1
-42 permission 0:25
-43 granted 0:24 11:1
-44 purpose 0:26 14:2 8:2
-45 including 0:28
-46 commercial 0:25
-47 applications 0:25 29:3 9:1 15:1
-48 alter 0:26
-49 redistribute 0:25
-50 freely 0:25
-51 subject 0:25
-52 restrictions 0:25
-53 origin 24:26 0:25 14:23
-54 misrepresented 0:49 20:1
-55 claim 0:25
-56 wrote 0:25 27:1
-57 original 12:295 0:50 14:7
-58 product 0:50 21:1
-59 acknowledgment 0:25
-60 documentation 0:25
-61 appreciated 0:25
-62 required 0:25 28:5 6:1
-63 altered 0:50
-64 source 0:96 23:29 2:14 15:8 19:6 21:5 27:4 10:2
-65 versions 0:25 24:1
-66 plainly 0:25
-67 marked 0:25
-68 notice 0:25
-69 distribution 0:25
-70 package 12:279 0:23 6:4 23:1
-71 nanoxml 0:50 19:16 27:4
-72 representation 6:6 5:4 0:2 21:1
-73 parse 0:68 19:60 27:11 18:3
-74 parsing 0:11 19:9
-75 data 0:246 10:87 5:54 19:38 11:25 14:20 26:10 18:4 20:3
-76 reader 11:781 10:18 27:7 18:3
-77 filename 15:6 11:5
-78 retrieving 19:2
-79 attributes 29:258 7:101 20:50 0:34 19:23 2:7
-80 enumerate 19:30
-81 link 19:7 20:4 8:4 7:2 10:1
-82 names 19:35 20:16 27:4
-83 values 11:20 27:15 21:14 6:12 1:12 18:10 29:8 19:7 15:6 7:5 28:4
-84 retrieved 20:3 19:2
-85 shows 15:3 19:1 1:1 13:1
-86 list 23:199 27:78 7:73 8:68 13:33 20:20 18:13 15:13 24:12 19:10 16:8 3:8 14:6
-87 iterator 20:40 19:33 17:32 23:17 22:17 29:12 16:10 24:6
-88 iter 19:12
-89 key 29:632 19:100 11:35 7:29 27:21 0:17 23:9 20:3 14:2
-90 child 8:257 20:149 19:51 27:28
-91 elements 20:31 27:15 11:10
-92 children 8:136 19:62 20:56 27:22 23:3
-93 iterate 19:23 22:5 20:4
-94 number 0:64 18:47 6:34 11:28 27:20 29:12 24:4 21:4 15:3
-95 count 3:61 27:59 23:50 13:26 19:17 8:14 20:11 6:9 2:6 16:4 7:3 29:1
-96 character 19:32 11:19 9:6 24:3
-97 title 16:33 7:12 20:11 4:10 15:9 11:3
-98 retrieve 19:9 20:3
-99 content 20:40 19:36 10:31 15:14 6:9 27:8 25:8 16:6
-100 subclassing 19:3 12:1
-101 override 12:62 9:17 19:2
-102 copy 16:15 4:10 7:7 23:3 6:3 21:2 12:2 19:1
-103 receiver 19:10
-104 author 12:282 0:24
-105 href 19:1
-106 mailto 19:1
-107 cyberelf@mac 19:2
-108 version 12:277 0:20 14:4 11:1
-109 adapted 19:1 22:1 4:1
-110 public 12:319 0:15
-111 serialization 19:1 20:1
-112 serial 6:6 19:2 20:1
-113 major 19:7 26:3
-114 classes 12:5 19:4
-115 minor 22:6 19:3
-116 binary 19:2 17:2
-117 compatible 14:17 4:10 26:6 19:4 23:2
-118 modify 10:18 25:16 19:3
-119 client 25:15 16:8 7:8 13:7 28:4 19:2
-120 invariants 19:9
-121 field 24:34 19:14
-122 empty 19:30 14:27 13:27 20:23 22:15 11:8 27:1
-123 code 19:476 15:330 6:95 28:50 21:37 9:14 1:8
-124 null 19:75 15:20
-125 set 29:227 2:175 13:161 10:145 16:128 25:125 19:96 14:94 28:92 7:90 15:66 22:65 3:57 9:51 27:46 24:43 26:41 8:39 23:36 6:35 20:30 0:17 18:13 21:7
-126 strings 19:8 9:7 10:6 24:1
-127 hash 19:57 29:51 27:49 7:37 5:15 23:14 13:6 1:5
-128 map 18:234 29:82 27:77 19:50 7:37 5:17
-129 instances 19:2 13:1
-130 subclass 28:7 23:3 4:2 19:1
-131 iff 19:2
-132 initialized 19:1 15:1
-133 it's 0:12 11:3
-134 valid 19:25 11:5 14:4 15:2 0:1 10:1
-135 identifier 19:28 11:13
-136 contents 19:13 27:9 4:7 5:5 23:4 24:1
-137 conversion 19:11
-138 table 19:11 24:2
-139 amp 19:8 11:5
-140 entities 19:36 0:22 27:3
-141 entity 11:192 0:91
-142 delimiters 19:2
-143 associations 19:1
-144 apos 19:4 1:1
-145 arrays 29:4 19:2 15:1
-146 line 0:334 17:112 26:90 19:25 7:23 3:22 24:19 8:14 2:11 18:6
-147 starts 20:23 11:8 13:7 18:4 4:2 8:1
-148 true 19:20
-149 insensitive 19:1
-150 ignore 19:27 20:20 23:13 1:4
-151 leading 19:21 27:1
-152 trailing 19:5
-153 whitespace 11:49 19:34 18:5
-154 sections 20:4 19:2
-155 read 11:191 27:95 19:42 10:30 8:19 13:7 2:3
-156 push 27:10 11:8 18:6
-157 back 23:48 8:13 15:9 7:8 18:6 19:5 11:5
-158 functionality 16:4 28:2 22:2 19:1
-159 input 27:78 10:72 11:37 15:30 19:26 3:14 14:8 26:7 21:7 18:7
-160 pushback 11:15
-161 caller 19:1
-162 running 19:2 13:1
-163 current 27:274 17:108 11:88 9:44 18:39 4:26 16:21 0:11 14:10 21:4 13:4 2:1
-164 parser 0:80 27:8
-165 variable 3:2 19:1 1:1 21:1
-166 encoding 11:12 19:2
-167 left 6:104 17:23 24:15 21:11 11:5
-168 underlying 19:1
-169 creates 12:272 0:23 20:20 19:15 13:5 7:2
-170 initializes 10:14 19:9 11:4 13:2 2:2 0:1
-171 calling 29:6 19:4 4:1
-172 construction 19:4 17:1
-173 equivalent 19:4
-174 postconditions 19:28
-175 enumeration 19:12 20:11 29:2 11:1
-176 property 9:510 28:96 13:37 1:9 19:6 18:4 11:2
-177 vector 20:24 21:15 19:7 14:2
-178 param 0:413 20:106 19:84 15:82 1:74 21:57 6:41 22:28 28:5 26:4 9:3
-179 preconditions 19:54
-180 skip 11:60 19:19
-181 constructor 25:12 6:6 29:5 19:1
-182 called 12:30 0:20 29:10 10:9
-183 fill 26:49 1:17 29:16 24:10 19:7 14:7 18:6
-184 basic 8:101 3:84 23:75 29:56 26:28 14:22 16:12 19:7 5:1
-185 false 19:6 1:1
-186 entries 23:4 19:1 4:1
-187 quot 19:1
-188 put 18:209 7:113 16:98 25:36 0:29 9:23 29:16 13:13 19:11 27:10 5:9 14:1
-189 adds 27:49 23:9 14:8 7:6 0:6 19:4 8:4 13:2
-190 add 7:381 27:207 16:205 23:168 25:167 8:93 3:80 5:63 10:57 9:39 20:35 28:21 15:21 24:20 21:17 13:17 19:13 18:13 11:3
-191 parent 15:109 0:44 6:37 16:22 27:16 20:6 23:5
-192 remove 23:154 8:73 9:35 22:26 16:24 19:21 27:17 25:17 20:17 3:14 2:14 10:10 13:4 15:2
-193 modifies 19:3 26:1
-194 upper 19:11 9:4 18:2
-195 result 10:87 1:35 19:30 5:28 20:22 0:17 27:12 22:6 28:4 21:4 7:4
-196 size 6:112 22:56 24:51 17:46 3:46 16:31 27:27 20:25 11:20 18:14 10:4 5:2 19:1
-197 enumerates 19:2
-198 safe 19:1
-199 clone 26:48 22:48 3:25 2:17 8:9 9:4 6:4 11:3
-200 compilers 19:1
-201 braindead 19:1
-202 require 19:1
-203 clause 19:1
-204 found 20:20 1:16 11:12 18:10 8:8 23:7 17:3
-205 doesn't 19:14 14:3
-206 default 19:8
-207 missing 0:31 1:19 19:9
-208 hashtable 11:8 19:3 5:1
-209 mapping 19:12
-210 attr 20:90 7:51 19:8
-211 literals 19:8
-212 invalid 0:18 19:13 17:1
-213 format 7:8 19:7 1:3
-214 literal 11:26 19:15
-215 numbers 19:8 27:5
-216 cast 1:3 19:2 20:1
-217 equal 6:12 19:2 9:2
-218 match 27:9 19:3 0:2
-219 thrown 0:4 19:1
-220 equals 27:64 20:43 9:32 13:23 18:12 16:10 29:9 11:5 6:3 5:2
-221 reads 11:13 27:10 19:8 25:4
-222 parses 19:8 0:5
-223 closed 3:47 17:13 19:6 27:5 15:3 6:1
-224 state 9:70 13:12 19:9 4:9 2:9 3:5
-225 updated 19:8 23:4 2:1
-226 reflect 19:8 25:4 1:4 15:1
-227 parsed 19:8 11:3
-228 points 21:82 3:25 2:11 23:10 17:7 19:2
-229 throws 0:63 11:44 19:3
-230 occured 19:12
-231 reading 0:28
-232 starting 19:11 11:3 29:1
-233 scan 11:34 19:25
-234 expected 18:47 11:21 19:14
-235 special 19:5 11:3 1:1
-236 tag 27:160 11:40 19:7
-237 unread 11:35 19:7
-238 string 27:21 19:14 18:12 29:4 15:4
-239 length 21:60 27:50 11:35 26:28 28:20 23:19 19:19 10:19 18:16 17:12 1:12 24:11 7:9 15:4 22:3
-240 handling 19:3 9:3 8:2
-241 suxx 19:3
-242 offset 19:24 26:17 17:13 11:13
-243 substring 18:11 27:10 11:9 19:7 10:6 20:5 9:4
-244 end 2:254 15:28 11:28 19:26 21:21 14:20 27:15 26:11 24:10 25:8 10:7 3:7 28:4
-245 stop 16:8 13:4 11:4 15:2 24:1
-246 scanning 19:5
-247 scanned 19:9
-248 happen 19:2
-249 removes 23:16 20:9 8:8 9:6 3:3 19:2 13:1 6:1
-250 similar 19:2 28:1
-251 elem 19:3
-252 writes 19:11 27:9 25:4
-253 output 27:111 10:17 25:15 19:12 0:10
-254 stream 11:82 18:68 0:28 27:25 10:21 25:18
-255 flush 27:3 19:2 13:1
-256 written 27:3 19:3
-257 indents 19:2
-258 indent 19:14
-259 indentation 19:1
-260 spaces 19:9
-261 enm 20:43 19:8
-262 internal 13:19 22:18 9:18 28:13 11:13 25:12 1:11 4:5 27:2 14:2 20:1 19:1
-263 message 15:129 0:35 10:15 1:11 27:8 23:3
-264 init 10:60 25:41 13:41 16:24 27:13 9:10 22:4 1:1
-265 str 11:127 27:60 18:58 0:19 20:14
-266 scans 19:7 11:6
-267 appended 19:5 0:2
-268 buffer 11:92
-269 won't 11:1 26:1
-270 append 18:91 11:20 19:15 17:11 27:4 3:1
-271 return 20:61 28:32 0:32 1:29 6:24 14:10 5:8 21:7 3:7 8:6 9:5 2:2
-272 delimited 11:3
-273 delimiter 19:21 11:2
-274 resolve 19:3
-275 resolved 0:7
-276 skipped 19:12 20:2
-277 check 11:21 16:16 28:13 7:10 9:8 24:5 23:5 26:3 17:1
-278 section 11:11
-279 buf 18:94 19:36 3:15 20:13 11:9 27:6
-280 chars 11:59 18:11 19:3 24:2
-281 skips 11:8
-282 comment 27:14 19:6 11:5
-283 dashes 7:15 18:10 29:8 17:7 19:4 0:4
-284 bracket 19:10
-285 level 14:48 11:17 19:14 8:11 23:5
-286 open 13:129 27:103 16:57 10:27 29:16 11:10
-287 square 21:2 19:1
-288 brackets 16:3 0:1
-289 text 24:412 27:104 10:86 4:54 7:37 18:17 19:3
-290 stops 24:10 19:2
-291 complete 24:6 19:1
-292 checked 19:1
-293 whichever 19:1
-294 unexpected 0:46 20:2
-295 elt 20:21 19:8
-296 trim 19:2 18:1
-297 resolves 11:3
-298 unknown 19:7 20:4 18:1
-299 pushes 11:3
-300 valueset 19:1
-301 msg 0:26 19:11
-302 reached 29:4 19:2 11:2
-303 syntax 19:3 18:3
-304 context 23:21 19:6 24:5 10:5
-305 human 19:3 5:2
-306 readable 19:6
-307 form 10:33 25:13 19:1 23:1
-308 char 19:2
-309 occures 0:1
-310 runtime 1:6 8:4 0:2
-311 exception 27:8 0:6 5:4 6:3
-312 occurred 0:54 11:8
-313 located 22:3 20:3 0:2
-314 describing 28:16 0:2
-315 wrong 11:15 0:7 27:2 26:1
-316 definition 0:2 5:1
-317 net 0:56 10:34 7:22 13:13 27:2 28:1
-318 encountered 0:22 16:1
-319 class 0:5 12:4 23:1 6:1
-320 encapsulated 0:23 8:12
-321 saved 13:19 11:9 24:2
-322 cleans 0:13
-323 destroyed 0:13
-324 finalize 0:26
-325 throwable 10:47 13:19 0:13 28:2 1:1
-326 block 11:3 28:1
-327 position 5:32 24:9 14:6 4:5 0:3 1:1 15:1
-328 maximum 28:11 21:5 11:3
-329 remaining 11:3
-330 closes 27:9 11:3 22:1
-331 close 27:126 10:47 16:19 11:11 17:4 15:3 26:2 4:1
-332 pointer 10:4 29:2 11:1
-333 index 3:164 8:66 20:59 27:45 11:42 28:32 23:18 10:12
-334 resolver 11:101 0:63
-335 don't 0:11 13:9 12:5 9:2
-336 interprete 0:2
-337 process 11:46 23:20 15:2
-338 builder 0:49 20:32 27:6 18:4 3:4 23:2
-339 construct 28:17 13:10 10:6 29:5
-340 structure 0:12
-341 supply 15:3 0:1
-342 aborted 13:3 20:1
-343 parser#parse 0:3
-344 encasulates 0:1
-345 processing 0:20 15:1
-346 start 2:309 15:34 14:32 26:14 3:13 11:12 10:10 28:8 21:7
-347 building 20:8
-348 instruction 0:8
-349 target 2:321 1:57 20:5 6:5 25:4
-350 reported 0:1
-351 parameter 10:63 0:39 1:17 21:14 11:14 15:13 9:8
-352 prefix 20:70 16:18
-353 identify 0:8 9:2
-354 namespace 20:203
-355 type 15:74 20:49 23:24 7:21 29:11 17:10 18:8 27:6 25:4 0:1
-356 processed 0:15
-357 elemnt 0:2
-358 supplied 15:2 0:2 26:1
-359 boundaries 0:2 24:1
-360 full 20:128 0:4
-361 rest 28:2 26:2 20:2
-362 care 4:2 0:2
-363 serializable 12:5 6:5 20:3
-364 easy 20:1 6:1
-365 generic 1:7 20:1
-366 top 6:107 24:12 20:11 16:3
-367 dom 27:357 10:84 2:9 18:2 20:1
-368 std 11:16 20:7 1:2 18:1
-369 implement 12:6 21:2 20:1
-370 defined 29:11 21:6 20:4 26:2 6:2 5:2
-371 root 15:19 5:14 16:11 20:10 21:4
-372 eventual 20:2
-373 sets 9:19 0:19 6:17 2:16 28:12 20:12 29:8 3:6 7:5 25:3
-374 clears 25:4 13:3 14:2 0:2
-375 leaf 5:11 20:4
-376 specific 12:10 20:4 9:3
-377 bounds 22:579 26:105 24:79 14:58 15:37 10:13 20:6 6:3
-378 searches 20:6
-379 search 20:8 1:3 12:2
-380 named 20:12 11:2 1:1 7:1
-381 properties 28:38 20:14 0:12 11:11
-382 started 0:14 23:10
-383 combination 20:2
-384 unnamed 4:5 16:4 20:2
-385 call 10:6 15:5 28:3 22:3 8:3 20:2 21:1
-386 possibly 28:2 20:2
-387 raw 20:7
-388 compare 20:4 7:3 12:1
-389 external 0:28
-390 resolving 0:2 11:1
-391 core 0:2
-392 retrieves 0:7
-393 logical 0:9 22:6 26:1 17:1
-394 validator 0:35 11:26
-395 validates 0:4 23:1
-396 lets 0:2
-397 builder#get 0:1
-398 built 11:2
-399 malformed 11:16
-400 opens 27:13 11:3 4:2
-401 refers 11:3
-402 local 11:3 7:1 21:1
-403 opening 11:6
-404 temporary 11:4 9:1
-405 exhausted 11:4
-406 control 3:82 0:11 21:10 18:7 28:1
-407 produced 28:7 11:2
-408 stack 0:41 27:35 10:23 28:10 4:10
-409 streams 11:2
-410 processes 11:15
-411 handles 14:236 2:33 0:2 8:1
-412 references 27:6 0:2
-413 responsible 0:4
-414 validated 0:10
-415 ended 0:9 29:2
-416 extra 0:15 11:4
-417 concrete 0:2
-418 definitions 11:1
-419 validation 0:67
-420 types 1:20 11:10
-421 clear 23:28 13:24 16:22 10:11 3:8 0:6 22:1 5:1
-422 orig 11:2
-423 conditional 11:3
-424 att 11:7
-425 subreader 11:5
-426 props 11:10
-427 attribs 11:6
-428 pop 27:4 11:4
-429 keys 26:70 29:63 7:61 11:2
-430 peek 11:5
-431 tree 22:31 20:5 6:3
-432 parents 0:1
-433 prototype 2:53 29:44 23:44 27:25 20:8 26:5 25:1
-434 creating 4:2 0:1 28:1
-435 handled 0:1 5:1 12:1
-436 duplicate 4:13 16:9 7:8 14:4 20:1
-437 ensure 22:8 0:1
-438 capacity 5:2 0:1
-439 validate 3:25 22:12 14:9 10:8 0:1
-440 hex 18:4 27:3 11:1 1:1
-441 allowed 29:14 3:5 20:3
-442 point 21:386 14:373 3:278 2:214 26:199 22:112 10:24 15:8 16:6 11:5
-443 namespaces 11:14
-444 bang 20:1
-445 doc 4:4 11:2
-446 document 27:136 13:30 10:6
-447 declaration 10:20 25:15 11:1
-448 regular 11:1 1:1 24:1 15:1
-449 colon 11:8 18:1
-450 xmlns 20:7
-451 closing 16:9 0:9 15:4
-452 unsupported 5:6 11:2 15:1
-453 stacked 11:14
-454 readers 11:15
-455 idas 11:4
-456 converts 14:6 21:3 11:1
-457 detecting 11:1
-458 pbstream 11:13
-459 url 11:14 10:12 1:4
-460 ref 27:15 11:5
-461 protocol 0:1
-462 host 0:1
-463 port 28:3 11:1
-464 jar 11:1
-465 resource 4:131 7:92 25:31 1:21
-466 pbreader 11:3
-467 plugin 0:5
-468 application 13:423
-469 insert 0:2
-470 additional 13:2 0:1 24:1
-471 validators 0:1
-472 delegate 0:22
-473 standard 16:13 12:5 24:3 17:2 6:2 20:1
-474 generates 20:1
-475 illegal 27:31 1:21 6:6 3:4 20:3
-476 argument 1:31 27:29 6:8 20:3
-477 inserts 20:1 8:1
-478 find 2:80 23:69 22:42 26:12 3:12 20:11 21:10
-479 space 6:2 20:1 13:1
-480 obj 1:63 6:6
-481 created/opened 1:1
-482 nested 0:5
-483 report 0:7
-484 params 0:9
-485 build 0:3
-486 builds 19:1
-487 dumps 0:3
-488 trace 10:24 28:9 4:9 0:9 17:5 8:3
-489 err 0:2 9:1
-490 passed 12:8 15:3 0:2
-491 formed 0:2
-492 factory 27:130 7:81 10:43 25:30
-493 security 1:2
-494 access 1:31 10:4 8:1
-495 instantiation 0:6
-496 created 12:238 23:92 2:19 24:17
-497 cls 1:5
-498 instance 12:253
-499 utility 11:1 14:1 21:1
-500 util 0:1
-501 remainder 11:2
-502 assumed 11:1
-503 escape 0:3
-504 delim 0:4
-505 stored 29:2 24:2 11:1
-506 expression 27:1
-507 disallowing 0:1
-508 determine 12:7 15:4 22:3 14:2 11:1
-509 reference 27:7 11:2
-510 expects 11:2
-511 expect 11:1
-512 validity 0:1
-513 offending 0:3
-514 violated 0:3
-515 pretty 19:16
-516 inserted 19:3
-517 make 13:5 15:4 10:4 19:3 16:2 3:2 17:1
-518 collapse 19:3
-519 nsprefixes 19:4
-520 contributors 12:276
-521 confidential 12:849
-522 proprietary 12:283
-523 information 12:846 28:33 22:6
-524 disclose 12:282 23:1
-525 accordance 12:278 27:5
-526 terms 12:281 9:2
-527 license 12:289
-528 agreement 12:274 17:5 5:2 21:1 22:1
-529 entered 12:291 28:1 29:1
-530 app 13:295 4:70 9:22 7:13
-531 beans 9:38 4:10 28:9 8:1
-532 prefs 16:114 13:25 25:10
-533 exit 13:17 16:11
-534 explicitly 13:3
-535 october 4:11 13:7 16:5
-536 bean 28:140 13:2 4:1
-537 linked 8:54 7:36 14:28 13:17 27:8 24:7 18:5 22:2
-538 projects 13:64
-539 collection 23:119 14:24 22:19 7:11
-540 unmodifiable 13:11 23:10 29:4 15:2
-541 documents 13:9 5:1
-542 enabled 9:160 13:80 29:16 10:4
-543 bundle 4:180 7:143 25:34
-544 labels 4:196 7:194 25:42 10:18 8:8
-545 model 13:137 16:55 2:1
-546 file 13:16
-547 recent 13:75 16:72
-548 files 13:49 16:16
-549 preferences 16:46 13:11
-550 user 15:23 2:15 9:13 16:7 21:5 14:1
-551 node 3:290 27:93 5:23 18:21 25:5 16:3 17:1
-552 path 3:462 17:166 18:77 21:51
-553 project 13:791
-554 show 15:69 13:17 16:14 5:2
-555 actions 16:112 7:49 9:32 25:17 13:16
-556 fire 23:171 9:50 14:32 8:14 15:11 29:9 28:2
-557 change 9:297 8:53 2:44 23:36 3:17 29:12 14:12 13:8
-558 dispose 13:20 23:7 15:2 1:2
-559 hide 16:7 15:6 13:3
-560 container 6:32 23:27 24:22 10:12 4:11 28:4
-561 frame 4:65 28:61 15:52 16:51 10:12 1:2
-562 launch 13:13
-563 configure 4:58 7:33 13:24 25:1
-564 utilities 13:20 16:7 10:7 28:6 15:3 26:1
-565 runnable 28:13 13:7 10:6
-566 run 10:10 28:7 16:4 9:2
-567 action 16:558 4:484 9:269 7:194 25:180 10:22 28:3
-568 select 4:24 23:14 7:13 16:6 15:4
-569 concurrent 13:3 8:2
-570 fixed 12:14
-571 support 12:110 9:29 27:25
-572 january 13:9 12:9 6:3
-573 panel 25:80 10:49 16:31 28:8 26:1
-574 chooser 13:105 15:57 25:25 7:4
-575 save 13:130 10:31 27:9 1:2
-576 executor 13:6
-577 unsaved 13:93
-578 multiple 13:59 23:12 27:5 2:2 12:1
-579 showing 13:19 16:6
-580 components 10:37 25:33 6:21 8:15
-581 initialize 25:9 10:7 8:3 6:3 15:1
-582 regenerated 25:9 10:8
-583 editor 25:404 7:338 23:208 10:18 4:16
-584 layout 6:142 24:69 25:54 10:44 8:38 16:22 22:8 7:1
-585 border 1:57 25:49 16:28 10:12 15:8 28:7 24:6 18:4
-586 variables 10:35 25:33 1:1
-587 component 15:143 4:92 16:62 6:54 13:27
-588 selected 4:75 23:53 9:49 14:19 15:12 25:9
-589 home 13:2
-590 directory 15:2 25:1
-591 bound 9:11
-592 rid 13:2 17:1
-593 resources 9:6
-594 invoked 13:17 15:4 9:4
-595 puts 13:4 27:3
-596 executes 13:2
-597 worker 28:30 13:16 10:13
-598 thread 28:54 13:9 10:6
-599 execution 9:2
-600 perfomred 13:2
-601 sequentially 9:2
-602 sequence 8:5 23:2 13:2
-603 runnables 13:2
-604 execute 13:13
-605 executors 13:1
-606 single 9:11 28:4 17:3 6:1 2:1
-607 mark 4:7 13:3
-608 displays 15:7 24:1
-609 dialog 15:65 27:3 16:2
-610 performed 4:55 9:21 10:3 7:3
-611 evt 23:220 9:75 4:45 16:42 13:34 10:16 7:9
-612 option 15:198 13:21 1:1
-613 pane 15:236 25:94 28:41 16:41 10:23
-614 n\n 10:12 12:1
-615 vendor 4:1
-616 june 13:28 12:14
-617 acts 9:6 4:4
-618 disabled 9:7
-619 listener 23:418 9:295 15:139 7:35 16:22 10:16
-620 install 16:17 9:14 15:3
-621 listeners 23:130 9:49 15:9
-622 update 9:71 2:24 23:21 28:4
-623 installs 9:14 16:4
-624 uninstall 9:17
-625 interned 9:9
-626 updates 9:5 2:2
-627 depending 23:10 13:10
-628 depends 9:4
-629 action#is 13:2
-630 enables 9:2
-631 disables 9:3
-632 enable 13:4
-633 disable 9:6
-634 action#set 13:2
-635 proj 9:3
-636 constants 25:8 7:4
-637 operations 9:3 3:2
-638 merged 27:4 12:1
-639 draw 12:139 23:112 26:103 14:84 29:80 7:78 25:75 8:73 10:68 24:26
-640 februar 12:15 7:1
-641 submenu 7:28 16:1 22:1
-642 represents 9:2 5:2 21:1 15:1
-643 menu 16:280 7:114 18:3
-644 radio 25:41 7:8
-645 button 7:380 25:148 10:72 1:20 15:10 28:5 16:4 14:1
-646 group 25:134 7:43 10:32 12:19 20:4
-647 prevent 12:9 7:2
-648 creation 7:76 23:40 18:2 21:1 1:1
-649 configures 29:6 9:2
-650 box 26:27 22:22 16:22 10:14 24:12 7:11
-651 item 7:107 16:71 27:6
-652 handler 9:57 8:51 16:45 26:3
-653 unconfigures 12:1
-654 unconfigure 12:1
-655 arrangeable 28:22
-656 arrangement 28:26
-657 arrange 28:15 16:12 22:1
-658 register 28:1
-659 vertical 6:43 24:14 25:4 4:4 16:1 9:1
-660 horizontal 6:16 24:8 22:4 25:3 26:2 9:2
-661 cascade 28:2
-662 label 9:31 5:27 14:14 24:12 10:9 25:8
-663 editable 4:28 24:21 28:8
-664 copies 4:3 23:1
-665 region 21:13 4:6 23:3
-666 place 4:5 14:3
-667 clipboard 4:13 5:12
-668 focus 4:179 15:18
-669 generated 10:9 25:5 4:4 16:3 1:3
-670 kit 14:6 7:4 4:4
-671 owner 14:133 15:93 8:89 5:89 2:74 4:63
-672 keyboard 4:16 9:1
-673 manager 25:63 4:60 18:28 10:20 28:17 15:4 6:1
-674 permanent 4:8
-675 cut 16:15 4:13 7:7
-676 cuts 4:4
-677 places 4:1 3:1
-678 delete 4:17 16:11
-679 deletes 4:4
-680 caret 4:10
-681 copied 14:5 4:1 1:1
-682 beep 4:10 14:5
-683 dot 21:8 4:7
-684 math 26:104 14:42 21:29 6:19 24:14 18:11 17:8 13:5
-685 abs 26:33 22:4 18:1
-686 bad 4:1
-687 location 14:63 15:28 16:21 26:10 6:6 2:6
-688 toolkit 14:10 4:10 6:2
-689 february 27:13 4:4 1:1
-690 gui 13:21 15:8 6:5 5:1
-691 exits 13:1
-692 letting 4:1
-693 reviewed 13:10
-694 silently 13:3
-695 abort 13:1
-696 window 16:151 15:56 18:5 10:5 4:3
-697 ancestor 13:19 16:15
-698 html 13:16 17:3 24:1
-699 css 13:18
-700 exiting 13:2
-701 lost 13:4 5:3 23:1
-702 options 15:38 23:2 14:2
-703 cancel 13:11
-704 initial 15:34
-705 quaqua 25:15 13:9 15:4 1:3
-706 destructive 13:4
-707 sheet 15:312
-708 review 13:18
-709 quitting 15:1
-710 discard 25:12 4:8
-711 visible 22:65 16:34 2:22 25:20 15:11 7:7 10:6 24:2 4:2
-712 request 23:34 13:20 24:11
-713 finished 28:15 13:10 10:6 2:2
-714 couldn't 13:8
-715 reason 13:4
-716 export 13:27
-717 requires 4:3 13:2 2:1
-718 pre 13:7 16:5 2:5 8:3 1:2
-719 convention 13:5 19:2
-720 dispatcher 28:5 13:4
-721 filechooser 15:7
-722 filter 13:19 25:14 15:6 20:2
-723 accessory 13:4
-724 exporting 13:1
-725 exported 4:2
-726 multi 4:12
-727 localize 29:2 13:1
-728 messsage 13:1
-729 front 23:33 8:19 4:16 7:8 15:5
-730 requests 12:4
-731 reworked 4:8 29:7 23:4 2:2
-732 formatted 4:7 16:1 24:1
-733 extended 4:15 25:4 29:1 17:1
-734 veto 28:8 4:1
-735 load 10:27 28:16 13:16
-736 loads 15:1
-737 opened 13:13
-738 maximize 16:7 4:4
-739 maximizes 4:1
-740 minimize 4:6 16:5
-741 minimizes 4:1
-742 staldenmattweg 4:10
-743 immensee 4:10
-744 switzerland 4:10
-745 relative 5:150 3:13 14:1 21:1
-746 existing 2:9 28:4 4:3
-747 drop 13:10 14:5 22:2 5:1
-748 dock 13:6 16:5
-749 roydesign 13:5
-750 dropped 22:5
-751 icon 28:196 29:82 15:32 16:18
-752 registered 23:48 15:4
-753 osxdrop 4:1
-754 can't 10:6 29:2 4:1
-755 toggle 7:58 25:16 16:14 9:6 14:3
-756 palette 16:94
-757 adapter 16:9 2:9 15:5
-758 paste 4:14 16:13 7:7
-759 pastes 4:4
-760 setter 9:8 1:8
-761 getter 1:16 9:9 29:1
-762 invocation 1:17 9:8 22:2
-763 failed 9:3 21:2
-764 redo 8:96 9:91 25:24
-765 redoes 4:3
-766 order 23:24 9:7 6:2
-767 work 28:8 9:6 16:5 10:4 2:3 26:2
-768 undo 8:156 25:136 9:38 23:18 16:11 3:11 14:8
-769 invoking 9:4
-770 real 9:18
-771 acceptable 15:5
-772 extension 15:21 25:9 21:2 28:1
-773 september 15:5 4:4 1:1
-774 success 4:3 9:1
-775 failure 15:1
-776 base 1:29 10:7 16:4 15:1 17:1
-777 safely 13:1
-778 immediately 15:4
-779 present 15:3 8:1
-780 shown 15:7 24:4 16:3
-781 chooses 15:3
-782 chanegs 15:1
-783 successfully 4:1
-784 localized 13:1
-785 messages 4:1
-786 dont 4:3
-787 couldnt 15:1
-788 actioin 4:1
-789 deselected 9:5
-790 tool 7:426 23:243 16:96 10:36 24:21 25:9
-791 bar 7:297 16:124 10:24 25:15 15:3
-792 toggles 4:2
-793 hidden 15:5 16:2 22:1
-794 undoes 4:3
-795 lifecycle 9:1
-796 windows 16:19 28:3 9:3
-797 screen 16:71 13:1
-798 style 15:13 27:11 25:8 29:7 24:6 18:3
-799 handle 14:511 2:48 16:6
-800 time 15:27 2:27 16:2
-801 typical 9:2
-802 styles 18:26
-803 mac 13:7 29:3
-804 usage 1:2
-805 appliciation 13:1
-806 myapplication 13:1
-807 launches 13:1
-808 typically 8:8 28:4 9:4
-809 arguments 1:4 21:1
-810 inited 13:1
-811 alternatively 13:1
-812 configured 12:1 6:1
-813 saving 10:2 13:1
-814 stopped 9:1
-815 fires 23:6 9:5
-816 users 13:1 21:1
-817 view 23:397 25:301 14:228 7:20 28:8 16:8 8:1
-818 hides 13:2
-819 convenience 3:13 1:11 29:2 8:2
-820 removing 9:2
-821 disposing 13:1
-822 share 9:4
-823 parallel 21:3 13:2 6:2 24:1
-824 consists 12:3 3:1
-825 sequential 9:4
-826 act 9:5
-827 perform 9:6 28:3
-828 shares 13:1 2:1
-829 tools 23:10 13:10 3:2 2:1
-830 sharing 13:9
-831 represented 9:1
-832 recently 9:1
-833 immutable 23:1
-834 appends 1:5
-835 bars 16:13 7:4 6:1
-836 toolbars 9:5 7:4 28:3 13:2
-837 toolbar 16:52 25:43 7:10
-838 shared 7:27 13:12
-839 menus 13:11
-840 applet 10:103
-841 startup 13:1
-842 performance 12:3
-843 suit 13:1
-844 unable 27:3 23:2 9:2
-845 subclasses 16:5 7:4 22:1
-846 life 16:3
-847 cycle 16:3 2:1
-848 presented 16:3 26:2 23:1
-849 needed 16:3 6:1 8:1 17:1
-850 scroll 25:116 28:45 13:2 16:1
-851 idesktop 28:12
-852 desktop 28:27 16:16 18:1
-853 apple 16:11 7:3
-854 graphics 29:34 14:34 26:27 23:18 22:14 1:11 16:8 21:3
-855 quartz 16:5
-856 feel 10:24 16:12 15:9 1:7
-857 operation 22:10 16:5 10:4 2:1
-858 viewport 25:8 28:4
-859 wrap 16:4 24:2
-860 laf 16:7 9:1 1:1
-861 macos 16:3
-862 closable 16:1
-863 maximizable 16:1
-864 resizable 15:3 16:2
-865 iconifiable 13:1
-866 loc 15:22 16:15 5:4
-867 moved 16:19 23:10 2:5 15:3
-868 modified 16:2
-869 wrapped 9:2
-870 reversed 23:14 16:2
-871 focusable 7:43 16:24 15:2 10:1
-872 separator 7:56 16:30 26:3
-873 edit 8:267 23:238 24:68 14:51 25:37 16:5
-874 cbmi 16:18 7:14
-875 stands 16:1
-876 project's 13:2
-877 attached 2:3 16:2
-878 designed 16:1
-879 platforms 13:1
-880 items 16:11
-881 wires 16:3
-882 displayed 15:28 10:12 16:5 12:1
-883 wiring 16:3
-884 services 16:1
-885 quit 16:2
-886 hasn't 28:3 16:2
-887 revert 16:2
-888 page 13:2 10:2
-889 setup 16:2
-890 palettes 16:20
-891 preferred 6:49 22:12 24:9 16:4
-892 dimension 6:81 22:26 29:9 24:9 18:6 16:2
-893 floating 24:19 16:19
-894 mrjapp 16:5
-895 frameless 16:1
-896 stb 16:4
-897 floatable 25:8 10:2 13:1
-898 orientation 26:20 16:9 15:4 6:1
-899 undecorated 15:2
-900 decoration 17:42 7:13 15:2 16:1 21:1
-901 font 24:76 7:73 25:27 23:24 27:19 18:3 17:3 16:3
-902 lucida 16:1 7:1
-903 grande 16:1
-904 pack 15:2 16:1 6:1
-905 width 26:279 6:159 17:39 24:36 29:35 22:34 15:30 7:4 5:1 18:1
-906 asterisk 16:1
-907 revised 12:3 16:2
-908 minimum 6:16 13:1
-909 activated 16:3
-910 eventually 13:1
-911 wraps 4:2
-912 provide 28:5 12:5 16:4 1:2
-913 duplicates 23:6 10:1
-914 selects 4:3
-915 anymore 12:3
-916 timer 16:25 15:16
-917 focused 23:21 16:5 9:3
-918 means 12:4 9:2 6:2
-919 subcomponents 16:2 6:2
-920 receive 16:1
-921 events 23:22 28:17 15:14 8:10 10:1
-922 gained 4:4
-923 longer 5:4 16:2
-924 delivered 12:1
-925 restart 16:1
-926 repeats 16:2 15:2
-927 owned 16:4 5:2
-928 related 28:3 13:1
-929 belongs 13:1
-930 visual 25:7 13:2
-931 marks 9:1
-932 consume 13:2
-933 crucial 13:2
-934 responsivenes 13:2
-935 distinguish 13:1 2:1
-936 multiply 13:1
-937 track 14:69 2:11 22:5 27:4 13:2 15:1
-938 models 9:1
-939 adding 17:2 9:1
-940 cloneable 12:10
-941 cloned 2:3 9:1
-942 assigned 9:1
-943 supported 5:9 29:7 22:6 28:5
-944 attributed 29:27 26:10 7:2
-945 composite 8:146 29:23 23:17 14:17
-946 figure 23:1094 2:761 8:575 29:137 14:133 26:121 10:62 24:53 5:29 7:17
-947 july 12:23 18:2 20:1
-948 geom 26:103 14:49 3:41 17:39 22:28 2:19 8:17 5:16 29:13 10:6 24:5 6:4
-949 object 29:61 7:32 27:18 15:13
-950 forbidden 29:51
-951 semantics 29:10
-952 implementing 29:9 8:1 12:1
-953 undoable 23:128 8:88 25:33 14:13
-954 happened 23:77 14:30 29:2
-955 entry 29:116 5:44 28:4
-956 color 18:292 7:79 26:73 29:62 14:62 28:48 27:22 24:15
-957 stroke 29:163 7:93 26:87 17:60 18:9
-958 translate 14:42 22:10 29:6 10:5 18:2
-959 height 26:207 6:147 22:53 24:14 14:9 5:5 15:4
-960 connectors 2:58 29:9 22:7
-961 miter 17:19 29:2
-962 limit 17:24 29:2
-963 factor 14:41 25:40 17:14 29:10 18:9 7:8
-964 rectangle 26:272 22:198 14:108 24:29 7:6
-965 total 26:35 29:6 6:1 5:1
-966 grow 26:213 14:13 29:5
-967 area 23:173 24:44 7:16 1:13 29:6 2:2 22:1
-968 lines 10:6 26:5 3:5 29:2
-969 assignable 29:5 1:1
-970 applies 29:4 1:1
-971 apply 29:24 1:1
-972 composed 8:4
-973 define 8:6
-974 behavior 24:3 8:1
-975 subclassers 8:2 23:1
-976 contained 22:10 8:8
-977 modification 22:2
-978 notify 23:80 8:28 15:5
-979 precision 12:35 23:16 6:3
-980 coordinates 12:50 14:32 23:15 17:7
-981 derived 12:38 23:26 14:12 2:1
-982 cached 22:2
-983 layouter 8:84 26:1
-984 determines 15:10 6:4 23:1
-985 laid 8:6
-986 graphically 8:1
-987 changing 22:23
-988 invalidated 23:148
-989 detail 14:46 8:9 2:2
-990 drawing 23:576 25:272 10:174 14:122 7:96 2:28 28:8
-991 figures 23:335 8:44 12:35 26:4
-992 avoid 8:3 6:1
-993 sends 23:13
-994 send 23:11 12:1
-995 invalidate 14:28 3:24 22:17 8:16
-996 transforms 22:8 26:2
-997 transform 14:100 22:75 8:63 26:25 18:21 27:13 10:12
-998 affine 14:36 22:34 8:16 26:9 10:8 18:7 23:2
-999 anchor 14:144 26:62 22:40 2:14 25:6 24:6 18:3 7:1
-1000 identity 14:9
-1001 scale 14:53 25:40 26:22 21:18 7:14 18:12 17:4
-1002 inside 23:15 22:13 26:7 7:3
-1003 algorithm 8:15 21:3 2:2 26:1
-1004 accesses 8:7
-1005 arranges 8:7 28:2
-1006 graphical 8:35
-1007 presentation 8:163
-1008 strategy 8:4
-1009 relation 8:4
-1010 task 2:55 8:5 7:4
-1011 layouting 8:3
-1012 delegated 8:11
-1013 plugged 8:4
-1014 good 8:3
-1015 idea 8:3
-1016 recreated 8:3
-1017 restored 8:3
-1018 storable 27:59 2:16 26:1
-1019 encapsulation 8:3 15:1
-1020 calculate 8:7 6:2 26:1
-1021 decomposition 22:3
-1022 restore 8:21 14:20 26:16 22:6
-1023 geometry 5:23 26:16 8:3
-1024 depth 22:11
-1025 connector 2:432 26:78
-1026 connection 2:460 26:6 10:6 7:5 23:1
-1027 decorator 22:67 5:21 17:14
-1028 doubl 2:1
-1029 connect 2:75 10:23 3:2 12:1
-1030 persistent 22:4 27:1
-1031 constructs 12:8 17:3
-1032 internally 12:1
-1033 resurrect 22:1
-1034 directly 9:3 2:2
-1035 tests 2:4 26:3 12:1
-1036 draws 14:18 17:5 23:3
-1037 invisible 25:3 2:2
-1038 ellipse 26:64 7:6
-1039 circle 14:10 27:4
-1040 blue 2:4 18:3 3:3
-1041 center 21:58 14:33 26:12 5:4 7:3 18:1
-1042 connector's 2:3
-1043 adjust 2:4 1:1
-1044 hint 14:17 17:1
-1045 improve 22:4
-1046 results 22:2
-1047 extend 12:2
-1048 ugly 23:1 15:1
-1049 dirty 23:4 15:1
-1050 fix 8:1
-1051 undoing 25:4 23:1
-1052 removal 23:1
-1053 lock 23:10 6:3
-1054 render 23:20 24:3
-1055 figuren 23:2
-1056 hinzuf\u 8:1
-1057 fcgen 23:3
-1058 entfernen 23:2 3:1
-1059 orphaned 23:3
-1060 note 2:10 27:5 23:4 15:3 17:2 6:2
-1061 problems 23:1
-1062 caused 23:1
-1063 connected 2:8 23:3 3:2
-1064 calls 23:7 28:2 16:1
-1065 figur 23:5 19:1
-1066 einf\u 8:2
-1067 interest 23:42 15:3
-1068 notification 23:22 15:3
-1069 guaranteed 23:20 15:2
-1070 notifying 23:20 15:2
-1071 interested 23:22 15:2
-1072 lazily 23:18 15:5
-1073 frc 23:7 24:2
-1074 synchronizes 23:1
-1075 managing 22:1
-1076 courting 22:7
-1077 interactive 22:6
-1078 increase 12:1 14:1
-1079 decrease 22:1
-1080 remap 8:8 23:6
-1081 cursor 14:117
-1082 predefined 14:14
-1083 checks 2:8 26:6 6:2 29:1
-1084 informs 22:10 23:5
-1085 redrawn 22:1
-1086 affects 22:1
-1087 display 15:19 22:17 26:6 10:6 28:4
-1088 moves 26:4 8:3 15:2
-1089 fired 28:4 14:1 22:1 8:1
-1090 chop 26:100 3:20 12:3 2:2
-1091 includes 2:8
-1092 popup 7:196 28:5 22:3
-1093 interpreted 22:2
-1094 separators 23:2
-1095 specialized 24:6 23:5
-1096 coordinate 3:10 24:3 22:1 14:1 5:1
-1097 mouse 23:228 1:11 24:1
-1098 click 14:17 23:12 3:6
-1099 hit 26:13 3:10 23:6
-1100 antialiased 24:2 23:2
-1101 fractional 24:4 14:2
-1102 metrics 24:3 23:2
-1103 layer 2:17 22:4
-1104 tooltip 22:3 29:1
-1105 insets 6:245 24:65 25:8 5:2
-1106 bottom 6:76 24:4
-1107 november 12:37 28:2
-1108 handlesize 14:36
-1109 secondary 14:27
-1110 white 14:9 26:8 7:6 18:2
-1111 black 14:17 7:14 26:10 18:4
-1112 oval 26:7
-1113 diamond 26:60 14:2
-1114 polygon 21:10 14:9 7:4 3:3
-1115 repainted 23:6
-1116 assumes 23:1
-1117 reimpleted 23:1
-1118 shape 26:23 17:21 22:7
-1119 combinable 14:12
-1120 typed 14:8
-1121 released 23:36
-1122 pressed 23:40 14:11 24:3
-1123 pixels 23:2 14:2
-1124 antialiasing 24:2 23:1
-1125 account 12:6 29:1
-1126 tracks 14:5
-1127 modifiers 14:67
-1128 dezember 6:5 8:1
-1129 rotated 17:1
-1130 scaled 17:1
-1131 filled 17:23 7:3
-1132 stroked 17:26 26:7
-1133 solid 17:17
-1134 arrow 17:11 7:8 12:7
-1135 tip 17:13 1:9 2:7 7:4
-1136 angle 26:55 21:31 17:25 18:12
-1137 radius 17:48 26:13
-1138 direction 26:23 6:3
-1139 template 17:1
-1140 general 17:62 21:9 8:4
-1141 transformed 22:4
-1142 join 17:10 3:9 5:6 2:6
-1143 rotate 14:14 18:2
-1144 atan 21:11 3:2
-1145 hook 16:5 17:2
-1146 calculates 17:2
-1147 locator 5:199
-1148 implementations 12:4
-1149 locate 5:20 14:6
-1150 dependent 2:12 29:1
-1151 views 23:22 9:17 25:2
-1152 active 23:18 18:3 28:2
-1153 prevents 29:1
-1154 enter 23:1
-1155 received 14:2 8:2
-1156 working 23:5 18:1
-1157 activate 23:20
-1158 deactivate 23:25
-1159 constrain 14:29 2:2
-1160 constrainer 25:49 14:44 7:11
-1161 selection 23:214 7:35 15:19
-1162 verschieben 3:3 23:1
-1163 clicked 23:11
-1164 exited 23:5 7:1
-1165 locale 1:25 4:11 12:5 9:1
-1166 align 22:25 7:10 25:5
-1167 aligns 5:1
-1168 m???rz 12:13 26:1
-1169 north 5:87
-1170 east 5:87
-1171 west 5:84
-1172 south 5:85
-1173 toggler 4:6 7:3
-1174 permant 4:1
-1175 regardles 4:1
-1176 image 1:106 28:44
-1177 rect 26:34 24:18 6:7 23:4 7:2
-1178 paint 1:31 26:3 14:3
-1179 red 18:6 29:3 2:1
-1180 chosen 28:4 29:3 5:1
-1181 colors 18:10
-1182 shadow 18:6 29:4
-1183 bug 26:2 2:1
-1184 apples 28:1
-1185 april 12:11
-1186 blackens 18:1
-1187 casting 4:3
-1188 amount 18:5 27:1
-1189 green 18:3 14:2
-1190 alpha 21:23 15:2
-1191 listen 9:1
-1192 anonymous 1:1
-1193 demo 1:2
-1194 dynamic 1:2
-1195 loaded 1:1
-1196 made 1:2 12:1
-1197 here's 1:1
-1198 dynamically 1:1
-1199 specifies 1:1 24:1 5:1
-1200 previous 18:12 17:12 3:3 1:1
-1201 parameterless 1:8 27:1
-1202 convenient 1:1
-1203 give 1:1 2:1
-1204 method 28:3 1:3
-1205 incoming 9:4 1:1
-1206 proxy 1:22
-1207 introduced 1:1
-1208 invoker 1:3
-1209 superclass 28:12 1:2
-1210 treatment 1:2
-1211 declaring 1:3
-1212 loader 1:2
-1213 supposed 1:10
-1214 produce 1:1
-1215 primitive 1:1
-1216 convert 9:2
-1217 kind 28:16 15:5
-1218 helper 12:2
-1219 desired 10:6 1:2
-1220 ambiguous 1:2
-1221 raise 1:6
-1222 modifier 1:2
-1223 ints 1:3
-1224 ungrouped 25:6
-1225 ungroup 25:26 7:2
-1226 redundant 8:3
-1227 sorted 23:28
-1228 sort 23:21
-1229 bevel 1:12
-1230 plaf 6:7 16:1 15:1
-1231 consist 1:1
-1232 parts 1:2
-1233 corners 17:113 26:1
-1234 edges 6:4 17:2
-1235 renamed 6:1 27:1
-1236 conflicts 6:1
-1237 redesigned 5:1
-1238 filling 17:2
-1239 texture 1:7
-1240 refactored 1:1
-1241 buffered 25:8 1:6
-1242 img 1:55
-1243 media 1:2
-1244 tracker 23:75 1:2
-1245 wait 25:4 1:1
-1246 interrupted 25:4 28:2 6:1
-1247 opaque 1:2 9:1
-1248 paints 1:1
-1249 painted 1:6
-1250 optimisation 1:2
-1251 fits 6:2
-1252 small 25:12 1:1
-1253 leads 1:1
-1254 subimage 1:5
-1255 yellow 14:4 18:2 1:1
-1256 wrandels 10:5
-1257 column 7:12 6:7
-1258 repaint 14:37 7:3
-1259 grid 25:93 7:63 6:27 14:3
-1260 dispatching 28:3 10:2
-1261 handlers 10:2
-1262 info 10:30 28:20 18:2
-1263 simple 28:4
-1264 descriptor 28:145
-1265 obtained 28:32
-1266 introspection 28:16
-1267 bdescriptor 28:8
-1268 customizing 28:25
-1269 pdescriptor 28:8
-1270 edescriptor 28:8
-1271 mdescriptor 28:8
-1272 icons 28:28
-1273 def 28:8
-1274 mono 28:40
-1275 idx 28:26
-1276 bean's 28:16
-1277 automatic 28:16
-1278 analysis 28:16
-1279 descriptors 28:36
-1280 indexed 28:12
-1281 belong 28:4
-1282 kinds 28:4 14:1
-1283 commonly 28:8
-1284 initially 28:4
-1285 human's 28:8
-1286 returned 28:8
-1287 represent 28:4 15:1
-1288 toolboxes 28:4
-1289 images 28:4 10:2
-1290 future 28:4 15:1
-1291 include 28:4 22:2
-1292 formats 28:4
-1293 aren't 28:4
-1294 flavors 5:10 28:4
-1295 choses 28:4
-1296 recommend 28:8
-1297 supporting 28:4
-1298 transparent 28:5
-1299 background 28:11 14:5 23:3 18:1
-1300 rendered 28:4 15:2
-1301 requested 28:8 5:8
-1302 constant 28:4 3:3
-1303 representing 27:6 28:4
-1304 suitable 28:4 21:1
-1305 rendering 14:39
-1306 hints 14:26
-1307 move 17:31 5:30 7:21 4:20 26:19 3:15 18:1
-1308 bring 23:8 15:1
-1309 defaults 12:10
-1310 gap 6:13 16:1
-1311 pick 29:7 21:6 7:2
-1312 dedicated 28:3
-1313 reasonable 28:1
-1314 unlike 14:2 12:1 15:1
-1315 dispatched 28:1
-1316 event's 2:2 28:1
-1317 compute 21:21 17:12 28:3
-1318 constructed 28:3 3:1
-1319 optimized 4:1
-1320 mnem 1:7 4:1
-1321 instructions 12:1
-1322 http 24:5 21:4 12:4
-1323 sun 28:2 26:2
-1324 com/docs/books/tutorial/uiswing/misc/threads 28:1
-1325 slightly 28:1 8:1
-1326 microsystems 28:1
-1327 private 28:6 2:1
-1328 maintain 28:1
-1329 separate 13:1 24:1
-1330 synchronization 28:1
-1331 var 28:11
-1332 synchronized 28:2
-1333 final 28:1
-1334 finally 28:1
-1335 constructing 28:1
-1336 catch 28:1
-1337 interrupt 28:3
-1338 propagate 23:2 28:1
-1339 protected 28:1 14:1
-1340 interrupts 28:1
-1341 force 28:1
-1342 paremeter 25:2
-1343 split 3:32 21:23 10:12 2:11 5:3 7:1
-1344 reuse 7:1
-1345 exclusion 7:5
-1346 cayenne 7:1
-1347 asparagus 7:1
-1348 clover 5:1
-1349 teal 18:2 7:1
-1350 midnight 9:1
-1351 plum 18:2
-1352 tin 12:1
-1353 nickel 29:1
-1354 maraschino 7:1
-1355 lemon 7:1
-1356 spring 7:1
-1357 turquoise 7:1 18:1
-1358 blueberry 7:1
-1359 magenta 18:2
-1360 steel 7:1
-1361 aluminium 5:1
-1362 salmon 18:2
-1363 banana 7:1
-1364 flora 7:1
-1365 ice 7:1
-1366 orchid 18:2
-1367 bubblegum 9:1
-1368 iron 7:1
-1369 magnesium 5:1
-1370 mocha 7:1
-1371 fern 29:1
-1372 moss 9:1
-1373 ocean 7:1
-1374 eggplant 7:1
-1375 maroon 18:3
-1376 tungsten 7:1
-1377 silver 18:3
-1378 tangerine 7:1
-1379 lime 18:3
-1380 sea 7:1
-1381 foam 7:1
-1382 aqua 18:2 9:1
-1383 grape 5:1
-1384 strawberry 23:1
-1385 mercury 7:1
-1386 cantaloupe 7:1
-1387 honeydew 18:2
-1388 spindrift 7:1
-1389 sky 29:1
-1390 lavender 5:1 3:1
-1391 carnation 7:1
-1392 licorice 7:1
-1393 snow 9:1 18:1
-1394 delegation 7:4 16:1
-1395 prior 7:1
-1396 zoom 7:49 25:47
-1397 buttons 7:52
-1398 factors 7:12 2:1
-1399 org/jhotdraw/draw/action/images/show 7:1
-1400 png 7:1
-1401 placement 7:34 29:17
-1402 widths 7:5 22:1
-1403 formatter 7:4
-1404 decimal 7:3
-1405 fraction 7:2
-1406 digits 18:3
-1407 decorations 7:6 12:2
-1408 fdashes 7:5
-1409 underfill 7:11 29:4
-1410 unfilled 7:3 5:2
-1411 bold 7:8 29:1
-1412 italic 7:8 24:1
-1413 underline 7:8
-1414 fonts 7:23 24:1
-1415 environment 7:2
-1416 gung 7:1
-1417 seo 7:1
-1418 head 18:1
-1419 myungjo 7:2
-1420 pil 7:1
-1421 bayan 7:1
-1422 gothic 7:4
-1423 sung 7:1
-1424 arial 7:2
-1425 hebrew 7:2
-1426 ayuthaya 7:1
-1427 baghdad 7:1
-1428 biau 7:1
-1429 kai 7:2
-1430 charcoal 7:1
-1431 corsiva 7:1
-1432 deco 7:1
-1433 naskh 7:1
-1434 devanagari 7:1
-1435 fang 7:1
-1436 song 7:3
-1437 bitmap 9:1
-1438 geeza 7:1
-1439 pro 7:6
-1440 geezah 7:1
-1441 geneva 7:1
-1442 gujarati 28:1
-1443 gurmukhi 18:1
-1444 hei 7:2
-1445 helvetica 7:1
-1446 hiragino 7:4
-1447 kaku 7:2
-1448 maru 29:1
-1449 mincho 7:2
-1450 inai 7:1
-1451 mathi 7:1
-1452 krungthep 9:1
-1453 kufi 7:1
-1454 mshtakan 7:1
-1455 monaco 7:1
-1456 nadeem 7:1
-1457 peninim 7:1
-1458 osaka 7:1
-1459 plantagenet 18:1
-1460 cherokee 29:1
-1461 raanana 7:1
-1462 fangsong 7:1
-1463 heiti 7:1
-1464 kaiti 29:1
-1465 sathu 7:1
-1466 silom 29:1
-1467 thonburi 7:1
-1468 times 6:9 21:2 8:1
-1469 professional 7:1
-1470 batang 7:1
-1471 estrangelo 9:1
-1472 edessa 7:1
-1473 gautami 7:1
-1474 kartika 7:1
-1475 latha 7:1
-1476 sans 7:1
-1477 mangal 1:1
-1478 marlett 18:1
-1479 outlook 7:1
-1480 boli 7:1
-1481 raavi 9:1
-1482 shruti 9:1
-1483 sim 7:1
-1484 sylfaen 7:1
-1485 symbol 9:1
-1486 tunga 7:1
-1487 vrinda 7:1
-1488 wingdings 7:3
-1489 adobe 18:1
-1490 family 7:11
-1491 comparator 12:10
-1492 families 7:4
-1493 styled 24:11 7:4
-1494 alignment 7:9 6:2 24:1
-1495 lays 8:4 6:3
-1496 columns 6:21 24:6
-1497 hgap 6:21
-1498 vgap 6:21
-1499 rows 6:54
-1500 cols 6:33 24:4
-1501 row 6:3
-1502 meaning 6:4
-1503 addition 6:1 3:1
-1504 gaps 6:3
-1505 constructors 6:1
-1506 defer 6:1
-1507 setting 6:2 3:2
-1508 affect 6:1
-1509 determined 15:10 22:2 6:1
-1510 comp 6:8
-1511 largest 6:5
-1512 padding 6:4
-1513 dimensions 6:3 22:1 26:1
-1514 lay 6:2 24:1
-1515 ncomponents 6:14
-1516 nrows 6:23
-1517 ncols 6:20
-1518 ncols*w 6:2
-1519 nrows*h 6:2
-1520 reshapes 6:1
-1521 satisfy 6:1
-1522 constraints 25:65
-1523 individual 6:1 18:1
-1524 dividing 6:1
-1525 free 6:2
-1526 sized 6:1
-1527 portions 6:1
-1528 container's 6:2
-1529 minus 6:1
-1530 container#do 6:1
-1531 ltr 6:2
-1532 layout's 6:1
-1533 zooms 25:1
-1534 decorationimplements 17:1
-1535 pointiness 27:1
-1536 outer 17:22 26:21 14:14
-1537 properly 15:2 2:2 17:1
-1538 sin 21:8 17:3 3:2
-1539 cos 21:7 17:5 3:1
-1540 eigenschaft 8:1
-1541 ndern 8:2
-1542 typesafe 29:3
-1543 juni 2:5 29:2 14:2
-1544 double 29:25 6:20 21:17 5:14 23:2
-1545 hey 29:1
-1546 works 12:6 15:1
-1547 easier 12:1
-1548 defines 17:5 23:2
-1549 dash 17:12
-1550 winding 29:9 18:5 3:4
-1551 rule 29:7 18:7 3:4
-1552 odd 29:2
-1553 determining 17:2 9:1
-1554 interior 29:2
-1555 outline 17:25 24:6
-1556 integer 29:4
-1557 cap 17:7
-1558 multiplied 17:1
-1559 doubles 26:1
-1560 pattern 20:3 29:1
-1561 phase 17:6
-1562 multiplication 29:1
-1563 stroking 29:2
-1564 centered 29:2 2:1 15:1
-1565 effect 15:3 17:2 14:1
-1566 paths 3:14 18:5 29:2 25:1
-1567 face 29:1
-1568 boolean 26:6 29:4
-1569 underlined 24:3
-1570 liner 2:80 29:3
-1571 bezier 3:339 21:91 18:16 7:10
-1572 triangle 26:81 21:1
-1573 computing 29:1
-1574 widht 29:1
-1575 ddashes 29:4
-1576 derive 24:3 29:1 21:1
-1577 distance 21:35 17:6 26:1
-1578 shrink 29:3
-1579 units 17:6
-1580 grown 29:3
-1581 shrunk 29:3
-1582 perpendicular 26:34
-1583 growth 26:29
-1584 detections 26:1
-1585 januar 8:5 3:4
-1586 coord 3:23
-1587 colinear 3:12
-1588 mask 3:63 18:5 21:2
-1589 punkt 3:5
-1590 step 14:39
-1591 independently 3:1
-1592 opposite 3:2 26:1
-1593 sqrt 26:10 28:4 21:3 3:3
-1594 sina 3:4
-1595 cosa 3:4
-1596 arbitrary 3:1
-1597 shapes 3:1
-1598 caps 3:7 22:1 21:1
-1599 improved 21:3 27:2
-1600 march 3:3 2:3 25:2
-1601 capped 3:29
-1602 cache 24:4 27:3 3:3
-1603 speed 17:3
-1604 tolerance 3:22 21:12
-1605 flatness 3:7
-1606 cloning 27:1 22:1
-1607 firing 8:7
-1608 ends 27:12 18:9 8:1
-1609 finds 23:14 2:9
-1610 nodes 27:11 17:1
-1611 segment 21:38 3:38 2:4
-1612 polyline 5:8 3:8
-1613 fixme 3:1
-1614 joins 3:3
-1615 segments 3:14 2:5
-1616 hits 2:4 3:3
-1617 joined 3:4
-1618 splits 3:3
-1619 outermost 3:5 14:2
-1620 poly 21:1 17:1
-1621 locates 26:5 5:5
-1622 labeling 21:1
-1623 positions 24:6 21:1
-1624 dir 5:8 1:8
-1625 dim 5:13
-1626 percentage 5:3
-1627 seg 5:25 17:11
-1628 progress 8:32 21:7 7:1
-1629 die 8:11
-1630 replace 8:8 5:1 28:1
-1631 plf 3:3
-1632 pressing 14:1 2:1
-1633 alt 14:1
-1634 shift 15:10 14:4
-1635 manipulating 21:1
-1636 restricts 21:1
-1637 theta 14:10
-1638 nice 21:1
-1639 overlap 14:2
-1640 ctr 21:37
-1641 len 21:27 17:19 27:6
-1642 angles 14:1
-1643 lengths 21:1
-1644 ratio 15:18 14:2
-1645 rotation 14:6
-1646 npoints 21:2
-1647 xpoints 21:2
-1648 ypoints 21:2
-1649 scribble 7:4 3:2
-1650 finish 3:15
-1651 drag 23:17 28:1 5:1
-1652 erstellen 23:4
-1653 fitted 21:10 3:7
-1654 fit 21:27 24:1
-1655 curve 21:144 18:4 17:3
-1656 dragged 23:20
-1657 bidirectional 2:4
-1658 dnd 2:2
-1659 connections 2:12
-1660 turns 2:2
-1661 visibility 2:2
-1662 enters 23:2
-1663 interaction 23:8 14:7
-1664 manipulated 2:2
-1665 edited 2:10 24:3
-1666 prototypical 2:2
-1667 manipulates 2:2
-1668 mousedown 2:2
-1669 connects 2:7
-1670 verbindung 2:4
-1671 connectable 2:18
-1672 damage 24:6 2:2
-1673 common 14:2
-1674 locations 24:6 22:4
-1675 figure's 22:9 2:1
-1676 fills 14:3
-1677 edge 17:11 6:2 5:2
-1678 resize 5:10 6:6
-1679 normalized 5:10
-1680 reconnect 2:3
-1681 disconnects 2:4
-1682 disconnect 2:13
-1683 tracking 2:1
-1684 temporarily 23:6
-1685 store 27:3 2:1 5:1
-1686 side 26:29 14:2
-1687 unaffected 2:1
-1688 reverts 2:1
-1689 choping 2:3
-1690 centers 26:3
-1691 growx 26:22
-1692 growy 26:23
-1693 correct 26:1
-1694 overlapping 2:1
-1695 quadrant 26:1
-1696 ang 26:10
-1697 dermine 26:1
-1698 intersection 26:5 23:3
-1699 intersect 17:42 22:4
-1700 proper 26:1
-1701 javac 12:1
-1702 jvm 26:1
-1703 gen 2:1
-1704 chopping 26:2
-1705 round 26:49
-1706 vertica 26:1
-1707 shortest 26:1
-1708 rrf 26:4
-1709 arc 26:33
-1710 orange 12:1 18:1
-1711 unchangeable 8:1
-1712 transformieren 8:1
-1713 concatenate 18:3 8:3
-1714 inverse 8:4
-1715 noninvertible 19:1 12:1
-1716 generally 8:1
-1717 edits 25:20 8:20
-1718 das 2:1
-1719 early 2:1
-1720 feedback 5:2 8:1
-1721 he/she 2:1
-1722 cases 2:2
-1723 lineout 2:15
-1724 lineouting 8:1
-1725 darker 12:1
-1726 activity 24:2 2:1
-1727 significant 8:31 25:8
-1728 owning 14:3
-1729 endpoint 21:2 2:1 17:1
-1730 describes 12:1
-1731 manually 22:1
-1732 leave 2:1
-1733 grids 12:1
-1734 constrains 22:3
-1735 constrained 14:4 21:2
-1736 minimal 22:9
-1737 treshold 29:5
-1738 enforced 22:1
-1739 eagerly 14:1
-1740 smaller 23:1 26:1
-1741 drawingextends 12:1
-1742 drawingimplements 23:2
-1743 sorting 23:13
-1744 clip 23:11 24:5 26:1
-1745 intersects 22:25
-1746 unsorted 23:6
-1747 invalidates 9:2 22:1
-1748 ensures 23:3
-1749 datatransfer 5:7 23:1
-1750 motion 23:9
-1751 transferable 5:16 14:7
-1752 rainbow 14:4
-1753 bto 23:1
-1754 gray 18:2 10:1
-1755 negative 6:3 17:2 21:1
-1756 isn't 14:2
-1757 test 14:2 17:1
-1758 pasted 14:2
-1759 master 14:10
-1760 owners 14:4
-1761 fsl 23:8
-1762 translation 14:1 3:1
-1763 domo 10:51 23:1
-1764 transfer 14:8 5:7
-1765 application/x 14:2
-1766 text/xml 14:1
-1767 deleted 14:2
-1768 flavor 5:62
-1769 domi 10:64
-1770 recognizes 16:1
-1771 clicks 7:1
-1772 triggers 16:1
-1773 trigger 16:6
-1774 overriden 16:3
-1775 subclasse 23:1
-1776 customized 16:1
-1777 behaviour 23:3 2:1
-1778 delegates 8:2 14:1
-1779 applied 23:3
-1780 presses 7:1
-1781 moving 14:1 2:1
-1782 movements 16:1 15:1
-1783 aevt 23:1
-1784 specialised 23:2
-1785 groups 16:3 26:1
-1786 pos 24:17 17:8 16:5
-1787 omg 26:1
-1788 vertices 21:3 26:1
-1789 midpoints 26:1
-1790 enclosing 26:2
-1791 sides 26:1
-1792 quadratic 26:10 5:2 17:1
-1793 transformation 26:5 22:2
-1794 matrix 26:3 21:2 18:2
-1795 dragging 14:4 28:2
-1796 snap 23:3
-1797 reinserts 23:2
-1798 reinssets 23:1
-1799 removeed 15:1
-1800 reinserted 15:2
-1801 lie 15:2 14:2
-1802 detection 23:4
-1803 descend 23:3
-1804 descends 15:1
-1805 detect 23:1
-1806 brings 15:11
-1807 undooable 23:1
-1808 leyout 23:2
-1809 threads 23:1
-1810 acting 22:1
-1811 synchronize 23:1
-1812 race 23:1
-1813 conditions 23:1
-1814 coordinating 9:1
-1815 participate 9:1
-1816 editor's 9:7
-1817 registers 9:1
-1818 unregisters 23:1
-1819 previously 14:3
-1820 forwards 14:3
-1821 moation 29:1
-1822 occur 29:1 24:1
-1823 renders 8:3 9:1
-1824 listens 23:1
-1825 receives 14:1
-1826 framework 14:4
-1827 elbow 7:6 3:3
-1828 orthogonal 2:1
-1829 soutcode 3:3 22:2
-1830 outcode 17:33 26:2
-1831 eoutcode 3:5
-1832 interact 2:2
-1833 manipulate 14:6
-1834 identified 12:1
-1835 ordering 2:1
-1836 higher 22:1
-1837 drawn 22:6 24:5 14:4
-1838 lower 12:9 15:5
-1839 layouter's 8:2
-1840 tool's 22:4
-1841 adjusting 2:1
-1842 bounding 22:3 24:1
-1843 takes 8:5 18:1
-1844 restores 22:1
-1845 transformations 22:1
-1846 arithmethics 22:1
-1847 inherently 2:1
-1848 lossy 19:1
-1849 recommended 22:1
-1850 lossless 19:1
-1851 undo/redo 22:1
-1852 affected 2:1
-1853 key#set 22:1
-1854 key#get 23:1
-1855 testing 2:3
-1856 action's 22:1
-1857 optionally 23:1
-1858 decompositon 14:1
-1859 considered 8:1
-1860 clones 19:1
-1861 providing 24:2 22:2 5:2
-1862 maps 22:1
-1863 remapped 22:1
-1864 inform 23:3
-1865 pairs 23:1
-1866 consumed 29:1
-1867 hotdraw 24:2
-1868 technical 24:2
-1869 drawings 12:3
-1870 www 24:4 27:2
-1871 sourceforge 24:2 28:1
-1872 lesser 24:2
-1873 opensource 24:2
-1874 org/licenses/lgpl 24:2
-1875 overlays 24:1
-1876 scrolling 25:1
-1877 editing 24:3 17:2 3:1
-1878 actual 25:1
-1879 widget 24:38
-1880 word 18:6 24:2
-1881 overlay 24:29
-1882 holding 25:1
-1883 holder 24:76
-1884 foreground 24:2
-1885 tab 24:40
-1886 sizes 24:1
-1887 description 15:14 20:8 24:1
-1888 initialization 24:1
-1889 positioned 21:2 24:1
-1890 schriftgr\u 24:1
-1891 sse 14:1
-1892 manages 23:1
-1893 mechanism 29:2
-1894 relies 8:1
-1895 giving 29:1
-1896 appearance 29:1
-1897 wolfram 29:1 28:1
-1898 kaiser 8:1 28:1
-1899 performs 8:1
-1900 tasks 8:7
-1901 sum 6:13 21:1
-1902 presenting 8:1
-1903 logcal 29:1
-1904 clients 29:1
-1905 chops 8:2
-1906 rectangular 8:2
-1907 falls 14:1
-1908 xebebeb 26:1
-1909 xcacaca 25:1
-1910 cell 22:2
-1911 closest 5:5 17:2
-1912 direct 14:1 24:1
-1913 manipulation 14:2
-1914 expressed 23:2
-1915 refreshed 14:1
-1916 disposes 14:1
-1917 aquired 12:1
-1918 tracked 23:1
-1919 src 12:4
-1920 requesting 15:3 14:2
-1921 multicaster 14:17
-1922 interactions 12:1
-1923 honors 6:2
-1924 laying 6:2
-1925 ins 6:10
-1926 labeled 8:8
-1927 encapsulates 12:3
-1928 extends 8:1
-1929 subelements 6:1
-1930 calculated 4:1
-1931 commented 2:2
-1932 stay 2:2 15:1
-1933 reconnection 2:1
-1934 normal 28:6 2:1
-1935 purposes 6:2 2:2
-1936 keywoard 2:2
-1937 setzen 2:2
-1938 recalculated 27:1
-1939 bpl 2:3
-1940 disconnection 2:2
-1941 reverse 2:2 12:1
-1942 tmp 21:13 17:4 2:4
-1943 decorate 12:1
-1944 decorationextends 17:1
-1945 crop 17:1
-1946 layouts 24:6
-1947 lined 2:1
-1948 handle's 3:1
-1949 setter/getter 8:1
-1950 figureextends 12:1
-1951 locators 5:1
-1952 supports 22:2 10:2
-1953 semantic 22:1
-1954 bugs 5:1 17:1
-1955 delegating 14:1
-1956 corner 16:3 14:2 21:1
-1957 rectangles 14:2
-1958 turned 15:1
-1959 quad 22:46 18:4 17:3
-1960 responsiveness 23:1
-1961 fall 23:1
-1962 specfies 5:1 22:1
-1963 computed 24:2 5:1 26:1 3:1
-1964 handlesizes 14:1
-1965 pixel 26:1
-1966 roundrect 26:32
-1967 arcwidth 26:9
-1968 archeight 26:9
-1969 rundung 26:1
-1970 mehrfachaenderung 14:1
-1971 range 21:8 14:2
-1972 rubber 26:17
-1973 band 23:17
-1974 union 23:1
-1975 states 23:2
-1976 abmessungen 22:1
-1977 slanted 17:5
-1978 slant 17:16
-1979 sticky 26:5
-1980 automatically 24:1 12:1
-1981 rearranges 24:1
-1982 allocated 24:1
-1983 breaking 24:1
-1984 sequences 24:1
-1985 paragraphs 24:7
-1986 formatting 26:1
-1987 tabs 24:5
-1988 distributed 24:1
-1989 intervals 14:1
-1990 correctly 24:1
-1991 resizing 28:2 24:1
-1992 dashed 29:1
-1993 pen 24:4
-1994 margin 24:16 25:8
-1995 rely 24:1
-1996 verticaly 6:1
-1997 horizontaly 24:1
-1998 eduardo 24:1
-1999 francos 24:1
-2000 ceil 6:4 21:3
-2001 tokenizer 18:76 24:1
-2002 tokens 27:2 3:2
-2003 paragraph 24:4
-2004 assume 24:1
-2005 tab's 24:1
-2006 measurer 24:7
-2007 ascent 24:12
-2008 descent 24:6
-2009 float 24:3
-2010 wrapping 24:2
-2011 advance 24:3
-2012 overlaying 24:2
-2013 typing 24:20
-2014 begin 24:8
-2015 overlaid 24:3
-2016 scrolled 24:2
-2017 expand 24:2
-2018 mode 23:1 28:1
-2019 targeted 23:1
-2020 forwarded 23:1
-2021 listener's 23:3
-2022 reused 23:1
-2023 initialized/deinitialized 12:1
-2024 activates 23:1
-2025 switches 23:2
-2026 reinitialize 12:1
-2027 accept 15:3
-2028 activation 12:1
-2029 deactivates 23:1
-2030 clean 4:1
-2031 switched 23:1
-2032 starteds 23:1
-2033 interacting 23:1
-2034 fail 8:1
-2035 coallesce 4:1
-2036 exhaust 8:1
-2037 memory 7:2 8:1
-2038 accessed 8:1
-2039 apex 26:1
-2040 based 10:4 9:1
-2041 doug 26:4
-2042 lea 26:1
-2043 gee 14:1
-2044 mar 26:1
-2045 layoutable 6:7
-2046 algorithms 21:1
-2047 fitting 21:7
-2048 curves 21:8
-2049 digitized 21:25
-2050 philip 3:1
-2051 schneider 21:1
-2052 gems 21:3
-2053 academic 21:2
-2054 press 21:2
-2055 preserve 21:1
-2056 squared 21:12
-2057 generate 21:8
-2058 piecewise 3:1
-2059 cubic 21:11
-2060 approximates 21:1
-2061 routine 21:1
-2062 outputs 21:1
-2063 degree 21:8
-2064 function 10:8 21:1
-2065 ascii 21:1
-2066 error 21:3
-2067 hat 21:72
-2068 unit 21:13
-2069 tangent 21:17
-2070 vectors 21:7
-2071 endpoints 21:2
-2072 indice 21:12
-2073 tanget 21:3
-2074 bez 21:90
-2075 prime 21:25
-2076 input/output 21:3
-2077 int 21:8
-2078 pts 21:15
-2079 subset 21:2
-2080 iteration 21:9
-2081 iterating 21:4
-2082 iterations 21:4
-2083 heuristic 21:3
-2084 dist 21:21
-2085 parameterize 21:5
-2086 attempt 27:2 21:2
-2087 chord 21:3
-2088 deviation 21:2
-2089 large 21:2
-2090 reparameterization 21:2
-2091 reparameterize 21:3
-2092 recursively 21:2
-2093 negate 21:3
-2094 squares 21:1
-2095 precomputed 21:1
-2096 rhs 21:1
-2097 eqn 21:7
-2098 det 21:12
-2099 determinants 21:2
-2100 matrices 21:2
-2101 ctl 21:1
-2102 a's 21:1
-2103 barsky 21:1
-2104 coincident 21:4
-2105 divide 21:1
-2106 subsequent 16:4 21:1
-2107 newton 21:4
-2108 raphson 21:4
-2109 parameterization 21:4
-2110 vor 21:1
-2111 numerator 21:3
-2112 denominator 21:2
-2113 evaluated 21:1
-2114 numerator/denominator 21:1
-2115 evaluate 21:1
-2116 parametric 21:1
-2117 vtemp 21:10
-2118 array 21:1
-2119 computation 21:1
-2120 multipliers 21:1
-2121 approximate 21:3
-2122 tangents 21:3
-2123 normalize 21:4
-2124 assign 12:1
-2125 distances 21:1
-2126 library 21:1
-2127 andrew 21:1
-2128 glassner 21:1
-2129 dx*dx 21:1
-2130 dy*dy 21:1
-2131 scales 21:1
-2132 newlen 21:1
-2133 newlen/len 21:2
-2134 negates 21:1
-2135 x*b 21:1
-2136 y*b 3:1
-2137 normalizes 21:1
-2138 consisting 17:1
-2139 straight 17:3
-2140 geometric 17:2
-2141 passes 17:2
-2142 controls 3:2
-2143 vertex 17:4
-2144 describe 22:1
-2145 arraycopy 17:2
-2146 recomputes 17:1
-2147 tested 22:1
-2148 coords 17:95
-2149 prev 17:87
-2150 deep 3:1
-2151 crosses 17:4
-2152 nearest 21:2
-2153 chopped 21:2
-2154 furthest 17:1
-2155 temp 17:7 5:2
-2156 quadto 21:2 18:1
-2157 cubicto 17:1
-2158 lineto 3:2
-2159 larger 21:2 6:1
-2160 reset 18:3 6:1 15:1
-2161 included 6:2
-2162 completeness 6:2
-2163 double#set 12:1
-2164 component#get 6:1
-2165 double#get 6:1
-2166 component#set 6:1
-2167 bits 6:2
-2168 object's 6:1
-2169 fields 6:2
-2170 intended 6:2
-2171 debugging 6:2
-2172 vary 6:2
-2173 outlines 3:1
-2174 thickness 17:3
-2175 flattened 17:2
-2176 outher 17:1
-2177 thick 17:9
-2178 middle 17:1
-2179 increments 17:1
-2180 ddx 17:7
-2181 ddy 17:7
-2182 enhanced 26:1
-2183 instantiated 21:1
-2184 bitmask 21:4
-2185 lies 21:4
-2186 computes 21:2
-2187 indicating 5:5 21:1 15:1
-2188 codes 21:2
-2189 constains 21:2
-2190 py*r 21:2
-2191 px*r 21:2
-2192 corresponds 21:4
-2193 polar 21:6
-2194 fx*co 17:2
-2195 fy*si 21:2
-2196 lea's 21:3
-2197 vision 21:4
-2198 dai 21:4
-2199 uk/andrewfg/c 17:4
-2200 faq 21:4
-2201 denom 21:12
-2202 rnum 21:11
-2203 snum 21:8
-2204 projection 21:2
-2205 html#q 17:1
-2206 backward 26:1
-2207 ahead 21:1
-2208 xdiff 21:4
-2209 ydiff 21:4
-2210 directional 17:1
-2211 resizes 21:1
-2212 horizontally 28:3 21:1
-2213 vertically 28:3 21:1
-2214 decreases 21:1
-2215 resulting 26:1
-2216 expansion 17:2
-2217 grow/shrink 17:1
-2218 convex 26:1
-2219 clockwise 17:1
-2220 inset 6:8
-2221 yield 6:4
-2222 subtracted 6:2
-2223 val 6:5
-2224 shouldn't 19:1
-2225 ids 6:2
-2226 reorganize 5:2
-2227 transferables 5:6
-2228 transferred 5:4
-2229 flavor#get 5:2
-2230 ordered 5:2
-2231 preference 6:6 5:2
-2232 richly 5:2
-2233 descriptive 5:4
-2234 wjether 5:2
-2235 ownership 5:2
-2236 peer 15:1
-2237 modal 15:2
-2238 blocks 24:1
-2239 dialogs 15:1
-2240 caveats 15:1
-2241 translucent 4:1
-2242 macintosh 15:1
-2243 rewritten 15:1
-2244 independent 15:1
-2245 displaying 15:2
-2246 movement 15:4
-2247 installed 15:6
-2248 transition 15:3
-2249 animated 15:9
-2250 forget 15:1
-2251 fully 15:1
-2252 remember 6:1
-2253 uninstalls 15:1
-2254 millis 15:3
-2255 delay 15:2
-2256 confirm 15:7
-2257 choices 15:5
-2258 designating 15:7
-2259 primarily 15:6
-2260 pluggable 15:3
-2261 question 15:2
-2262 parented 15:3
-2263 prompts 15:1
-2264 selections 15:2
-2265 choose 15:1
-2266 implies 15:1
-2267 prompt 15:1
-2268 decide 15:1
-2269 combo 15:1
-2270 notified 15:3 6:1
-2271 dismissed 15:3
-2272 helps 15:1
-2273 choice 15:1
-2274 objects 15:1
-2275 meaningful 15:1
-2276 hack 15:1
-2277 mayhem 15:1
-2278 selecting 15:1
-2279 component's 15:1
-2280 toplevel 15:1
-2281 appears 15:2
-2282 approve 15:10
-2283 custom 15:2
-2284 accessible 1:21 15:1
-2285 command 18:24 15:1
-2286 rescan 15:1
-2287 dnoyeb 6:1
-2288 frames 28:87
-2289 opposed 28:1
-2290 simply 6:1
-2291 wont 28:1
-2292 biggie 28:1
-2293 article 28:1
-2294 world 28:1
-2295 gilbert 28:1
-2296 dnoyeb@users 28:1
-2297 cascading 6:2
-2298 tile 28:2
-2299 height/all 28:1
-2300 width/all 22:1
-2301 efficiently 28:2
-2302 keeping 28:2
-2303 maximal 28:2
-2304 vert 28:12
-2305 floor 6:2
-2306 hor 28:12
-2307 cnt 28:12 7:6
-2308 tiled 6:2
-2309 scrollbar 18:2 28:1
-2310 placard 25:33
-2311 hsb 6:9
-2312 llp 6:4
-2313 filters 15:1
-2314 extensions 15:19
-2315 converted 15:2
-2316 extlc 15:4
-2317 pathname 15:7
-2318 samples 12:53 7:24 10:12 25:7
-2319 marz 10:1
-2320 plasma 10:13 13:1
-2321 automaticaly 10:6
-2322 thing 10:6
-2323 loading 10:8
-2324 datafile 10:26
-2325 alle 10:6
-2326 informatik 10:6
-2327 und 10:6
-2328 erich 10:6
-2329 gamma 10:6
-2330 script 10:14
-2331 fold 25:13 10:13
-2332 defaultstate 25:7 10:6
-2333 collapsed 25:8 10:5
-2334 desc 25:8 10:7 20:1
-2335 lnk 2:1
-2336 rbmi 25:79 7:11
-2337 bag 25:68
-2338 gridx 25:8
-2339 gridy 25:8
-2340 live 10:22
-2341 netscape 10:4
-2342 javascript 10:4
-2343 dataread 10:8
-2344 datawrite 10:6
-2345 win 10:12 13:3
-2346 rechte 10:2
-2347 vorbehalten 10:2
-2348 diese 10:2
-2349 basiert 10:2
-2350 auf 10:2
-2351 laden 10:2
-2352 speichern 10:2
-2353 fehler 10:4
-2354 redoing 25:4
-2355 choosable 25:8
-2356 policy 25:8
-2357 entitie 7:6
-2358 unconfiguring 7:2
-2359 leak 7:2
-2360 pert 10:30 7:18 2:9 25:8 13:7 12:2
-2361 diagram 25:5 10:5
-2362 messy 25:1
-2363 dependency 2:28 7:4
-2364 disallow 2:2
-2365 predecessors 2:4
-2366 cyclic 2:3
-2367 dependencies 2:10
-2368 efficiency 8:1
-2369 reasons 2:1 12:1
-2370 observe 24:2
-2371 duration 2:25
-2372 succ 2:7
-2373 successors 2:4
-2374 compartment 2:15
-2375 statement 24:1
-2376 guards 2:1
-2377 predecessor 27:1
-2378 indirect 24:1
-2379 dep 7:1
-2380 combine 25:10 7:1
-2381 svg 12:35 25:11 18:3
-2382 presents 29:1
-2383 profile 27:2
-2384 defs 20:3 27:2
-2385 radial 20:4
-2386 gradient 20:6
-2387 linear 20:2
-2388 roll 14:2
-2389 token 18:75
-2390 mainx 10:1
-2391 org 10:2
-2392 tiny 18:2 12:1
-2393 doctype 27:34
-2394 d/svg 25:1
-2395 dtd 25:1
-2396 utils 18:2
-2397 xffff 18:2
-2398 olive 18:2
-2399 navy 18:2
-2400 purple 18:2
-2401 fuchsia 18:2
-2402 aliceblue 18:1
-2403 antiquewhite 18:1
-2404 aquamarine 18:1
-2405 azure 18:1
-2406 beige 18:1
-2407 bisque 18:1
-2408 blanchedalmond 18:1
-2409 blueviolet 18:1
-2410 brown 18:1
-2411 burlywood 18:1
-2412 cadetblue 18:1
-2413 chartreuse 18:1
-2414 chocolate 18:1
-2415 coral 18:1
-2416 cornflowerblue 18:1
-2417 cornsilk 18:1
-2418 crimson 18:1
-2419 cyan 18:1
-2420 darkblue 18:1
-2421 darkcyan 18:1
-2422 darkgoldenrod 18:1
-2423 darkgray 18:1
-2424 darkgreen 18:1
-2425 darkgrey 18:1
-2426 darkkhaki 18:1
-2427 darkmagenta 3:1
-2428 darkolivegreen 18:1
-2429 darkorange 18:1
-2430 darkorchid 18:1
-2431 darkred 18:1
-2432 darksalmon 18:1
-2433 darkseagreen 18:1
-2434 darkslateblue 18:1
-2435 darkslategray 18:1
-2436 darkslategrey 18:1
-2437 darkturquoise 18:1
-2438 darkviolet 18:1
-2439 deeppink 18:1
-2440 deepskyblue 18:1
-2441 dimgray 18:1
-2442 dimgrey 18:1
-2443 dodgerblue 18:1
-2444 firebrick 18:1
-2445 floralwhite 18:1
-2446 forestgreen 18:1
-2447 gainsboro 18:1
-2448 ghostwhite 18:1
-2449 gold 18:1
-2450 goldenrod 18:1
-2451 grey 18:1
-2452 greenyellow 18:1
-2453 hotpink 18:1
-2454 indianred 18:1
-2455 indigo 18:1
-2456 ivory 18:1
-2457 khaki 18:1
-2458 lavenderblush 18:1
-2459 lawngreen 18:1
-2460 lemonchiffon 27:1
-2461 lightblue 29:1
-2462 lightcoral 18:1
-2463 lightcyan 18:1
-2464 lightgoldenrodyellow 18:1
-2465 lightgray 18:1
-2466 lightgreen 18:1
-2467 lightgrey 18:1
-2468 lightpink 18:1
-2469 lightsalmon 18:1
-2470 lightseagreen 18:1
-2471 lightskyblue 18:1
-2472 lightslategray 18:1
-2473 lightslategrey 18:1
-2474 lightsteelblue 18:1
-2475 lightyellow 29:1
-2476 limegreen 18:1
-2477 linen 18:1
-2478 mediumaquamarine 18:1
-2479 mediumblue 18:1
-2480 mediumorchid 18:1
-2481 mediumpurple 18:1
-2482 mediumseagreen 18:1
-2483 mediumslateblue 18:1
-2484 mediumspringgreen 18:1
-2485 mediumturquoise 18:1
-2486 mediumvioletred 18:1
-2487 midnightblue 18:1
-2488 mintcream 18:1
-2489 mistyrose 18:1
-2490 moccasin 18:1
-2491 navajowhite 3:1
-2492 oldlace 18:1
-2493 olivedrab 18:1
-2494 orangered 18:1
-2495 palegoldenrod 18:1
-2496 palegreen 18:1
-2497 paleturquoise 18:1
-2498 palevioletred 18:1
-2499 papayawhip 18:1
-2500 peachpuff 18:1
-2501 peru 18:1
-2502 pink 12:1
-2503 powderblue 18:1
-2504 rosybrown 18:1
-2505 royalblue 18:1
-2506 saddlebrown 18:1
-2507 sandybrown 18:1
-2508 seagreen 18:1
-2509 seashell 18:1
-2510 sienna 18:1
-2511 skyblue 18:1
-2512 slateblue 18:1
-2513 slategray 18:1
-2514 slategrey 18:1
-2515 springgreen 18:1
-2516 steelblue 18:1
-2517 tan 18:3
-2518 thistle 18:1
-2519 tomato 18:1
-2520 violet 18:1
-2521 wheat 18:1
-2522 whitesmoke 18:1
-2523 yellowgreen 18:1
-2524 activeborder 18:1
-2525 caption 18:6
-2526 activecaption 18:1
-2527 appworkspace 18:1
-2528 buttonface 18:1
-2529 buttonhighlight 18:1
-2530 highlight 18:6
-2531 buttonshadow 18:1
-2532 buttontext 18:1
-2533 captiontext 18:1
-2534 graytext 18:1
-2535 inactive 18:4
-2536 highlighttext 18:1
-2537 inactiveborder 18:1
-2538 inactivecaption 18:1
-2539 inactivecaptiontext 18:1
-2540 infobackground 18:1
-2541 infotext 18:1
-2542 menutext 18:1
-2543 threeddarkshadow 18:1
-2544 threedface 18:1
-2545 threedhighlight 18:1
-2546 threedlightshadow 18:1
-2547 threedshadow 18:1
-2548 windowframe 18:1
-2549 windowtext 18:1
-2550 ttype 18:8
-2551 sval 18:7
-2552 mantissa 18:1
-2553 nval 18:57
-2554 skew 18:4
-2555 inherited 18:14 27:4
-2556 commands 18:1
-2557 moveto 18:1
-2558 curveto 18:1
-2559 assigns 18:1
-2560 miterlimit 18:2
-2561 dasharray 18:2
-2562 dashoffset 18:2
-2563 painting 18:1
-2564 inherit 18:2
-2565 element's 18:1
-2566 decode 27:9 18:5
-2567 rgb 18:1
-2568 dbl 18:3
-2569 evenodd 18:1
-2570 basically 4:1
-2571 compound 8:20
-2572 compuondable 8:1
-2573 compounded 8:1
-2574 verbose 8:3
-2575 presentatio 8:5
-2576 edit#get 8:7
-2577 accepts 8:1
-2578 chance 8:2
-2579 refuses 8:1
-2580 insignificant 13:1
-2581 maintains 8:1
-2582 user's 8:1
-2583 texts 27:4 9:1
-2584 accelerator 4:3
-2585 smarter 9:1
-2586 edits/clear 9:1
-2587 internationalisation 9:1
-2588 flag 8:3
-2589 ignores 9:4
-2590 sending 8:1
-2591 functions 9:1
-2592 occurs 4:2
-2593 discards 8:1
-2594 edit#end 8:1
-2595 edit#add 9:1
-2596 undone 9:3
-2597 mai 1:2
-2598 wrapper 1:2
-2599 overcome 12:1
-2600 restriction 1:1
-2601 preventing 12:1
-2602 applets 1:1
-2603 invocations 1:1
-2604 comments 27:2 1:1
-2605 exceptions 1:9 12:1
-2606 clazz 1:26
-2607 runs 16:4
-2608 storing/retrieving 6:4
-2609 configuration 22:4 27:1
-2610 conf 16:6
-2611 resized 16:4
-2612 intenal 6:1
-2613 i's 16:1
-2614 constraint 16:15
-2615 reflection 16:1
-2616 hold 16:1
-2617 accessing 1:1
-2618 suffixes 7:1
-2619 redirection 1:1
-2620 class/get 1:1
-2621 metal 1:2
-2622 adaptation 1:1
-2623 resouce 1:1
-2624 rsrc 1:6
-2625 exist 4:1
-2626 mnemonic 1:5
-2627 javax 1:2
-2628 acc 1:7
-2629 prepended 1:1
-2630 language 1:1
-2631 country 1:1
-2632 complex 28:1
-2633 reporting 18:1
-2634 enum 27:5
-2635 enums 27:8
-2636 instantiable 18:1
-2637 makes 27:12
-2638 maerz 27:1
-2639 consecutives 27:4
-2640 reduce 27:1
-2641 writing 27:1
-2642 parsers 27:2
-2643 unmarshall 27:3
-2644 marshalled 27:6
-2645 unmarshalled 27:3
-2646 idobjects 27:12
-2647 transformer 27:16
-2648 rgba 27:6
-2649 xff 27:3
-2650 marshall 27:3
-2651 objectids 27:18
-2652 prototypes 27:18
-2653 awkard 27:10
-2654 prints 27:2
-2655 transfering 5:1
-2656 mime 5:2
-2657 presentable 5:2
-2658 notifies 5:1
+0 create 67:69 78:38 76:38 92:29 85:26 50:25 73:24 63:16 57:12 54:12 43:12 20:10 75:9 11:9 72:6 59:5
+1 element 46:250 73:242 95:212 10:155 39:152 31:78 32:45 68:42 69:37 54:21 14:2
+2 attribute 81:549 98:240 46:219 73:118 95:111 55:107 39:79 67:68 41:62 72:57 91:34 97:31 43:23 26:14 7:14 48:3
+3 write 10:112 55:86 39:38 69:17 6:5
+4 encoded 10:16
+5 xml 95:297 10:236 32:229 46:148 73:89 99:57 55:56 28:36 75:33 39:29 50:25 66:24 38:16
+6 revision 65:52
+7 date 65:26
+8 nano 65:59 69:42 99:28 73:21
+9 lite 69:48 73:5 54:2
+10 reserved 37:212 11:38 55:26 65:23 62:16 46:1
+11 warranty 65:25
+12 purpose 65:25 77:5
+13 restrictions 65:25
+14 required 65:26 19:4 53:1
+15 distribution 65:23 10:1 75:1
+16 package 37:198 11:38 55:25 65:23 62:17 67:4 59:1 52:1
+17 representation 53:4 38:4 64:2 54:1 44:1 94:1
+18 parse 54:62 95:51 73:11 65:11 32:6 58:1
+19 parsing 54:13 32:7
+20 data 95:109 99:87 32:65 38:58 98:44 66:41 85:29 0:26 28:16 72:9 58:3
+21 reader 17:376 28:219 32:105 66:84 99:18 73:7
+22 filename 28:5 44:4 11:2
+23 retrieving 10:2
+24 attributes 68:125 67:69 55:59 43:44 62:38 46:37 27:36 98:29 32:26 95:10
+25 enumerate 54:30
+26 link 98:7 80:4 46:3 49:2 65:1 27:1
+27 names 10:36 32:11 73:4 46:4
+28 values 32:18 73:16 51:13 94:11 98:10 53:10 61:9 81:7 25:5 15:5 67:4 19:4 78:1
+29 retrieved 46:3 54:2
+30 shows 61:4 98:1 76:1
+31 list 92:119 78:83 73:61 67:59 76:47 2:42 91:35 97:28 25:20 46:18 33:18 98:11
+32 iterator 98:40 46:38 59:32 90:27 2:11 60:10 29:6 31:3
+33 iter 54:12
+34 key 81:452 10:107 29:69 14:60 32:44 63:33 67:22 56:22 91:21 73:10 39:7 36:1
+35 child 91:241 46:139 54:49 73:27 31:23 33:6
+36 elements 31:17 17:15 73:13 46:11
+37 children 91:119 54:64 46:55 33:20 73:18 80:3
+38 iterate 98:12 10:12 85:4 91:2 2:2
+39 number 95:51 25:45 64:30 73:18 54:16 85:14 81:11 28:10 66:6 16:4 94:3 5:3 97:2 30:2 89:1
+40 count 1:62 73:31 76:25 43:24 55:18 98:17 90:17 92:16 85:16 93:11 4:9 6:8 41:6 63:1
+41 character 54:35 28:10 17:8 11:4 16:3
+42 title 60:33 67:11 34:11 31:11 5:8 10:3 22:1
+43 retrieve 98:9 32:3
+44 content 46:39 10:33 69:27 5:14 87:8 45:8 60:6 73:4 39:4 27:4 53:3 66:2
+45 subclassing 98:3 43:1
+46 override 55:39 11:18 69:13 33:8 54:2 61:1
+47 copy 60:16 36:11 67:7 96:3 71:3 94:2 10:1
+48 receiver 54:10
+49 author 37:194 11:37 65:27 55:20 62:17 78:11
+50 href 10:1
+51 mailto 98:1
+52 cyberelf@mac 54:2
+53 version 37:204 11:32 65:25 55:21 62:18 17:1 67:1
+54 adapted 54:1 79:1 42:1
+55 public 37:223 11:39 55:24 65:17 62:14 86:9 63:4 67:2 30:1 27:1
+56 serialization 10:1 46:1
+57 serial 53:6 98:2 46:1
+58 major 54:7 9:3
+59 classes 54:4 37:4 57:1
+60 minor 9:5 10:3 91:1
+61 binary 96:2 54:2
+62 compatible 78:17 36:8 81:6 98:4 72:4
+63 modify 69:27 27:8 98:2
+64 client 50:16 41:8 60:7 19:4 6:4 49:3 17:2
+65 invariants 54:9
+66 field 20:30 54:14 5:4
+67 empty 10:29 78:22 46:20 34:18 55:10 71:9 82:6 17:5 67:4 50:4 59:3 39:1
+68 code 54:459 5:310 53:153 19:32 64:26 86:24 14:4 97:2
+69 null 54:75 5:19 53:1
+70 set 29:181 4:155 84:146 40:124 99:114 71:112 98:105 76:97 78:71 6:67 81:66 83:54 5:51 19:44 97:42 79:41 24:38 85:37 18:35 39:28 13:28 41:24 12:24 47:23 34:19 25:19 93:18 63:17 32:17 20:17 14:15 86:14 64:11 8:9 45:7 28:6 75:3
+71 strings 98:9 24:7 99:6
+72 hash 29:100 54:53 67:30 39:14 48:13 73:10 25:8 57:3 27:3
+73 map 58:204 29:168 54:48 67:29 39:26 73:19 98:1 21:1 20:1
+74 instances 54:2 76:1
+75 subclass 19:4 86:3 92:2 14:2 98:1 13:1
+76 iff 10:2
+77 initialized 10:1 21:1
+78 it's 65:14 86:1
+79 valid 54:25 90:5 28:5 92:2 95:1
+80 identifier 54:26 17:15
+81 contents 10:13 39:8 36:8 38:5 92:3 20:2
+82 conversion 54:11
+83 table 98:13
+84 amp 10:9 95:4
+85 entities 10:53 65:5 73:3
+86 entity 17:150 95:118 28:15
+87 delimiters 54:2
+88 associations 10:1
+89 apos 10:5
+90 arrays 54:2 41:2 29:2 25:1
+91 line 95:171 59:47 46:47 74:46 54:45 32:44 9:40 96:29 83:28 28:28 44:22 67:21 16:20 89:18 4:14 91:10 18:9 97:8 3:7 98:2
+92 starts 65:17 46:16 76:8 25:4
+93 true 54:20
+94 insensitive 98:1
+95 ignore 54:24 31:16 2:13 51:4 32:4 98:3
+96 leading 98:22
+97 trailing 54:5
+98 whitespace 17:54 54:29 25:5
+99 sections 46:4 10:2
+100 read 55:90 17:64 66:54 28:48 98:37 32:31 73:23 99:21 50:9 91:5 34:5
+101 push 73:11 25:7 28:6
+102 back 2:42 91:13 5:9 67:8 88:6 58:6 98:5 28:5
+103 functionality 60:4 79:2 26:2 10:1
+104 input 55:77 69:46 73:30 99:26 54:23 28:21 5:20 1:20 17:14 8:4 56:2 0:2 65:1
+105 pushback 28:15
+106 caller 65:1
+107 running 10:2 11:1
+108 current 73:189 59:107 28:83 39:73 58:43 24:32 60:27 11:23 78:18 95:13 36:8 88:5 86:5 94:4
+109 parser 75:51 32:25 98:10 95:2
+110 variable 83:2 54:1 29:1 3:1
+111 encoding 28:14
+112 left 52:120 59:26 94:7 28:5
+113 underlying 10:1
+114 creates 37:170 11:48 65:36 62:34 55:22 98:12 46:11 67:4
+115 initializes 50:10 10:7 99:6 53:3 28:3 47:2 65:1
+116 calling 68:7 98:4
+117 construction 10:4 0:1
+118 equivalent 10:4
+119 postconditions 54:28
+120 enumeration 98:13 46:8 17:5
+121 property 24:403 19:84 60:53 50:35 41:27 14:20 76:15 79:10 98:7 25:4 6:4 75:2
+122 vector 46:23 94:13 10:8 23:4
+123 param 65:239 85:185 95:167 54:78 5:72 51:55 94:48 53:15 15:15 44:8 38:6 72:5 19:4
+124 preconditions 54:54
+125 skip 17:79
+126 constructor 84:7 37:7 22:5 80:3 54:2
+127 called 32:19 68:15 69:12 86:5 27:5 26:4 93:3 42:3 8:2 98:1
+128 fill 72:28 3:21 45:19 18:16 68:9 98:8 16:6 25:5
+129 basic 30:141 91:36 83:31 72:30 71:26 3:24 4:21 33:20 55:14 12:13 81:11 41:10 98:7 57:1 23:1
+130 false 54:7
+131 entries 26:5 54:1
+132 quot 85:1
+133 put 58:192 40:106 12:57 41:56 29:36 67:35 65:31 50:26 10:10 39:5 6:5 73:4 14:2 54:1 0:1 60:1
+134 adds 39:36 85:25 78:12 10:6 75:4 41:4 14:1
+135 add 67:240 60:188 27:164 78:112 39:104 69:103 55:97 48:81 83:63 41:62 24:54 91:51 29:42 33:35 30:34 61:24 23:22 19:21 32:16 8:15 73:14 46:14 10:14 13:12 42:11 2:10 34:8 12:7 70:1 1:1
+136 parent 61:135 95:34 64:21 73:15 46:11 79:8 56:6 28:5 38:3 98:1
+137 remove 48:117 91:40 85:35 24:31 29:28 92:26 56:24 83:23 69:21 54:19 76:17 13:16 33:15 39:13 60:2 63:1
+138 modifies 54:3 89:1
+139 upper 54:11 24:4 58:2
+140 result 99:86 23:32 54:26 46:24 17:19 57:18 51:18 73:12 19:4 67:3 2:3 94:2 8:2
+141 size 15:41 59:38 83:34 16:33 91:27 46:26 79:24 96:23 53:23 29:23 76:20 73:18 66:17 64:12 58:12 20:12 2:12 93:10 18:10 77:6 45:5 99:4 37:3 85:2
+142 enumerates 98:2
+143 safe 10:1
+144 clone 72:66 96:25 29:19 4:18 91:10 26:7 52:3 8:3 76:2 33:2 17:2 32:1
+145 compilers 85:1
+146 braindead 98:1
+147 require 98:1
+148 clause 10:1
+149 found 46:20 28:12 25:11 91:9 75:9 51:5 56:4 89:2 57:2 83:1 22:1
+150 doesn't 10:14 55:2 47:1
+151 default 54:7 44:1
+152 missing 95:31 14:18 98:9 44:1
+153 hashtable 17:7 10:4 23:1
+154 mapping 98:12
+155 attr 46:74 41:49 32:12 54:8 36:4 97:2
+156 literals 54:8
+157 invalid 54:15 95:8 17:7 85:1 96:1
+158 format 98:5 41:5 14:4 53:2 31:2
+159 literal 17:30 54:11
+160 numbers 98:8 39:3 55:2
+161 cast 45:3 98:2 85:1
+162 equal 53:7 79:4 64:3 54:2
+163 match 73:8 71:2 54:2 17:2
+164 thrown 65:5
+165 equals 73:57 46:30 40:20 31:20 6:18 12:11 81:10 58:9 57:9 61:7 30:6 53:2 38:2 10:2
+166 reads 98:9 66:9 73:8 50:5 28:4
+167 parses 54:8 32:5
+168 closed 83:58 54:6 39:5 5:3 3:3
+169 state 24:58 40:16 34:16 54:8 26:8 83:5 63:3
+170 updated 54:8 82:2 62:2 4:1
+171 reflect 54:9 50:4 51:3 5:1
+172 parsed 98:8 28:2 88:1
+173 points 8:53 89:33 83:29 56:12 4:8 54:2
+174 throws 95:32 28:23 65:18 32:17 54:12 75:8
+175 occured 54:12
+176 reading 17:15 32:7 66:6
+177 starting 98:13 17:2
+178 scan 17:43 54:16
+179 expected 58:47 17:24 54:11
+180 special 54:7 32:2
+181 tag 73:154 17:47 68:5 33:1
+182 unread 17:23 66:7 28:7 54:5
+183 string 73:16 54:12 58:11 29:10 44:4 61:2
+184 length 73:49 89:33 92:23 10:22 79:21 94:20 66:20 99:18 83:16 9:16 0:16 58:15 41:10 28:10 57:7 16:7 44:3 20:3 3:3 14:2 13:1 71:1 38:1
+185 handling 54:3 93:2 4:2 57:1
+186 suxx 98:3
+187 offset 98:50 66:12 59:5
+188 substring 17:14 25:13 39:10 87:6 46:5 24:4
+189 end 4:233 5:28 98:26 47:18 66:15 8:15 72:13 39:13 20:13 69:12 42:12 32:12 96:7 43:6 97:5 79:4 27:4 65:2 91:1
+190 stop 76:6 98:5 93:3 11:2 5:2 86:1
+191 scanning 54:5
+192 scanned 10:9
+193 happen 10:1 53:1
+194 removes 85:41 92:4 42:1
+195 similar 98:2 86:1
+196 elem 10:3
+197 writes 10:11 39:7 50:5 25:1
+198 output 55:66 39:45 69:35 10:12 66:6 25:1
+199 stream 28:81 25:71 69:39 44:10 73:9 39:9 17:9 10:6 66:4 91:3 87:1
+200 flush 39:3 10:2 6:1
+201 writer 10:9
+202 written 10:3 39:2 71:1
+203 indents 98:2
+204 indent 10:14
+205 indentation 98:1
+206 spaces 10:9
+207 enm 46:34 10:12 32:5
+208 internal 51:21 79:17 50:16 96:12 12:12 28:10 34:9 65:5 43:4 26:4 86:3 39:2
+209 message 5:109 95:15 65:13 99:12 6:11 51:9 44:9 2:9 78:8 73:6
+210 init 69:91 76:58 27:16 73:8 51:6 96:5 29:5 61:3 17:1 6:1
+211 str 17:94 39:60 58:58 28:25 46:21 66:15 44:5
+212 scans 17:8 54:5
+213 appended 98:4 44:2 54:1
+214 buffer 66:56 17:32 32:3 54:1
+215 won't 28:1 0:1
+216 append 25:109 17:16 54:12 28:5
+217 return 85:103 19:28 65:27 53:25 51:20 14:8 38:7 77:4 91:1
+218 delimited 17:3
+219 delimiter 10:21 28:2
+220 resolve 10:3
+221 resolved 17:4 65:3
+222 skipped 98:12 32:2
+223 check 49:19 17:18 60:13 79:9 78:6 43:6 19:4 65:3 96:2 76:2
+224 section 17:10 66:1
+225 buf 25:128 54:37 17:8
+226 chars 66:36 28:15 58:11 54:11 20:2
+227 skips 17:5 66:3
+228 comment 39:14 17:6 98:4 32:1
+229 dashes 41:16 3:16 25:8 17:8
+230 bracket 54:10
+231 level 78:62 17:16 54:13 28:4
+232 open 34:94 60:82 39:44 69:39 68:28 31:27 73:19 28:9
+233 square 89:2 54:1
+234 brackets 13:3 98:1
+235 text 16:226 20:154 99:80 73:57 36:40 67:30 39:28 97:26 81:22 25:18 21:13 5:8 14:6 40:2 3:2 94:1
+236 stops 16:12
+237 complete 16:5 98:2
+238 checked 98:1
+239 whichever 54:1
+240 unexpected 95:36 17:10 31:2
+241 elt 46:21 98:8
+242 trim 10:2 25:1
+243 resolves 28:3
+244 unknown 54:6 85:5 58:1
+245 pushes 28:3
+246 valueset 10:1
+247 msg 44:15 54:12 95:10
+248 reached 3:4 66:2 54:2
+249 syntax 58:3 54:3
+250 context 92:21 54:6 99:4 16:4 88:2
+251 human 44:2 38:2 54:1
+252 readable 10:4 44:2
+253 form 69:38 27:9 82:1
+254 char 54:2
+255 occures 54:1
+256 runtime 57:6 91:4 54:1 5:1
+257 exception 73:8 65:6 38:4 64:3
+258 occurred 65:60 95:2
+259 located 46:3 92:2 65:2 77:1
+260 describing 19:16 95:2
+261 wrong 32:14 95:8 73:2 9:1
+262 definition 95:2 77:1
+263 net 65:56 49:28 99:24 84:15 60:4 75:1
+264 encountered 32:11 95:8 66:3 93:1
+265 class 65:5 90:2 75:2 37:1 79:1
+266 encapsulated 44:17 80:12 66:6
+267 saved 6:17 66:9 40:2 16:2
+268 cleans 65:13
+269 destroyed 65:13
+270 finalize 65:26
+271 throwable 99:44 65:14 34:14 24:6 86:2 57:2
+272 block 66:3 86:1
+273 position 89:34 16:10 36:5 66:3 45:3 5:2
+274 maximum 79:10 94:5 66:3 21:1
+275 remaining 66:3
+276 closes 73:8 66:3 11:1 83:1
+277 close 39:53 69:45 31:43 60:21 68:12 73:11 9:10 32:7 70:5 66:5 6:1
+278 pointer 99:4 81:2 66:1
+279 index 1:326 46:63 19:32 2:12 8:3 31:2
+280 resolver 32:98 95:54 66:12
+281 don't 32:9 6:7 61:4 66:2 1:2 71:1 57:1 48:1
+282 interprete 66:2
+283 process 17:33 92:22 32:13
+284 builder 32:67 25:12 75:10 73:4 46:4
+285 construct 86:17 6:10 99:6 3:4 32:1
+286 structure 32:10 46:2
+287 supply 5:3 65:1
+288 aborted 6:3 32:1
+289 parser#parse 32:3
+290 encasulates 32:1
+291 processing 32:11 65:9 92:1
+292 start 4:278 5:34 97:29 47:22 72:18 32:14 86:12 99:10 0:9 28:6 94:4 42:2 95:1
+293 building 32:8
+294 instruction 32:7 66:1
+295 target 88:267 7:45 57:44 51:14 97:11 32:7 50:4
+296 reported 65:1
+297 parameter 99:62 32:51 51:18 5:13 94:8 57:8 8:6 85:1 31:1
+298 prefix 32:58 12:18 10:10 46:2
+299 identify 32:8 43:1 61:1
+300 namespace 46:203
+301 type 5:66 46:44 92:26 21:22 83:11 3:11 81:9 58:8 73:6 84:3 38:2
+302 processed 32:15
+303 elemnt 32:2
+304 supplied 92:2 32:2 96:1
+305 boundaries 32:2 16:1
+306 full 46:126 32:6
+307 rest 96:2 79:2 32:2
+308 care 32:2 99:1 79:1
+309 serializable 85:7 37:3 53:2 78:1
+310 easy 85:2
+311 generic 57:7 46:1
+312 top 52:126 85:6 32:1
+313 dom 55:156 73:111 69:97 39:74 75:15
+314 std 46:12 28:11 75:2 21:1
+315 implement 37:9
+316 defined 68:8 94:5 53:5 46:4 38:2 7:2 14:1
+317 root 23:14 60:12 5:12 46:10 34:5 94:4 57:1
+318 eventual 46:2
+319 sets 85:50 19:12 32:11 4:11 15:9 84:7 68:7 28:4 67:2 53:2 16:2
+320 clears 50:6 85:3 90:2
+321 leaf 23:11 46:4
+322 specific 85:8 84:5 29:2 24:2
+323 bounds 71:488 23:102 15:91 91:63 5:41 20:40 48:18 85:11 99:10 82:10 47:3 69:2 31:1
+324 searches 46:6
+325 search 46:8 57:3 34:2
+326 named 85:12 95:2 57:1 21:1
+327 deprecated 46:2
+328 properties 19:36 32:23 46:13 79:2 42:1
+329 started 56:11 95:7 46:5 62:1
+330 combination 46:2
+331 unnamed 60:6 34:3 46:2
+332 call 85:10 87:8 86:3 26:2
+333 possibly 79:2 46:2
+334 raw 46:7
+335 compare 46:4 21:4
+336 external 95:28
+337 resolving 28:3
+338 core 32:1 17:1
+339 retrieves 17:7
+340 logical 32:9 26:5 89:2 72:1
+341 validator 32:61
+342 validates 32:4 18:1
+343 lets 65:2
+344 builder#get 32:1
+345 built 17:2
+346 malformed 28:16
+347 opens 73:13 28:3 11:2
+348 refers 28:3
+349 local 28:3 40:1 8:1
+350 opening 95:3 28:3
+351 temporary 28:4 56:1
+352 exhausted 28:4
+353 control 83:88 8:11 75:7 28:4 86:1
+354 produced 86:7 28:2
+355 stack 99:22 73:21 32:20 39:13 44:12 28:9 79:8 70:5 34:5 86:2 60:2
+356 streams 28:2
+357 processes 32:9 17:6
+358 handles 78:271 97:1
+359 references 73:6 32:2
+360 responsible 95:3 26:1
+361 validated 95:10
+362 ended 32:9 29:2
+363 extra 95:11 32:8
+364 concrete 32:2
+365 definitions 65:1
+366 validation 95:67
+367 types 51:12 32:10 57:8
+368 clear 60:21 78:17 11:17 63:12 69:10 33:8 86:5 65:5 59:2 48:2 23:2
+369 orig 17:2
+370 conditional 17:3
+371 att 32:7
+372 subreader 17:5
+373 props 17:10
+374 attribs 32:6
+375 pop 73:4 32:2 28:2
+376 keys 67:59 72:40 81:37 7:35 68:12 97:4 52:4 42:3 17:2
+377 peek 65:5
+378 tree 2:21 23:10 46:5 64:3
+379 parents 32:1
+380 prototype 43:64 88:48 68:29 39:12 33:11 75:9 72:7
+381 creating 34:2 32:1 86:1
+382 handled 47:2 88:1
+383 duplicate 36:13 60:12 67:8 46:1 59:1
+384 ensure 2:6 52:2 96:1
+385 capacity 29:2 46:1
+386 validate 83:25 78:21 69:7 79:2
+387 hex 25:4 39:3 17:1 57:1
+388 allowed 81:13 59:4 32:3 4:2
+389 point 47:337 71:267 83:246 89:238 8:175 4:143 7:74 43:43 77:32 99:24 23:11 5:8 94:7
+390 namespaces 32:14
+391 bang 32:1
+392 doc 36:4 17:2
+393 document 73:66 39:64 76:16 6:13 99:6 56:6 58:1
+394 declaration 69:27 27:8 17:1
+395 regular 32:1 57:1 16:1 5:1
+396 colon 32:9
+397 xmlns 32:3 10:3 31:1
+398 closing 60:10 17:9 5:2 13:1
+399 unsupported 38:6 28:2 61:1
+400 stacked 28:14
+401 readers 28:15
+402 idas 28:4
+403 converts 90:6 96:3 28:1
+404 detecting 65:1
+405 pbstream 28:13
+406 url 28:14 99:12 14:4
+407 ref 73:16 28:4
+408 protocol 28:1
+409 host 66:1
+410 port 79:3 28:1
+411 jar 1:1
+412 resource 67:91 11:71 14:69 40:26 62:17 28:1
+413 pbreader 28:3
+414 plugin 95:5
+415 application 76:251 11:172
+416 insert 95:1 46:1
+417 additional 32:1 6:1 60:1 16:1
+418 validators 65:1
+419 delegate 95:22
+420 standard 60:13 77:4 52:4 89:3 46:1 21:1
+421 generates 46:1
+422 illegal 75:15 51:14 73:10 39:10 83:6 64:6 85:4
+423 argument 14:28 73:14 75:9 64:7 39:6 85:5 57:2
+424 inserts 46:1 42:1
+425 find 88:49 2:37 4:36 78:27 23:25 83:16 85:12 63:12 8:10 72:7 56:5
+426 space 85:4
+427 obj 51:63 53:6
+428 created/opened 51:1
+429 nested 44:5
+430 report 44:7
+431 params 44:9
+432 build 44:3
+433 builds 44:1
+434 dumps 44:3
+435 trace 99:22 44:9 79:7 59:5 34:5 60:3 42:3 86:2 22:1 82:1 14:1
+436 err 44:2 40:1
+437 passed 37:8 5:3 65:2
+438 formed 95:2
+439 factory 73:99 67:87 69:64 75:29 63:3 20:2
+440 security 75:1 14:1
+441 access 51:16 75:13 99:4 26:2 45:1
+442 instantiation 75:6
+443 created 43:148 37:137 11:40 55:15 62:13 75:6 5:3 76:2 87:1 42:1
+444 cls 57:3 75:2
+445 instance 37:157 11:33 62:29 55:19 40:8 75:3 43:2 13:2
+446 utility 95:1 23:1 8:1
+447 util 95:1
+448 remainder 17:2
+449 assumed 66:1
+450 escape 95:3
+451 delim 95:4
+452 stored 16:2 95:1 26:1 14:1
+453 expression 95:1
+454 disallowing 95:1
+455 determine 89:4 52:4 5:4 26:3 66:1 83:1
+456 reference 73:6 95:2 86:1
+457 expects 65:1 95:1
+458 expect 95:1
+459 validity 95:1
+460 offending 95:3
+461 violated 95:3
+462 pretty 10:16
+463 inserted 10:3
+464 make 6:6 99:4 61:4 10:3 1:3 29:1
+465 collapse 10:3
+466 nsprefixes 10:4
+467 disclose 37:208 11:36 55:24 62:13 42:2
+468 accordance 37:204 11:33 62:23 55:23
+469 app 11:268 76:100 34:19 27:9 22:4
+470 beans 24:28 40:9 19:9 36:6 50:4 91:1 79:1
+471 prefs 12:146 34:3
+472 exit 60:13 6:12 86:3
+473 explicitly 11:3
+474 october 24:9 36:8 12:3 15:2 13:1
+475 bean 19:135 24:8
+476 linked 78:60 67:27 76:20 33:19 91:14 73:7 25:4 30:3 2:3
+477 projects 76:43 6:17 50:4
+478 collection 2:59 78:42 90:18 92:14 33:13 67:11 23:9 76:4 56:3
+479 unmodifiable 29:11 76:10 2:6
+480 documents 76:5 6:4 38:1
+481 enabled 24:171 6:61 90:18 68:6 87:4
+482 bundle 67:134 11:108 14:52 40:46 62:16 50:1
+483 labels 67:181 40:127 11:111 69:22 42:14 91:2 60:1
+484 model 76:186 50:4 97:3
+485 file 76:8 6:8
+486 recent 76:84 60:49 34:14
+487 files 76:65
+488 preferences 12:54 15:3
+489 user 4:14 5:12 56:10 12:10 6:9 94:5 24:3 78:1
+490 node 83:308 73:87 23:22 76:8 58:7 84:4
+491 path 83:534 74:57 8:49 58:48 33:40 3:12 9:10 76:6
+492 project 11:284 76:223 34:155 6:72 50:57
+493 show 5:51 6:31 93:9 76:6 13:4 18:1
+494 actions 40:107 93:54 67:26 76:22 50:17
+495 fire 30:159 92:49 24:36 63:21 76:18 84:4 79:2
+496 change 24:218 30:108 40:77 4:41 50:20 82:10 31:4 15:1
+497 dispose 76:11 6:8 61:3 48:3 78:2 45:2 92:1 18:1
+498 hide 5:6 76:5 13:5
+499 container 64:25 20:23 56:20 99:12 34:6 63:5 61:4 19:4 79:3 76:2 68:2 41:2
+500 frame 79:70 34:61 5:48 60:35 12:15 99:12 45:2
+501 launch 76:13
+502 configure 40:53 11:24 67:20 14:14 36:5
+503 utilities 12:12 34:11 86:7 69:6 6:5 5:2 71:1
+504 runnable 86:17 69:9
+505 run 86:8 69:7 15:4 57:2 87:1 99:1
+506 action 40:889 11:320 60:227 27:126 36:46 93:38 69:24 57:16 87:12 18:8 61:4
+507 select 40:27 82:10 27:9 36:8 61:5 22:2
+508 concurrent 76:3 91:2
+509 fixed 37:8 1:5 30:1
+510 support 37:94 71:31 42:12 39:11 24:9 50:4 34:3
+511 january 11:9 22:4 77:3 53:3 69:1 85:1
+512 panel 69:78 27:52 60:31 19:7 92:1
+513 chooser 6:122 50:35 5:30 41:4
+514 save 6:89 60:30 87:20 69:20 39:10 14:3
+515 executor 6:6
+516 unsaved 6:71 50:14 60:8
+517 multiple 34:43 76:15 56:14 39:4 4:2 93:1
+518 showing 76:24 5:1
+519 components 69:53 64:18 91:17 27:17 61:1
+520 initialize 69:14 27:4 91:3 61:2
+521 regenerated 69:13 27:4
+522 editor 67:385 62:282 90:112 84:85 50:64 63:34 99:16 36:6
+523 layout 80:105 69:76 16:68 64:58 12:27 27:25 1:8 5:7 43:3 26:1
+524 border 45:54 84:39 69:27 12:25 61:9 79:7 18:6 25:4
+525 variables 69:51 27:17 52:1
+526 component 61:168 36:46 15:39 6:35 60:27 34:19 64:16 45:11 18:9 50:8
+527 selected 90:119 24:32 6:25 40:16 5:8 36:7 27:4 21:4 62:2
+528 home 76:2
+529 directory 6:1 5:1 44:1
+530 bound 86:7 56:4
+531 rid 86:2 55:1
+532 resources 34:5 14:1
+533 invoked 6:8 76:7 24:6 13:2 41:1 77:1
+534 puts 76:4 39:3
+535 executes 34:2
+536 worker 86:35 99:13 6:11
+537 thread 86:63 99:6
+538 execution 34:2
+539 perfomred 34:2
+540 sequentially 86:2
+541 sequence 42:4 2:3 34:2
+542 runnables 34:2
+543 execute 6:13
+544 executors 34:1
+545 single 56:6 50:5 19:4 59:3 64:1 71:1
+546 mark 36:5 6:5
+547 displays 5:7 16:1
+548 dialog 5:54 6:12 73:3 82:1
+549 performed 40:33 11:28 36:8 61:6 99:3 80:2 57:2
+550 evt 63:153 11:52 62:40 93:38 24:38 6:29 78:28 15:20 60:19 87:13 36:7 84:4
+551 option 5:123 6:92 60:4 45:1
+552 pane 5:143 84:98 6:89 79:53 60:27 99:14 87:9 15:2
+553 n\n 99:12 11:1
+554 vendor 11:1
+555 june 76:18 11:16 37:8
+556 acts 24:6 36:4
+557 disabled 24:7
+558 listener 92:207 24:185 48:157 5:102 56:78 57:54 69:34 21:33 40:31 6:15 13:12 27:9 12:8
+559 install 24:17 60:9 15:6 49:2
+560 listeners 92:134 24:48 48:6
+561 update 24:55 40:21 4:21 63:9 30:6 22:4 19:4
+562 installs 24:14 15:4
+563 uninstall 24:17
+564 interned 24:6 41:3
+565 updates 24:5 4:2
+566 depending 56:10 11:6 50:4
+567 depends 24:4
+568 action#is 11:2
+569 enables 24:2
+570 disables 24:3
+571 enable 24:4
+572 disable 24:6
+573 action#set 24:2
+574 proj 11:3
+575 constants 50:8 21:4
+576 operations 24:3 1:2
+577 merged 39:5
+578 draw 71:199 37:150 67:98 69:92 62:71 68:65 78:58 48:48 18:20 47:12 45:10 82:7 33:4 87:2 25:2
+579 februar 37:15 41:1
+580 submenu 93:20 41:10
+581 represents 24:3 38:2 59:1
+582 menu 60:201 93:67 27:55 49:53 14:13 58:3 41:3 11:2
+583 radio 27:45 93:2 49:2
+584 button 21:221 67:122 69:86 27:73 84:58 14:25 93:24 87:23 19:5 60:3
+585 group 33:104 27:69 99:25 41:18 49:8 93:6 82:2
+586 prevent 37:6 76:2 21:1 1:1 58:1
+587 creation 43:43 27:39 67:35 94:1 58:1 51:1
+588 configures 68:6 24:2
+589 box 7:25 49:19 60:15 26:14 99:12 77:12 20:10 61:1
+590 item 27:52 60:45 49:40 93:18 41:18 73:6 40:5
+591 handler 24:35 12:26 91:23 13:22 80:14 21:13 4:13 57:5 7:3 76:1 35:1
+592 unconfigures 49:1
+593 unconfigure 49:1
+594 arrangeable 79:22
+595 arrangement 79:26
+596 arrange 79:27 80:1
+597 register 40:1
+598 vertical 64:32 16:11 80:7 84:6 93:4 70:4 40:3
+599 horizontal 71:11 64:10 16:7 50:4 79:2 41:1
+600 cascade 79:2
+601 label 22:35 89:27 40:17 57:7 16:7 99:6 43:2
+602 editable 36:29 16:18 19:8 20:2
+603 copies 36:4
+604 region 8:13 36:6 92:3
+605 place 36:3 37:2 0:2 61:1
+606 clipboard 38:13 36:12
+607 focus 36:64 6:60 13:23 56:17 5:13 60:10 20:10
+608 generated 69:9 36:4 27:4 60:3 57:3 94:1
+609 kit 47:5 41:4 36:4 83:1
+610 owner 77:279 5:82 36:46 4:46 6:36 7:29 0:19 38:4
+611 keyboard 36:14 13:3
+612 manager 27:44 58:28 50:20 42:19 99:18 79:17 36:14 6:13 60:11 5:4 14:3 64:2
+613 permanent 36:8
+614 cut 60:16 36:10 67:7 56:2
+615 cuts 36:4
+616 places 36:1 7:1
+617 delete 36:14 60:13 26:1
+618 deletes 36:4
+619 caret 36:9 20:1
+620 copied 90:4 36:2 45:1
+621 beep 36:12 34:3
+622 dot 94:8 36:7
+623 math 72:77 89:74 47:22 52:13 15:11 25:9 78:7 34:6 79:5 16:5 94:2 41:1
+624 abs 72:20 96:16 43:2
+625 bad 36:1
+626 location 47:46 5:27 12:21 26:14 0:12 72:7 53:6 91:1
+627 toolkit 18:8 36:6 34:6 15:2
+628 february 73:12 36:4 55:2
+629 gui 6:22 84:5 79:2 45:2 38:2 5:2
+630 exits 6:1
+631 letting 6:1
+632 reviewed 6:10
+633 silently 6:3
+634 abort 6:1
+635 window 13:80 12:60 5:45 15:9 34:8 6:7 87:6 25:5
+636 ancestor 12:17 6:9 34:7 92:1
+637 html 6:14 96:3 20:2 86:1
+638 css 6:14 60:4
+639 exiting 6:2
+640 lost 11:4 38:3 56:1
+641 options 6:17 5:17 92:8
+642 cancel 6:11
+643 initial 5:26 6:8
+644 quaqua 50:16 6:5 60:4 52:4 5:2
+645 destructive 6:4
+646 sheet 5:236 6:76
+647 review 6:18
+648 quitting 6:1
+649 discard 84:12 42:4 6:4
+650 visible 26:44 61:22 12:22 22:21 91:17 88:16 69:11 11:6 13:5 79:3 68:2
+651 request 48:19 6:17 92:10 82:8 20:8 26:2 79:1
+652 finished 86:15 6:10 99:7 26:1
+653 couldn't 6:8
+654 reason 6:4
+655 export 6:15 76:12
+656 requires 11:3 55:1 37:1 5:1
+657 pre 76:10 97:5 42:3 57:2 6:2
+658 convention 86:5 53:2
+659 dispatcher 86:9
+660 filechooser 6:5 44:2
+661 filter 50:17 6:17 44:5 31:2
+662 accessory 6:4
+663 exporting 6:1
+664 exported 6:2
+665 multi 34:12
+666 localize 30:2 34:1
+667 messsage 34:1
+668 front 2:38 91:14 61:9 67:8 34:8 88:4
+669 requests 77:3 34:1
+670 reworked 81:8 11:7 48:5 7:1
+671 formatted 60:4 14:3 11:2
+672 extended 34:15 50:4 83:1 14:1
+673 veto 79:8 24:1
+674 load 87:17 19:16 99:10 34:9 60:7
+675 loads 11:1
+676 opened 34:7 11:6
+677 maximize 60:7 34:4
+678 maximizes 11:1
+679 minimize 60:7 34:4
+680 minimizes 11:1
+681 staldenmattweg 11:10
+682 immensee 11:8 5:1 86:1
+683 switzerland 11:8 34:1 5:1
+684 relative 23:106 89:42 83:14 77:3
+685 existing 88:9 19:4 11:3
+686 drop 60:10 70:7 38:1
+687 dock 60:11
+688 roydesign 60:5
+689 dropped 26:4 11:1
+690 icon 19:148 18:107 5:31 60:19 41:12 14:11
+691 registered 92:45 48:5 13:2
+692 osxdrop 6:1
+693 can't 99:6 68:2 11:1
+694 toggle 41:38 40:31 22:16 84:10 63:2
+695 palette 13:81 60:9 49:4
+696 adapter 97:9 61:6 12:6 13:2
+697 paste 60:16 36:11 27:4 67:3
+698 pastes 36:4
+699 setter 51:15 85:1
+700 getter 51:25 55:1
+701 invocation 51:16 50:6 57:3 92:2
+702 failed 24:3 8:2
+703 redo 42:162 50:21 60:16 27:12
+704 redoes 42:3
+705 order 2:20 37:4 24:4 40:3 56:2
+706 work 40:7 79:5 99:4 86:4 12:3 4:2 56:1 18:1 35:1
+707 undo 42:163 50:73 30:63 27:48 40:20 33:9 60:1 4:1
+708 invoking 11:2 57:1 55:1
+709 real 11:18
+710 acceptable 6:4 44:1
+711 extension 44:15 50:9 6:6 53:2 79:1
+712 september 6:9 51:1
+713 success 42:3 6:1
+714 failure 6:1
+715 base 14:30 99:6 15:4 6:1 31:1
+716 safely 6:1
+717 immediately 6:2 5:2
+718 present 30:2 11:1 24:1
+719 shown 61:9 16:4 6:1
+720 chooses 6:3
+721 chanegs 11:1
+722 successfully 6:1
+723 localized 6:1
+724 messages 6:1
+725 dont 6:2 79:1
+726 couldnt 6:1
+727 actioin 36:1
+728 deselected 11:5
+729 tool 67:387 56:137 12:117 63:58 43:47 93:24 69:22 87:17 16:16 14:6
+730 bar 67:230 60:82 12:75 41:37 50:18 87:17 14:4
+731 toggles 40:1 36:1
+732 hidden 61:7 16:1
+733 undoes 42:3
+734 lifecycle 86:1
+735 windows 13:16 79:4 76:4 41:1
+736 screen 15:58 60:13 76:1
+737 style 5:11 73:9 50:9 3:8 58:3 20:3 13:3 31:2
+738 handle 78:330 47:232 60:3
+739 time 5:27 97:21 42:4 57:2 50:1 12:1
+740 typical 76:2
+741 styles 58:25 76:1
+742 mac 76:6 40:3 55:1
+743 usage 24:1 57:1
+744 appliciation 76:1
+745 myapplication 76:1
+746 launches 85:1
+747 typically 91:6 85:4 19:4 62:2
+748 arguments 14:3 57:1 8:1
+749 inited 76:1
+750 alternatively 76:1
+751 configured 24:1 68:1
+752 saving 87:2 24:1
+753 stopped 11:1
+754 fires 26:5 76:4 92:2
+755 users 86:1 8:1
+756 view 47:209 56:181 62:176 84:163 90:92 33:58 63:41 20:41 19:2
+757 hides 85:1 13:1
+758 convenience 14:11 83:9 80:4 81:3 51:1
+759 removing 24:2
+760 disposing 76:1
+761 share 56:4
+762 parallel 53:5 86:2 94:1
+763 consists 86:2 80:1 96:1
+764 sequential 86:2 85:2
+765 act 24:5
+766 perform 86:5 93:4
+767 shares 56:2
+768 tools 76:10 56:9 88:2 59:2
+769 sharing 76:9
+770 represented 61:1
+771 recently 76:1
+772 immutable 78:1
+773 appends 14:3 56:1 44:1
+774 bars 76:17 79:1
+775 toolbars 76:7 19:4 56:3
+776 toolbar 27:54 12:47 41:4
+777 shared 67:32 50:4 76:3
+778 menus 76:9 49:2
+779 applet 99:71 87:32
+780 startup 76:1
+781 performance 40:2 70:1
+782 suit 76:1
+783 unable 29:4 39:3
+784 subclasses 76:7 93:3
+785 life 60:3
+786 cycle 60:3 97:1
+787 presented 60:3 33:3
+788 needed 60:3 64:1 80:1 59:1
+789 scroll 84:119 79:45
+790 idesktop 79:12
+791 desktop 79:37 15:6 58:1
+792 apple 60:11 41:3
+793 graphics 71:53 68:24 18:22 47:18 45:14 12:9 88:5 8:3 23:1
+794 quartz 60:5
+795 feel 99:24 60:12 5:9 14:6 45:1
+796 operation 40:6 26:5 99:4 68:3 23:1 61:1
+797 viewport 84:8 79:4
+798 wrap 60:4 20:2
+799 laf 60:7 14:2
+800 macos 60:3
+801 closable 76:1
+802 maximizable 60:1
+803 resizable 5:3 60:2
+804 iconifiable 40:1
+805 loc 5:22 60:15 23:4
+806 moved 63:9 12:9 60:8 4:4 71:3 61:3 45:1
+807 modified 60:2
+808 wrapped 76:1 14:1
+809 reversed 2:11 78:3 60:2
+810 focusable 41:35 60:27 67:7 69:1
+811 separator 60:29 67:25 27:23 97:10 93:2
+812 edit 30:451 42:115 20:70 84:25 60:5
+813 cbmi 60:18 49:14
+814 stands 60:1
+815 project's 60:2
+816 attached 4:3 60:2
+817 designed 60:1
+818 platforms 60:1
+819 items 60:10 63:1
+820 wires 60:3
+821 displayed 5:27 99:12 76:6 64:1
+822 wiring 60:3
+823 services 60:1
+824 quit 13:2
+825 hasn't 86:3 12:2
+826 revert 76:2
+827 page 99:2 60:2
+828 setup 13:2
+829 palettes 13:20
+830 preferred 15:23 80:18 64:9 18:9 20:8 93:4 60:2 16:1
+831 dimension 53:41 55:28 18:19 15:17 64:7 80:6 25:4 20:4 3:4 60:3
+832 floating 20:19 12:16 13:3
+833 mrjapp 60:5
+834 frameless 13:1
+835 stb 60:4
+836 floatable 27:8 87:2 76:1
+837 orientation 7:15 61:7 12:7 3:5
+838 undecorated 5:2
+839 decoration 74:36 21:15 3:6 40:1 23:1
+840 font 41:45 16:44 3:26 50:24 92:21 93:16 27:15 20:12 39:10 73:8 60:3 58:3 48:1
+841 lucida 60:1 29:1
+842 grande 60:1
+843 pack 5:3 45:1
+844 width 52:101 9:100 3:62 72:57 53:47 71:37 35:32 5:26 79:24 18:23 15:23 23:20 68:18 7:17 59:12 20:12 41:7
+845 asterisk 11:1
+846 revised 56:4 86:1
+847 minimum 64:8 15:5 80:2 40:2
+848 activated 93:2 60:1
+849 eventually 60:1
+850 wraps 60:1 14:1
+851 provide 37:6 93:5 19:4 60:1
+852 duplicates 90:7
+853 selects 36:2 24:1
+854 anymore 24:2 51:1
+855 timer 93:18 5:16 13:7
+856 focused 56:20 13:7 21:2
+857 means 70:3 64:2 13:2 52:1
+858 subcomponents 64:2 13:2
+859 receive 13:1
+860 events 19:16 5:14 2:8 93:7 85:7 42:6 30:2 13:2 1:2
+861 gained 29:3 61:1
+862 longer 38:4 13:2
+863 delivered 13:1
+864 restart 13:1
+865 repeats 61:3 13:1
+866 owned 13:4 37:2
+867 related 86:4
+868 belongs 76:1
+869 visual 50:9
+870 marks 6:1
+871 consume 34:2
+872 crucial 34:2
+873 responsivenes 86:2
+874 distinguish 34:1 31:1
+875 multiply 76:1
+876 track 47:74 88:10 15:4 73:3 81:1
+877 models 24:1
+878 adding 96:3
+879 cloneable 37:6 53:3 29:1
+880 cloned 88:3 24:1
+881 assigned 24:1
+882 supported 38:9 96:5 68:4 19:4 3:3 26:2
+883 attributed 68:21 72:7 16:6 67:5
+884 composite 80:83 30:61 33:25 42:22 68:7 38:5
+885 figure 48:1328 4:267 91:197 43:192 97:151 70:139 78:95 72:93 33:86 77:85 68:73 80:71 81:57 7:54 2:50 99:43 87:1
+886 july 55:24 0:2
+887 geom 71:78 37:57 7:51 96:37 83:36 0:20 55:19 23:13 77:10 59:10 47:7 68:1 93:1
+888 object 29:71 67:28 5:13 73:12
+889 forbidden 68:51
+890 semantics 68:5 48:5
+891 implementing 68:11
+892 undoable 30:220 84:24 42:18
+893 happened 30:109
+894 entry 29:157 19:4 16:2 62:1
+895 color 58:231 18:102 41:65 47:57 3:52 19:43 67:26 72:17 16:13 73:9 39:9 68:7 55:7 9:7 27:4 45:3 20:1
+896 stroke 3:196 41:101 72:37 68:28 7:20 14:18 25:12
+897 translate 70:38 18:23 81:4
+898 height 52:101 9:86 71:47 53:45 72:40 15:30 35:29 18:26 79:20 23:15
+899 connectors 4:48 26:15 68:7 91:4
+900 miter 59:10 3:8 68:3
+901 limit 59:16 3:8 68:2
+902 factor 22:91 3:11 83:9 58:8 68:3
+903 rectangle 71:202 72:147 96:58 23:56 47:44 82:35 35:15 20:15 45:12 15:12 67:11 5:6
+904 total 7:27 81:10 89:3 35:2 64:1
+905 grow 72:139 3:37 7:34 47:9 96:8 20:2 68:1 90:1
+906 area 82:109 48:82 20:17 16:17 67:12 45:12 81:6
+907 lines 96:6 87:6 55:5 18:1
+908 assignable 81:5 57:1
+909 applies 68:3 85:2
+910 apply 62:14 97:4 68:4 21:2 81:1
+911 composed 91:3 26:1
+912 define 91:5 70:1
+913 behavior 20:2 77:1 3:1
+914 subclassers 80:3
+915 contained 80:9 26:8 31:1
+916 modification 91:2
+917 notify 92:57 48:28 91:20 56:8
+918 precision 37:35 53:7 77:6 48:6
+919 coordinates 37:50 71:28 78:14 56:10 48:2
+920 derived 37:50 71:17 82:6 43:2 23:2
+921 cached 91:2
+922 layouter 91:50 80:35
+923 determines 61:14 91:1
+924 laid 91:6
+925 graphically 71:1
+926 changing 92:10 91:10 80:2 83:1
+927 invalidated 82:89 48:59
+928 detail 78:57
+929 drawing 48:348 69:269 62:216 90:120 47:85 27:84 56:71 67:43 33:33 19:7
+930 figures 2:136 90:121 33:53 30:42 80:20 55:15 4:14 63:5 84:4 49:4 9:4
+931 avoid 31:2 37:1 5:1
+932 sends 2:13
+933 send 2:10 57:1 9:1
+934 invalidate 78:45 83:17 91:16 2:7
+935 transforms 71:10
+936 transform 70:263 72:35 0:11
+937 affine 70:100 72:9 78:3
+938 anchor 47:89 71:66 72:43 0:25 80:21 43:21 27:8 25:3
+939 identity 47:6 91:2 57:1
+940 scale 22:99 9:21 8:17 78:11 25:10 0:5
+941 inside 48:21 23:8 72:7 41:2
+942 algorithm 91:16 96:2 94:2 4:1
+943 accesses 91:7
+944 arranges 91:7 79:2
+945 graphical 80:35
+946 presentation 80:109 42:54
+947 strategy 91:4
+948 relation 91:4
+949 task 97:57 80:7
+950 layouting 91:3
+951 delegated 80:11
+952 plugged 91:4
+953 good 91:3
+954 idea 91:3
+955 recreated 80:3
+956 restored 91:3
+957 storable 55:28 73:18 75:12 39:7 7:6 80:5
+958 encapsulation 91:3 5:1
+959 calculate 80:9 37:1
+960 decomposition 26:2 30:1
+961 restore 0:29 72:22 26:6 77:4 91:2
+962 geometry 77:25 72:17
+963 depth 92:9 91:2
+964 connector 4:389 7:106 72:15
+965 connection 4:429 67:22 7:19 99:6 92:2
+966 decorator 26:61 23:21 74:17 16:3
+967 doubl 26:1
+968 connect 4:79 87:22
+969 persistent 26:4 55:1
+970 constructs 82:4 4:4 74:3
+971 internally 77:1
+972 resurrect 18:1
+973 directly 31:4 45:1
+974 tests 89:4 4:4
+975 draws 71:13 47:10 26:2 56:1
+976 invisible 50:3 26:2
+977 ellipse 74:61 67:8 55:1
+978 circle 47:8 55:6
+979 blue 47:6 25:3 4:1
+980 center 0:40 94:28 96:18 7:9 4:7 23:4 21:3 45:1 58:1
+981 connector's 26:3
+982 adjust 4:4 52:1
+983 hint 18:13 26:4 96:1
+984 improve 71:4
+985 results 4:2
+986 extend 92:1 12:1
+987 ugly 92:2
+988 dirty 92:5
+989 fix 92:1
+990 undoing 50:4 92:1
+991 removal 92:1
+992 lock 92:9 64:3 48:1
+993 render 92:20 16:2 55:1
+994 figuren 92:2
+995 hinzuf\u 30:1
+996 fcgen 30:2 31:1
+997 entfernen 30:2 83:1
+998 orphaned 30:3
+999 note 37:14 4:6 39:4 5:2
+1000 problems 30:1
+1001 caused 92:1
+1002 connected 4:7 97:3 1:3
+1003 calls 92:4 86:2 85:1 57:1 62:1 42:1
+1004 figur 30:6
+1005 einf\u 1:1 55:1
+1006 interest 92:45
+1007 notification 92:25
+1008 guaranteed 92:22
+1009 notifying 92:22
+1010 interested 92:22 37:2
+1011 lazily 92:23
+1012 frc 92:7 16:2
+1013 synchronizes 92:1
+1014 managing 92:1
+1015 courting 26:7
+1016 interactive 26:6
+1017 increase 26:1 83:1
+1018 decrease 92:1
+1019 remap 48:14
+1020 cursor 47:83 56:12 43:10 92:9 26:3
+1021 predefined 47:13 43:1
+1022 checks 72:6 53:5 4:5 81:1
+1023 informs 26:8 56:5 91:2
+1024 redrawn 71:1
+1025 affects 52:1
+1026 display 5:19 26:11 77:7 99:6 7:5 19:4
+1027 moves 71:5 30:2 5:2
+1028 fired 19:4 26:2 37:1
+1029 chop 7:94 96:27 92:4
+1030 includes 88:5 26:3
+1031 popup 41:101 93:90 27:8 19:5
+1032 interpreted 26:2
+1033 separators 26:2
+1034 specialized 16:6 26:4 93:1
+1035 coordinate 83:10 16:3 48:1 24:1 23:1
+1036 mouse 63:138 93:43 56:24 43:15 57:11 78:6 88:3
+1037 click 78:23 93:6 30:6
+1038 hit 72:12 83:10 2:5 3:2
+1039 antialiased 92:4
+1040 fractional 92:4 20:2
+1041 metrics 92:4 16:1
+1042 layer 26:19 97:2
+1043 tooltip 26:3 14:1
+1044 insets 52:290 50:8 16:8 97:7 3:7
+1045 bottom 52:80
+1046 november 37:19 62:13 19:4 18:3
+1047 handlesize 47:36
+1048 secondary 78:27
+1049 white 47:10 72:6 67:6 25:2 3:1
+1050 black 47:18 67:14 72:7 58:3 18:3
+1051 oval 96:4 3:3
+1052 diamond 9:45 7:8 47:5 67:4
+1053 polygon 0:10 37:6 96:4 67:3 8:3
+1054 repainted 82:4 48:2
+1055 assumes 77:1
+1056 reimpleted 78:1
+1057 shape 3:24 7:13 96:7 26:7
+1058 combinable 47:11 70:1
+1059 typed 63:8
+1060 released 63:36
+1061 pressed 63:49 20:4 93:1
+1062 pixels 78:2 56:2
+1063 antialiasing 71:2 18:1
+1064 account 71:5 74:1 7:1
+1065 tracks 47:5
+1066 modifiers 47:63 63:2 57:2
+1067 dezember 80:4 15:2
+1068 rotated 3:1
+1069 scaled 74:1
+1070 filled 74:19 21:3 3:3 52:1
+1071 stroked 74:22 3:6 7:5
+1072 solid 74:17
+1073 arrow 74:14 67:6 49:6
+1074 tip 74:16 14:9 67:4 49:4
+1075 angle 89:50 7:40 74:15 25:12 0:6
+1076 radius 74:51 35:6 96:4
+1077 direction 89:17 72:5 80:2 3:2
+1078 template 22:1
+1079 general 59:29 74:18 83:12 8:9 9:7
+1080 transformed 74:3 26:1
+1081 join 83:13 3:7 23:6 88:4 86:1
+1082 rotate 0:10 25:4 74:2
+1083 atan 89:10 0:3
+1084 hook 93:5 74:2
+1085 calculates 74:2
+1086 locator 77:135 23:64
+1087 implementations 53:3 77:1
+1088 locate 77:26
+1089 dependent 97:7 77:4 88:2
+1090 views 56:29 22:10 62:1 93:1
+1091 active 56:18 25:3 86:2
+1092 prevents 70:1
+1093 enter 92:1
+1094 received 70:4
+1095 working 70:6
+1096 activate 63:16 56:4
+1097 deactivate 63:20 56:5
+1098 constrain 47:23 43:7 4:1
+1099 constrainer 22:87 47:17
+1100 selection 90:193 67:31 5:18 63:16 43:10
+1101 verschieben 1:3 30:1
+1102 clicked 63:7 93:4
+1103 exited 63:6
+1104 locale 14:33 62:9
+1105 align 70:25 41:8 50:4 22:3
+1106 aligns 70:1
+1107 m???rz 70:5 7:3 73:2 71:2 27:2
+1108 north 23:87
+1109 east 23:87
+1110 west 23:84
+1111 south 23:85
+1112 toggler 36:6 41:3
+1113 permant 40:1
+1114 regardles 36:1
+1115 image 45:86 19:44 14:15 21:5
+1116 rect 16:19 35:18 18:9 45:8 33:4 79:2 49:2 2:2 82:1
+1117 paint 45:26 18:11
+1118 red 18:5 25:2 16:2 4:1
+1119 chosen 19:4 18:3 89:1
+1120 colors 25:6 18:3 41:1
+1121 shadow 3:4 18:3 58:2 25:1
+1122 bug 18:2 4:1
+1123 apples 18:1
+1124 april 37:11
+1125 blackens 18:1
+1126 casting 14:2 25:1
+1127 amount 25:5 39:1
+1128 green 25:3 47:2
+1129 alpha 94:13 89:10 5:2
+1130 listen 81:1
+1131 anonymous 57:1
+1132 demo 57:2
+1133 dynamic 57:2
+1134 loaded 57:1
+1135 made 57:2 45:1
+1136 here's 57:1
+1137 dynamically 57:1
+1138 specifies 57:1 3:1 89:1
+1139 previous 59:15 58:12 57:1
+1140 parameterless 51:6 57:3
+1141 convenient 21:1
+1142 give 57:1 77:1
+1143 method 86:3 57:3
+1144 incoming 42:4 57:1
+1145 proxy 57:22
+1146 introduced 57:1
+1147 invoker 57:3
+1148 superclass 19:12 57:2
+1149 treatment 57:2
+1150 declaring 57:3
+1151 loader 57:2
+1152 supposed 51:9 57:1
+1153 produce 57:1
+1154 primitive 57:1
+1155 convert 57:1 90:1
+1156 kind 19:16 61:4 57:1
+1157 helper 57:1 3:1
+1158 desired 99:6 57:1 26:1
+1159 ambiguous 57:2
+1160 raise 57:6
+1161 modifier 57:2
+1162 ints 57:3
+1163 ungrouped 33:6
+1164 ungroup 33:24 27:4
+1165 redundant 33:2 97:1
+1166 sorted 2:16 33:8 18:4
+1167 sort 2:15 33:6
+1168 bevel 45:12
+1169 plaf 52:6 49:3
+1170 consist 52:1
+1171 parts 45:1 53:1
+1172 corners 59:111 45:2 35:1
+1173 edges 52:5 7:1
+1174 renamed 45:1 39:1
+1175 conflicts 45:1
+1176 redesigned 52:1
+1177 filling 52:2
+1178 texture 45:7
+1179 refactored 52:1
+1180 buffered 50:8 45:6
+1181 img 45:55
+1182 media 45:2
+1183 tracker 63:75 52:2
+1184 wait 84:4 45:1
+1185 interrupted 50:4 86:2 45:1
+1186 opaque 45:2 5:1
+1187 paints 45:1
+1188 painted 45:5 49:1
+1189 optimisation 45:2
+1190 fits 45:2
+1191 small 50:12 45:1
+1192 leads 45:1
+1193 subimage 45:5
+1194 yellow 47:4 25:2 45:1
+1195 wrandels 99:3 24:2
+1196 column 93:8 41:6 64:3 79:2
+1197 repaint 18:39 93:1
+1198 grid 27:66 22:55 64:24 84:23 41:18
+1199 dispatching 86:3 69:2
+1200 handlers 24:1 69:1
+1201 info 99:30 19:20 58:2
+1202 simple 19:4
+1203 descriptor 19:145
+1204 obtained 19:32
+1205 introspection 19:16
+1206 bdescriptor 19:8
+1207 customizing 19:25
+1208 pdescriptor 19:8
+1209 edescriptor 19:8
+1210 mdescriptor 19:8
+1211 icons 19:28
+1212 def 19:8
+1213 mono 19:40
+1214 idx 79:18 19:8
+1215 bean's 19:16
+1216 automatic 19:16
+1217 analysis 19:16
+1218 descriptors 19:36
+1219 indexed 19:12
+1220 belong 19:4
+1221 kinds 19:5
+1222 commonly 19:8
+1223 initially 19:4
+1224 human's 19:8
+1225 returned 19:8
+1226 represent 19:4 61:1
+1227 toolboxes 19:4
+1228 images 19:4 87:2
+1229 future 19:4 5:1
+1230 include 19:4 78:2
+1231 formats 19:4
+1232 aren't 19:4
+1233 flavors 38:10 19:4
+1234 choses 19:4
+1235 recommend 19:8
+1236 supporting 19:4
+1237 transparent 19:4 67:1
+1238 background 18:10 19:8 63:1 58:1
+1239 rendered 19:4 5:2
+1240 requested 38:8 19:8
+1241 constant 19:4 59:3
+1242 representing 73:6 19:4
+1243 suitable 19:4 89:1
+1244 rendering 18:38 68:1
+1245 hints 18:26
+1246 move 62:33 96:26 72:16 59:12 47:11 27:10 55:9 23:7 21:7 71:3 97:2 15:1
+1247 bring 2:8 61:1
+1248 defaults 55:10
+1249 gap 64:11 49:2 80:1
+1250 pick 62:9 96:6
+1251 dedicated 86:3
+1252 reasonable 86:1
+1253 unlike 56:2 86:1 61:1
+1254 dispatched 86:1
+1255 event's 26:3
+1256 compute 94:19 59:11 89:3 86:3
+1257 constructed 86:3 70:1
+1258 optimized 40:1
+1259 mnem 14:7 40:1
+1260 instructions 86:1
+1261 http 20:5 96:4 84:2 86:1 31:1
+1262 sun 7:2 86:1 21:1
+1263 com/docs/books/tutorial/uiswing/misc/threads 86:1
+1264 slightly 86:1 42:1
+1265 microsystems 86:1
+1266 private 86:6 37:1
+1267 maintain 86:1
+1268 separate 86:1 16:1
+1269 synchronization 86:1
+1270 var 86:11
+1271 synchronized 86:2
+1272 final 86:1
+1273 finally 86:1
+1274 constructing 86:1
+1275 catch 86:1
+1276 interrupt 86:3
+1277 propagate 2:2 86:1
+1278 protected 86:1 88:1
+1279 interrupts 86:1
+1280 force 86:1
+1281 paremeter 22:2
+1282 split 83:25 94:23 99:12 4:11 33:7 29:4
+1283 reuse 40:1
+1284 exclusion 21:5
+1285 cayenne 41:1
+1286 asparagus 21:1
+1287 clover 21:1
+1288 teal 58:2 41:1
+1289 midnight 41:1
+1290 plum 41:1 58:1
+1291 tin 21:1
+1292 nickel 21:1
+1293 maraschino 67:1
+1294 lemon 81:1
+1295 spring 41:1
+1296 turquoise 67:1 58:1
+1297 blueberry 21:1
+1298 magenta 81:2
+1299 steel 21:1
+1300 aluminium 29:1
+1301 salmon 21:1 58:1
+1302 banana 67:1
+1303 flora 40:1
+1304 ice 22:1
+1305 orchid 41:1 58:1
+1306 bubblegum 67:1
+1307 iron 21:1
+1308 magnesium 21:1
+1309 mocha 21:1
+1310 fern 21:1
+1311 moss 67:1
+1312 ocean 21:1
+1313 eggplant 62:1
+1314 maroon 58:2 21:1
+1315 tungsten 40:1
+1316 silver 58:2 41:1
+1317 tangerine 41:1
+1318 lime 58:2 21:1
+1319 sea 21:1
+1320 foam 21:1
+1321 aqua 58:2 41:1
+1322 grape 41:1
+1323 strawberry 41:1
+1324 mercury 21:1
+1325 cantaloupe 67:1
+1326 honeydew 41:1 58:1
+1327 spindrift 67:1
+1328 sky 41:1
+1329 lavender 40:1 25:1
+1330 carnation 41:1
+1331 licorice 40:1
+1332 snow 67:1 25:1
+1333 delegation 93:4 21:1
+1334 prior 67:1
+1335 zoom 27:44 41:31 22:15 50:6
+1336 buttons 67:52
+1337 factors 67:12 4:1
+1338 org/jhotdraw/draw/action/images/show 21:1
+1339 png 21:1
+1340 placement 41:34 3:16 72:1
+1341 widths 41:5 85:1
+1342 formatter 41:4
+1343 decimal 21:3
+1344 fraction 41:2
+1345 digits 41:2 58:1
+1346 decorations 41:6 26:1 14:1
+1347 fdashes 21:5
+1348 underfill 41:9 3:6
+1349 unfilled 41:3 77:2
+1350 bold 41:8 3:1
+1351 italic 41:8 3:1
+1352 underline 41:8
+1353 fonts 41:23 52:1
+1354 environment 41:2
+1355 gung 67:1
+1356 seo 41:1
+1357 head 41:1
+1358 myungjo 41:2
+1359 pil 21:1
+1360 bayan 41:1
+1361 gothic 41:4
+1362 sung 40:1
+1363 arial 21:2
+1364 hebrew 21:2
+1365 ayuthaya 21:1
+1366 baghdad 41:1
+1367 biau 23:1
+1368 kai 41:2
+1369 charcoal 41:1
+1370 corsiva 21:1
+1371 deco 21:1
+1372 naskh 41:1
+1373 devanagari 67:1
+1374 fang 67:1
+1375 song 41:3
+1376 bitmap 40:1
+1377 geeza 29:1
+1378 pro 41:6
+1379 geezah 41:1
+1380 geneva 41:1
+1381 gujarati 41:1
+1382 gurmukhi 21:1
+1383 hei 41:2
+1384 helvetica 21:1
+1385 hiragino 41:4
+1386 kaku 41:2
+1387 maru 41:1
+1388 mincho 21:2
+1389 inai 22:1
+1390 mathi 41:1
+1391 krungthep 62:1
+1392 kufi 41:1
+1393 mshtakan 21:1
+1394 monaco 41:1
+1395 nadeem 40:1
+1396 peninim 41:1
+1397 osaka 41:1
+1398 plantagenet 41:1
+1399 cherokee 62:1
+1400 raanana 21:1
+1401 fangsong 41:1
+1402 heiti 41:1
+1403 kaiti 21:1
+1404 sathu 21:1
+1405 silom 41:1
+1406 thonburi 41:1
+1407 times 64:8 94:2 21:1 37:1
+1408 professional 41:1
+1409 batang 41:1
+1410 estrangelo 41:1
+1411 edessa 41:1
+1412 gautami 41:1
+1413 kartika 21:1
+1414 latha 21:1
+1415 sans 41:1
+1416 mangal 21:1
+1417 marlett 21:1
+1418 outlook 41:1
+1419 boli 21:1
+1420 raavi 67:1
+1421 shruti 62:1
+1422 sim 41:1
+1423 sylfaen 23:1
+1424 symbol 21:1
+1425 tunga 21:1
+1426 vrinda 41:1
+1427 wingdings 41:3
+1428 adobe 21:1
+1429 family 21:11
+1430 comparator 26:9 21:1
+1431 families 21:4
+1432 styled 16:11 41:4
+1433 alignment 67:9 78:3
+1434 lays 80:5 64:2
+1435 columns 64:21 16:4 20:2
+1436 hgap 64:21
+1437 vgap 64:21
+1438 rows 64:54
+1439 cols 64:33 20:4
+1440 row 64:3
+1441 meaning 64:4
+1442 addition 85:2
+1443 gaps 64:3
+1444 constructors 64:1
+1445 defer 64:1
+1446 setting 83:2 52:2
+1447 affect 64:1
+1448 determined 61:11 26:2
+1449 comp 64:8
+1450 largest 64:4 16:1
+1451 padding 64:4
+1452 dimensions 80:2 64:2 72:1
+1453 lay 64:2 16:1
+1454 ncomponents 64:14
+1455 nrows 64:25
+1456 ncols 64:22
+1457 reshapes 61:1
+1458 satisfy 61:1
+1459 constraints 27:64 64:1
+1460 individual 64:1 58:1
+1461 dividing 64:1
+1462 free 64:2
+1463 sized 64:1
+1464 portions 64:1
+1465 container's 64:2
+1466 minus 64:1
+1467 container#do 64:1
+1468 ltr 64:2
+1469 layout's 64:1
+1470 zooms 22:1
+1471 decorationimplements 74:1
+1472 pointiness 55:1
+1473 outer 35:21 74:16 0:15 93:5
+1474 properly 61:2 55:2 68:1
+1475 sin 89:13
+1476 cos 89:12 74:1
+1477 eigenschaft 42:1
+1478 ndern 30:2
+1479 typesafe 81:2 26:1
+1480 juni 97:4 47:4 81:1
+1481 double 53:24 3:20 23:17 94:13 85:2 2:2
+1482 hey 29:1
+1483 works 85:5 59:2
+1484 easier 81:1
+1485 defines 59:4 56:2 3:1
+1486 dash 3:11 29:1
+1487 winding 25:11 3:7
+1488 rule 25:11 3:7
+1489 odd 3:2
+1490 determining 3:2 14:1
+1491 interior 3:2
+1492 outline 59:20 3:11
+1493 integer 3:4
+1494 cap 3:5 59:2
+1495 multiplied 3:1
+1496 doubles 68:1
+1497 pattern 31:3 81:1
+1498 phase 3:6
+1499 multiplication 3:1
+1500 stroking 3:2
+1501 centered 3:2 77:1 92:1
+1502 effect 5:3 3:1 90:1 59:1
+1503 paths 33:11 25:8 3:3
+1504 face 3:1
+1505 boolean 3:8 9:2
+1506 underlined 3:3
+1507 liner 4:74 3:5 67:4
+1508 bezier 83:357 94:71 0:14 67:12 7:2
+1509 triangle 7:77 67:4 94:1
+1510 computing 3:1
+1511 widht 3:1
+1512 ddashes 3:4
+1513 derive 20:2 3:2 94:1
+1514 distance 89:29 8:8 3:4 35:1
+1515 shrink 3:3
+1516 units 89:3 3:3
+1517 grown 3:3
+1518 shrunk 3:3
+1519 perpendicular 72:30 3:4
+1520 growth 72:29
+1521 detections 81:1
+1522 januar 83:5 80:4
+1523 coord 1:15 83:8
+1524 colinear 83:12
+1525 mask 83:70
+1526 punkt 1:5
+1527 step 47:36 20:3
+1528 independently 1:1
+1529 opposite 1:2 9:1
+1530 sqrt 89:7 9:7 79:4 94:2
+1531 sina 1:4
+1532 cosa 1:4
+1533 arbitrary 3:1
+1534 shapes 1:1
+1535 caps 83:9
+1536 improved 94:3 42:1 75:1
+1537 march 83:3 16:3 27:2
+1538 capped 83:29
+1539 cache 83:3 39:3 16:3 78:1
+1540 speed 83:3
+1541 tolerance 96:18 83:16
+1542 flatness 83:7
+1543 cloning 1:1 30:1
+1544 firing 80:6 83:1
+1545 ends 39:10 58:9 42:2 14:1
+1546 finds 4:13 56:6 2:4
+1547 nodes 73:7 83:5
+1548 segment 83:43 89:31 4:5 16:1
+1549 polyline 89:8 83:6 33:2
+1550 fixme 83:1
+1551 joins 83:3
+1552 segments 83:9 4:6 94:2 59:1 16:1
+1553 hits 4:4 83:3
+1554 joined 83:4
+1555 splits 83:3
+1556 outermost 83:5 0:2
+1557 poly 89:2
+1558 locates 77:5 7:5
+1559 labeling 55:1
+1560 positions 16:4 20:2 23:1
+1561 dir 89:8 14:8
+1562 dim 89:13
+1563 percentage 89:3
+1564 seg 89:25 59:11
+1565 progress 42:32 89:7 14:1
+1566 die 42:11
+1567 replace 42:5 71:4 15:1
+1568 plf 1:3
+1569 pressing 0:1 88:1
+1570 alt 0:1
+1571 shift 5:10 63:4
+1572 manipulating 0:1
+1573 restricts 0:1
+1574 theta 0:10
+1575 nice 0:1
+1576 overlap 0:2
+1577 ctr 0:25 96:12
+1578 len 96:33 8:8 73:6 0:5
+1579 angles 0:1
+1580 lengths 0:1
+1581 ratio 5:18 0:2
+1582 rotation 7:4 0:2
+1583 npoints 0:1 8:1
+1584 xpoints 0:1 94:1
+1585 ypoints 47:1 8:1
+1586 scribble 67:4 43:2
+1587 finish 43:15
+1588 drag 63:17 79:1 38:1
+1589 erstellen 43:4
+1590 fitted 94:10 43:7
+1591 fit 94:26 43:2
+1592 curve 8:144 25:5 59:2
+1593 dragged 63:20
+1594 bidirectional 88:3 43:1
+1595 dnd 88:2
+1596 connections 4:12
+1597 turns 4:2
+1598 visibility 4:2
+1599 enters 88:2
+1600 interaction 56:10 88:5
+1601 manipulated 4:2
+1602 edited 88:12 16:1
+1603 prototypical 88:2
+1604 manipulates 4:2
+1605 mousedown 88:2
+1606 connects 4:7
+1607 verbindung 4:4
+1608 connectable 88:18
+1609 damage 20:5 88:3
+1610 common 47:2
+1611 locations 16:6 77:2 26:2
+1612 figure's 2:6 72:3 74:1
+1613 fills 77:3
+1614 edge 96:10 9:3 23:2
+1615 resize 23:10 79:4 80:2
+1616 normalized 23:10
+1617 reconnect 4:3
+1618 disconnects 88:4
+1619 disconnect 4:13
+1620 tracking 88:1
+1621 temporarily 2:5 88:1
+1622 store 39:3 47:1 29:1
+1623 side 9:30 92:1
+1624 unaffected 88:1
+1625 reverts 88:1
+1626 choping 7:3
+1627 centers 7:3
+1628 growx 9:22
+1629 growy 9:23
+1630 correct 9:1
+1631 overlapping 89:1
+1632 quadrant 9:1
+1633 ang 9:10
+1634 dermine 9:1
+1635 intersection 89:5 2:3
+1636 intersect 59:42 15:2 2:1 90:1
+1637 proper 9:1
+1638 javac 37:1
+1639 jvm 71:1
+1640 gen 7:1
+1641 chopping 7:2
+1642 round 35:44 67:5
+1643 vertica 35:1
+1644 shortest 35:1
+1645 rrf 35:4
+1646 arc 35:33
+1647 orange 77:1 58:1
+1648 unchangeable 91:1
+1649 transformieren 62:1
+1650 concatenate 70:6
+1651 inverse 70:4
+1652 noninvertible 70:2
+1653 generally 42:1
+1654 edits 84:20 42:20
+1655 das 4:1
+1656 early 80:1
+1657 feedback 77:3
+1658 he/she 4:1
+1659 cases 85:2
+1660 lineout 4:15
+1661 lineouting 4:1
+1662 darker 4:1
+1663 activity 88:3
+1664 significant 42:31 50:8
+1665 owning 77:3
+1666 endpoint 94:2 71:1 3:1
+1667 describes 55:1
+1668 manually 4:1
+1669 leave 26:1
+1670 grids 47:1
+1671 constrains 37:3
+1672 constrained 47:4 89:2
+1673 minimal 43:9
+1674 treshold 43:5
+1675 enforced 43:1
+1676 eagerly 43:1
+1677 smaller 29:1 35:1
+1678 drawingextends 2:1
+1679 drawingimplements 2:2
+1680 sorting 2:13
+1681 clip 18:8 16:5 2:4
+1682 intersects 23:17 59:4 2:4
+1683 unsorted 2:6
+1684 invalidates 78:2 2:1
+1685 ensures 2:2 4:1
+1686 datatransfer 38:7 62:1
+1687 motion 56:9
+1688 transferable 38:23
+1689 rainbow 18:4
+1690 bto 38:1
+1691 gray 25:2 36:1
+1692 negative 53:4 18:1 94:1
+1693 isn't 48:2
+1694 test 90:2 59:1
+1695 pasted 90:2
+1696 master 63:6 38:4
+1697 owners 18:4
+1698 fsl 90:8
+1699 translation 36:1 25:1
+1700 domo 69:52
+1701 transfer 38:10 78:5
+1702 application/x 18:2
+1703 text/xml 82:1
+1704 deleted 78:2
+1705 flavor 38:62
+1706 domi 99:41 69:23
+1707 recognizes 61:1
+1708 clicks 93:1
+1709 triggers 37:1
+1710 trigger 93:6
+1711 overriden 93:3
+1712 subclasse 93:1
+1713 customized 63:1
+1714 behaviour 93:3 42:1
+1715 delegates 80:2 93:1
+1716 applied 93:3
+1717 presses 93:1
+1718 moving 47:2
+1719 movements 93:1 61:1
+1720 aevt 93:1
+1721 specialised 93:2
+1722 groups 93:3 48:1
+1723 pos 16:17 59:8 93:5
+1724 omg 9:1
+1725 vertices 94:2 9:1 83:1
+1726 midpoints 9:1
+1727 enclosing 72:2
+1728 sides 9:1
+1729 quadratic 9:12 59:1
+1730 transformation 72:6 48:1
+1731 matrix 72:3 58:2 8:2
+1732 dragging 70:4 79:2
+1733 snap 70:3
+1734 reinserts 2:2
+1735 reinssets 2:1
+1736 removeed 2:1
+1737 reinserted 92:2
+1738 lie 2:4
+1739 detection 2:4
+1740 descend 2:3
+1741 descends 2:1
+1742 detect 2:1
+1743 brings 5:10 85:1
+1744 undooable 85:1
+1745 leyout 71:2
+1746 threads 92:1
+1747 acting 48:1
+1748 synchronize 2:1
+1749 race 2:1
+1750 conditions 2:1
+1751 coordinating 13:1
+1752 participate 56:1
+1753 editor's 56:7
+1754 registers 56:1
+1755 unregisters 13:1
+1756 previously 37:2 26:1
+1757 forwards 78:3
+1758 moation 85:1
+1759 occur 13:1 26:1
+1760 renders 80:3 56:1
+1761 listens 22:1
+1762 receives 56:1
+1763 framework 90:2 20:2
+1764 elbow 67:6 96:3
+1765 orthogonal 96:1
+1766 soutcode 96:5
+1767 outcode 96:35
+1768 eoutcode 96:5
+1769 interact 26:2
+1770 manipulate 26:4 35:1 63:1
+1771 identified 26:1
+1772 ordering 26:1
+1773 higher 53:1
+1774 drawn 26:7 37:4 20:4
+1775 lower 44:6 76:3 52:3 26:1 32:1
+1776 changed 26:6 52:2
+1777 layouter's 80:2
+1778 tool's 26:4
+1779 adjusting 71:1
+1780 bounding 85:4
+1781 takes 80:5 58:1
+1782 restores 26:1
+1783 transformations 26:1
+1784 arithmethics 53:1
+1785 inherently 26:1
+1786 lossy 53:1
+1787 recommended 53:1
+1788 lossless 81:1
+1789 undo/redo 78:1
+1790 affected 53:1
+1791 key#set 53:1
+1792 key#get 26:1
+1793 testing 4:3
+1794 action's 53:1
+1795 optionally 53:1
+1796 decompositon 85:1
+1797 considered 2:1
+1798 clones 85:1
+1799 providing 38:2 20:2 53:1 79:1
+1800 maps 48:1
+1801 remapped 26:1
+1802 inform 56:3
+1803 pairs 26:1
+1804 consumed 85:1
+1805 hotdraw 20:2
+1806 technical 20:2
+1807 drawings 20:2 2:1
+1808 www 84:3 23:2 31:1
+1809 sourceforge 20:2 79:1
+1810 lesser 20:2
+1811 opensource 20:2
+1812 org/licenses/lgpl 20:2
+1813 overlays 20:1
+1814 scrolling 48:1
+1815 editing 83:3 20:3
+1816 actual 20:1
+1817 widget 20:38
+1818 word 58:6 16:2
+1819 overlay 20:29
+1820 holding 16:1
+1821 holder 20:58 16:18
+1822 foreground 20:2
+1823 tab 16:39 20:1
+1824 sizes 84:1
+1825 description 44:13 31:8 22:1 61:1
+1826 initialization 20:1
+1827 positioned 8:2 63:1
+1828 schriftgr\u 30:1
+1829 sse 30:1
+1830 manages 55:1
+1831 mechanism 68:2
+1832 relies 80:1
+1833 giving 81:1
+1834 appearance 80:1
+1835 wolfram 29:1 79:1
+1836 kaiser 55:1 79:1
+1837 performs 80:1
+1838 tasks 80:5 97:2
+1839 sum 53:12 80:1 8:1
+1840 presenting 80:1
+1841 logcal 48:1
+1842 clients 7:1
+1843 chops 7:2
+1844 rectangular 71:2
+1845 falls 9:1
+1846 xebebeb 22:1
+1847 xcacaca 9:1
+1848 cell 9:2
+1849 closest 96:6 37:1
+1850 direct 85:1 97:1
+1851 manipulation 56:2
+1852 expressed 56:2
+1853 refreshed 47:1
+1854 disposes 47:1
+1855 aquired 77:1
+1856 tracked 71:1
+1857 src 82:4
+1858 requesting 61:3 82:2
+1859 multicaster 63:17
+1860 interactions 63:1
+1861 honors 80:2
+1862 laying 80:2
+1863 ins 80:10
+1864 labeled 91:8
+1865 encapsulates 37:2 63:1
+1866 subelements 80:1
+1867 calculated 90:1
+1868 commented 4:2
+1869 stay 4:2 5:1
+1870 reconnection 78:1
+1871 normal 79:6 4:1
+1872 purposes 53:2 4:2
+1873 keywoard 4:2
+1874 setzen 4:2
+1875 recalculated 1:1
+1876 bpl 4:3
+1877 disconnection 4:2
+1878 reverse 42:2 88:1
+1879 tmp 94:13 59:4 4:4
+1880 decorate 74:1
+1881 decorationextends 74:1
+1882 crop 14:1
+1883 layouts 16:5 85:1
+1884 lined 4:1
+1885 handle's 85:1
+1886 setter/getter 80:1
+1887 figureextends 97:1
+1888 locators 37:1
+1889 supports 87:2 77:1 79:1
+1890 semantic 77:1
+1891 bugs 55:1 59:1
+1892 delegating 77:1
+1893 corner 15:3 59:2 77:1
+1894 rectangles 77:2
+1895 turned 37:1
+1896 quad 23:20 2:20 59:9 58:4
+1897 responsiveness 2:1
+1898 fall 2:1
+1899 specfies 23:2
+1900 computed 55:5
+1901 handlesizes 0:1
+1902 pixel 72:1
+1903 roundrect 35:32
+1904 arcwidth 35:9
+1905 archeight 35:9
+1906 rundung 35:1
+1907 mehrfachaenderung 35:1
+1908 range 89:8 35:2
+1909 rubber 82:17
+1910 band 82:17
+1911 union 63:1
+1912 states 63:2
+1913 abmessungen 71:1
+1914 slanted 96:5
+1915 slant 96:16
+1916 sticky 7:5
+1917 automatically 55:1 8:1
+1918 rearranges 16:1
+1919 allocated 71:1
+1920 breaking 16:1
+1921 sequences 16:1
+1922 paragraphs 16:7
+1923 formatting 52:1
+1924 tabs 16:5
+1925 distributed 16:1
+1926 intervals 55:1
+1927 correctly 1:1
+1928 resizing 79:2 16:1
+1929 dashed 68:1
+1930 pen 16:4
+1931 margin 16:16 50:8
+1932 rely 16:1
+1933 verticaly 71:1
+1934 horizontaly 16:1
+1935 eduardo 16:1
+1936 francos 72:1
+1937 ceil 96:3 15:3 16:1
+1938 tokenizer 58:44 25:33
+1939 tokens 68:2 16:1 25:1
+1940 paragraph 16:4
+1941 assume 16:1
+1942 tab's 71:1
+1943 measurer 16:7
+1944 ascent 16:12
+1945 descent 16:6
+1946 float 16:3
+1947 wrapping 16:2
+1948 advance 16:3
+1949 overlaying 43:2
+1950 typing 20:20
+1951 begin 20:7 37:1
+1952 overlaid 20:3
+1953 scrolled 20:2
+1954 origin 16:2
+1955 expand 16:2
+1956 mode 56:1 79:1
+1957 targeted 56:1
+1958 forwarded 56:1
+1959 listener's 56:3
+1960 reused 56:1
+1961 initialized/deinitialized 90:1
+1962 activates 36:1
+1963 switches 90:2
+1964 reinitialize 37:1
+1965 accept 44:2 36:1
+1966 activation 90:1
+1967 deactivates 92:1
+1968 clean 37:1
+1969 switched 56:1
+1970 starteds 82:1
+1971 interacting 56:1
+1972 fail 37:1
+1973 coallesce 37:1
+1974 exhaust 30:1
+1975 memory 62:3
+1976 accessed 30:1
+1977 apex 7:1
+1978 based 99:4 98:1
+1979 doug 96:4
+1980 lea 71:1
+1981 gee 30:1
+1982 mar 7:1
+1983 layoutable 80:7
+1984 algorithms 94:1
+1985 fitting 94:7
+1986 curves 8:7 59:1
+1987 digitized 94:25
+1988 philip 94:1
+1989 schneider 8:1
+1990 gems 94:3
+1991 academic 8:2
+1992 press 94:2
+1993 preserve 94:1
+1994 squared 8:12
+1995 generate 94:8
+1996 piecewise 94:1
+1997 cubic 8:11
+1998 approximates 94:1
+1999 routine 94:1
+2000 outputs 94:1
+2001 degree 94:8
+2002 function 87:8 8:1
+2003 ascii 94:1
+2004 error 94:3
+2005 hat 94:72
+2006 unit 8:13
+2007 tangent 94:17
+2008 vectors 8:6 94:1
+2009 endpoints 94:2
+2010 indice 94:12
+2011 tanget 94:3
+2012 bez 8:90
+2013 prime 94:25
+2014 max 94:5
+2015 input/output 8:3
+2016 int 94:8
+2017 pts 8:14 96:1
+2018 subset 8:2
+2019 iteration 94:9
+2020 iterating 94:4
+2021 iterations 8:4
+2022 heuristic 8:3
+2023 dist 8:21
+2024 parameterize 94:5
+2025 attempt 73:2 8:2
+2026 chord 94:3
+2027 deviation 8:2
+2028 large 94:2
+2029 reparameterization 94:2
+2030 reparameterize 94:3
+2031 recursively 94:2
+2032 negate 94:3
+2033 squares 94:1
+2034 precomputed 8:1
+2035 rhs 94:1
+2036 eqn 96:6 94:1
+2037 det 94:12
+2038 determinants 94:2
+2039 matrices 8:2
+2040 ctl 8:1
+2041 a's 8:1
+2042 barsky 94:1
+2043 coincident 89:3 94:1
+2044 divide 8:1
+2045 subsequent 15:4 94:1
+2046 newton 8:4
+2047 raphson 8:4
+2048 parameterization 94:4
+2049 vor 94:1
+2050 numerator 8:2 89:1
+2051 denominator 94:2
+2052 evaluated 94:1
+2053 numerator/denominator 94:1
+2054 evaluate 8:1
+2055 parametric 94:1
+2056 vtemp 94:10
+2057 array 94:1
+2058 computation 8:1
+2059 multipliers 8:1
+2060 approximate 8:3
+2061 tangents 94:3
+2062 normalize 94:4
+2063 assign 8:1
+2064 distances 8:1
+2065 library 8:1
+2066 andrew 94:1
+2067 glassner 8:1
+2068 scales 8:1
+2069 newlen 8:1
+2070 newlen/len 94:2
+2071 negates 94:1
+2072 normalizes 94:1
+2073 consisting 83:1
+2074 straight 59:3
+2075 geometric 96:2
+2076 passes 83:2
+2077 controls 59:2
+2078 vertex 96:4
+2079 describe 8:1
+2080 arraycopy 59:2
+2081 recomputes 59:1
+2082 tested 59:1
+2083 coords 59:95
+2084 prev 59:87
+2085 deep 8:1
+2086 crosses 96:4
+2087 nearest 96:2
+2088 chopped 59:2
+2089 furthest 96:1
+2090 temp 59:7 23:2
+2091 quadto 83:3
+2092 cubicto 1:1
+2093 lineto 25:2
+2094 larger 53:3
+2095 reset 25:3 53:1 61:1
+2096 included 53:2
+2097 completeness 53:2
+2098 double#set 53:1
+2099 component#get 53:1
+2100 double#get 53:1
+2101 component#set 53:1
+2102 bits 53:2
+2103 object's 53:1
+2104 fields 53:2
+2105 intended 53:2
+2106 debugging 53:2
+2107 vary 53:2
+2108 outlines 3:1
+2109 thickness 59:3
+2110 flattened 3:2
+2111 outher 59:1
+2112 thick 59:9
+2113 middle 83:1
+2114 increments 59:1
+2115 ddx 59:7
+2116 ddy 59:7
+2117 enhanced 89:1
+2118 instantiated 96:1
+2119 bitmask 89:4
+2120 lies 96:4
+2121 computes 96:2
+2122 indicating 38:4 89:2 61:1
+2123 codes 89:2
+2124 constains 9:2
+2125 corresponds 96:4
+2126 polar 96:6
+2127 lea's 96:3
+2128 vision 96:4
+2129 dai 96:4
+2130 uk/andrewfg/c 96:4
+2131 faq 89:4
+2132 denom 89:12
+2133 rnum 96:11
+2134 snum 96:8
+2135 projection 96:2
+2136 html#q 96:1
+2137 backward 96:1
+2138 ahead 89:1
+2139 xdiff 89:4
+2140 ydiff 96:4
+2141 directional 96:1
+2142 resizes 53:1
+2143 horizontally 79:3 89:1
+2144 vertically 79:3 96:1
+2145 decreases 89:1
+2146 resulting 89:1
+2147 expansion 96:2
+2148 grow/shrink 59:1
+2149 convex 59:1
+2150 clockwise 3:1
+2151 inset 53:8
+2152 yield 53:4
+2153 subtracted 53:2
+2154 val 53:5
+2155 shouldn't 53:1
+2156 ids 53:2
+2157 reorganize 23:2
+2158 transferables 38:6
+2159 transferred 38:4
+2160 flavor#get 38:2
+2161 ordered 38:2
+2162 preference 15:6 38:2
+2163 richly 38:2
+2164 descriptive 38:4
+2165 wjether 38:2
+2166 ownership 38:2
+2167 peer 61:1
+2168 modal 5:2
+2169 blocks 5:1
+2170 dialogs 5:1
+2171 caveats 5:1
+2172 translucent 24:1
+2173 macintosh 31:1
+2174 rewritten 24:1
+2175 independent 5:1
+2176 displaying 61:2
+2177 movement 5:4
+2178 installed 61:6
+2179 transition 5:3
+2180 animated 5:9
+2181 forget 61:1
+2182 fully 5:1
+2183 remember 5:1
+2184 uninstalls 61:1
+2185 millis 5:3
+2186 delay 61:2
+2187 confirm 5:7
+2188 choices 61:5
+2189 designating 5:7
+2190 primarily 5:6
+2191 pluggable 5:3
+2192 question 61:2
+2193 parented 61:3
+2194 prompts 5:1
+2195 selections 61:2
+2196 choose 5:1
+2197 implies 61:1
+2198 prompt 5:1
+2199 decide 92:1
+2200 combo 61:1
+2201 notified 61:3 79:1
+2202 dismissed 5:3
+2203 helps 24:1
+2204 choice 61:1
+2205 objects 5:1
+2206 meaningful 5:1
+2207 hack 5:1
+2208 mayhem 61:1
+2209 selecting 5:1
+2210 component's 61:1
+2211 toplevel 5:1
+2212 appears 5:2
+2213 approve 5:10
+2214 custom 61:2
+2215 accessible 51:20 5:2
+2216 command 58:24 61:1
+2217 rescan 21:1
+2218 dnoyeb 79:1
+2219 frames 79:87
+2220 opposed 52:1
+2221 simply 15:1
+2222 wont 79:1
+2223 biggie 79:1
+2224 article 79:1
+2225 world 15:1
+2226 gilbert 79:1
+2227 dnoyeb@users 79:1
+2228 cascading 79:2
+2229 tile 79:2
+2230 height/all 79:1
+2231 width/all 15:1
+2232 efficiently 15:2
+2233 keeping 15:2
+2234 maximal 79:2
+2235 vert 79:12
+2236 floor 79:2
+2237 hor 79:12
+2238 cnt 79:12 67:6
+2239 tiled 79:2
+2240 scrollbar 25:2 79:1
+2241 placard 84:33
+2242 hsb 64:9
+2243 llp 64:4
+2244 filters 44:1
+2245 extensions 44:19
+2246 converted 44:2
+2247 extlc 44:4
+2248 pathname 44:7
+2249 samples 55:22 67:18 49:17 33:12 99:11 50:6 97:5 76:3 19:2
+2250 marz 99:1
+2251 plasma 69:13 76:1
+2252 automaticaly 99:6
+2253 thing 99:6
+2254 loading 99:8
+2255 datafile 99:26
+2256 alle 99:6
+2257 informatik 99:6
+2258 und 99:6
+2259 erich 99:6
+2260 gamma 99:6
+2261 script 99:10 31:4
+2262 fold 84:16 99:10
+2263 defaultstate 69:9 27:4
+2264 collapsed 84:8 99:5
+2265 desc 69:9 27:4 31:3
+2266 lnk 7:1
+2267 rbmi 27:88 49:2
+2268 bag 27:68
+2269 gridx 27:8
+2270 gridy 27:8
+2271 live 87:22
+2272 netscape 87:4
+2273 javascript 87:4
+2274 dataread 87:8
+2275 datawrite 87:6
+2276 win 87:12 76:3
+2277 rechte 87:2
+2278 vorbehalten 87:2
+2279 diese 87:2
+2280 basiert 87:2
+2281 auf 87:2
+2282 laden 99:2
+2283 speichern 87:2
+2284 fehler 87:4
+2285 redoing 50:4
+2286 choosable 50:8
+2287 policy 50:8
+2288 entitie 67:6
+2289 unconfiguring 49:2
+2290 leak 49:2
+2291 pert 49:34 69:31 97:9
+2292 diagram 69:8 49:2
+2293 messy 11:1
+2294 dependency 97:32
+2295 disallow 97:2
+2296 predecessors 97:4
+2297 cyclic 97:3
+2298 dependencies 97:10
+2299 efficiency 31:1
+2300 reasons 29:1 37:1
+2301 observe 97:2
+2302 duration 97:25
+2303 succ 97:7
+2304 successors 97:4
+2305 compartment 97:15
+2306 statement 97:1
+2307 guards 97:1
+2308 predecessor 23:1
+2309 indirect 37:1
+2310 dep 97:1
+2311 combine 33:11
+2312 svg 33:22 55:20 50:4 99:1 69:1 37:1
+2313 presents 74:1
+2314 characters 37:1
+2315 profile 31:2
+2316 defs 31:3 33:2
+2317 radial 31:4
+2318 gradient 31:6
+2319 linear 31:2
+2320 roll 70:1 68:1
+2321 token 25:75
+2322 mainx 99:1
+2323 org 31:1 50:1
+2324 tiny 25:2 31:1
+2325 doctype 39:34
+2326 d/svg 84:1
+2327 dtd 50:1
+2328 utils 25:2
+2329 xffff 58:2
+2330 olive 58:2
+2331 navy 25:2
+2332 purple 58:2
+2333 fuchsia 25:2
+2334 aliceblue 58:1
+2335 antiquewhite 25:1
+2336 aquamarine 25:1
+2337 azure 25:1
+2338 beige 58:1
+2339 bisque 25:1
+2340 blanchedalmond 25:1
+2341 blueviolet 58:1
+2342 brown 25:1
+2343 burlywood 25:1
+2344 cadetblue 55:1
+2345 chartreuse 58:1
+2346 chocolate 25:1
+2347 coral 58:1
+2348 cornflowerblue 58:1
+2349 cornsilk 70:1
+2350 crimson 58:1
+2351 cyan 25:1
+2352 darkblue 25:1
+2353 darkcyan 58:1
+2354 darkgoldenrod 58:1
+2355 darkgray 25:1
+2356 darkgreen 83:1
+2357 darkgrey 55:1
+2358 darkkhaki 70:1
+2359 darkmagenta 32:1
+2360 darkolivegreen 25:1
+2361 darkorange 25:1
+2362 darkorchid 25:1
+2363 darkred 25:1
+2364 darksalmon 25:1
+2365 darkseagreen 58:1
+2366 darkslateblue 58:1
+2367 darkslategray 58:1
+2368 darkslategrey 58:1
+2369 darkturquoise 58:1
+2370 darkviolet 70:1
+2371 deeppink 58:1
+2372 deepskyblue 70:1
+2373 dimgray 58:1
+2374 dimgrey 25:1
+2375 dodgerblue 70:1
+2376 firebrick 58:1
+2377 floralwhite 25:1
+2378 forestgreen 58:1
+2379 gainsboro 25:1
+2380 ghostwhite 81:1
+2381 gold 70:1
+2382 goldenrod 81:1
+2383 grey 25:1
+2384 greenyellow 55:1
+2385 hotpink 58:1
+2386 indianred 58:1
+2387 indigo 58:1
+2388 ivory 25:1
+2389 khaki 25:1
+2390 lavenderblush 55:1
+2391 lawngreen 83:1
+2392 lemonchiffon 58:1
+2393 lightblue 25:1
+2394 lightcoral 58:1
+2395 lightcyan 25:1
+2396 lightgoldenrodyellow 58:1
+2397 lightgray 55:1
+2398 lightgreen 58:1
+2399 lightgrey 25:1
+2400 lightpink 70:1
+2401 lightsalmon 25:1
+2402 lightseagreen 25:1
+2403 lightskyblue 25:1
+2404 lightslategray 25:1
+2405 lightslategrey 58:1
+2406 lightsteelblue 58:1
+2407 lightyellow 58:1
+2408 limegreen 25:1
+2409 linen 25:1
+2410 mediumaquamarine 25:1
+2411 mediumblue 25:1
+2412 mediumorchid 70:1
+2413 mediumpurple 72:1
+2414 mediumseagreen 58:1
+2415 mediumslateblue 25:1
+2416 mediumspringgreen 25:1
+2417 mediumturquoise 70:1
+2418 mediumvioletred 58:1
+2419 midnightblue 58:1
+2420 mintcream 58:1
+2421 mistyrose 58:1
+2422 moccasin 25:1
+2423 navajowhite 58:1
+2424 oldlace 25:1
+2425 olivedrab 25:1
+2426 orangered 25:1
+2427 palegoldenrod 25:1
+2428 palegreen 58:1
+2429 paleturquoise 25:1
+2430 palevioletred 58:1
+2431 papayawhip 25:1
+2432 peachpuff 58:1
+2433 peru 58:1
+2434 pink 58:1
+2435 powderblue 58:1
+2436 rosybrown 25:1
+2437 royalblue 58:1
+2438 saddlebrown 58:1
+2439 sandybrown 58:1
+2440 seagreen 25:1
+2441 seashell 70:1
+2442 sienna 58:1
+2443 skyblue 58:1
+2444 slateblue 25:1
+2445 slategray 70:1
+2446 slategrey 58:1
+2447 springgreen 55:1
+2448 steelblue 58:1
+2449 tan 58:3
+2450 thistle 25:1
+2451 tomato 58:1
+2452 violet 83:1
+2453 wheat 25:1
+2454 whitesmoke 58:1
+2455 yellowgreen 25:1
+2456 activeborder 25:1
+2457 caption 58:6
+2458 activecaption 58:1
+2459 appworkspace 25:1
+2460 buttonface 25:1
+2461 buttonhighlight 55:1
+2462 highlight 25:6
+2463 buttonshadow 55:1
+2464 buttontext 25:1
+2465 captiontext 25:1
+2466 graytext 58:1
+2467 inactive 25:4
+2468 highlighttext 25:1
+2469 inactiveborder 25:1
+2470 inactivecaption 70:1
+2471 inactivecaptiontext 58:1
+2472 infobackground 25:1
+2473 infotext 25:1
+2474 menutext 58:1
+2475 threeddarkshadow 70:1
+2476 threedface 25:1
+2477 threedhighlight 58:1
+2478 threedlightshadow 25:1
+2479 threedshadow 58:1
+2480 windowframe 25:1
+2481 windowtext 58:1
+2482 ttype 58:8
+2483 sval 25:7
+2484 mantissa 25:1
+2485 nval 58:57
+2486 skew 25:4
+2487 inherited 58:14 73:4
+2488 commands 58:1
+2489 moveto 25:1
+2490 curveto 25:1
+2491 assigns 25:1
+2492 miterlimit 25:2
+2493 dasharray 25:2
+2494 dashoffset 58:2
+2495 painting 58:1
+2496 inherit 25:2
+2497 element's 58:1
+2498 decode 73:9 58:5
+2499 rgb 58:1
+2500 dbl 58:3
+2501 evenodd 58:1
+2502 basically 42:1
+2503 compound 42:20
+2504 compuondable 42:1
+2505 compounded 30:1
+2506 verbose 42:3
+2507 presentatio 42:5
+2508 edit#get 42:7
+2509 accepts 42:1
+2510 chance 42:2
+2511 refuses 42:1
+2512 insignificant 42:1
+2513 maintains 42:1
+2514 user's 42:1
+2515 texts 39:4 42:1
+2516 accelerator 42:2 40:1
+2517 smarter 1:1
+2518 edits/clear 42:1
+2519 internationalisation 42:1
+2520 flag 42:3
+2521 ignores 42:4
+2522 sending 42:1
+2523 functions 42:1
+2524 occurs 42:2
+2525 discards 42:1
+2526 edit#end 42:1
+2527 edit#add 42:1
+2528 undone 42:3
+2529 mai 14:2
+2530 wrapper 14:2
+2531 overcome 14:1
+2532 restriction 14:1
+2533 preventing 14:1
+2534 applets 14:1
+2535 invocations 51:1
+2536 comments 39:2 51:1
+2537 exceptions 51:9 75:1
+2538 clazz 51:26
+2539 runs 15:4
+2540 storing/retrieving 15:4
+2541 configuration 15:4 39:1
+2542 conf 15:6
+2543 resized 15:3 12:1
+2544 intenal 15:1
+2545 i's 12:1
+2546 constraint 12:15
+2547 reflection 61:1
+2548 hold 61:1
+2549 accessing 14:1
+2550 suffixes 14:1
+2551 redirection 14:1
+2552 class/get 14:1
+2553 metal 14:2
+2554 adaptation 14:1
+2555 resouce 14:1
+2556 rsrc 14:6
+2557 exist 14:1
+2558 mnemonic 14:5
+2559 javax 14:2
+2560 acc 14:7
+2561 prepended 14:1
+2562 language 14:1
+2563 country 14:1
+2564 complex 11:1
+2565 reporting 29:1
+2566 enum 75:5
+2567 enums 75:8
+2568 instantiable 75:1
+2569 makes 73:12
+2570 maerz 39:1
+2571 consecutives 39:4
+2572 reduce 39:1
+2573 writing 39:1
+2574 parsers 73:2
+2575 unmarshall 73:3
+2576 marshalled 73:6
+2577 unmarshalled 73:3
+2578 idobjects 73:12
+2579 transformer 73:16
+2580 rgba 73:6
+2581 xff 73:3
+2582 marshall 39:3
+2583 objectids 39:18
+2584 prototypes 39:18
+2585 awkard 39:10
+2586 prints 39:2
+2587 transfering 38:1
+2588 mime 38:2
+2589 presentable 38:2
+2590 notifies 38:1

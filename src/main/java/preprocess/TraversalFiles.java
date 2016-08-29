@@ -22,7 +22,7 @@ import static utility.Tools.writeToFile;
 public class TraversalFiles {
     
     //traversal all files
-    public static void fileList(File inputFile, int node, ArrayList<String> path, String outputFilePath, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, Map<String, Integer> documentWordsCountList) {
+    public static void fileList(File inputFile, int node, ArrayList<String> path, String outputFilePath, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, String copyrightInfoContent, Map<String, Integer> documentWordsCountList) {
         node ++;
         File[] files = inputFile.listFiles();
         if (!inputFile.exists()){
@@ -31,21 +31,22 @@ public class TraversalFiles {
             path.add(inputFile.getName());
             
             for (File f : files) {
-                for(int i = 0; i < node - 1; i ++) {
-                    System.out.print(" ");
-                }
-                System.out.print("|-" + f.getPath());
+//                for(int i = 0; i < node - 1; i ++) {
+//                    System.out.print(" ");
+//                }
+//                System.out.print("|-");
+//                System.out.println(f.getPath());
 
                 String ext = FilenameUtils.getExtension(f.getName());
                 if(ext.equals("java")) {
                     try {
-                        System.out.println(" => extracted");
+//                        System.out.println(" => extracted");
                         
                         //Get extracted file location and add it to output file name,
                         //in order to avoid files in different folder 
                         //have the same name.
                         String extractedCommentsFilePath = outputFilePath + "/preprocess/" + f.getName() + "-comments.txt";
-                        System.out.println(extractedCommentsFilePath);
+//                        System.out.println(extractedCommentsFilePath);
                         
                         //create output file for extracted comments
                         File extractedCommentsFile = new File(extractedCommentsFilePath);
@@ -54,7 +55,7 @@ public class TraversalFiles {
                         } 
                         
                         //extract comments
-//                        ParseJavaFile parseJavaFile = new ParseJavaFile(f, extractedCommentsFile, ifGeneral, libraryTypeCondition, documentWordsCountList, extractedCommentsFile);
+//                        ParseJavaFile parseJavaFile = new ParseJavaFile(f, extractedCommentsFile, ifGeneral, copyrightInfoContent, libraryTypeCondition, copyrightInfoContent documentWordsCountList, extractedCommentsFile);
 //                        parseJavaFile.extractComments();
 
                         //extract all codes
@@ -66,7 +67,7 @@ public class TraversalFiles {
                                 allCodes.append(line);
                             }
                         }
-                        ParseWords parseWords = new ParseWords(allCodes, ifGeneral, libraryTypeCondition, documentWordsCountList, extractedCommentsFile);
+                        ParseWords parseWords = new ParseWords(allCodes, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList, extractedCommentsFile);
                         allCodes = parseWords.parseAllWords();
                         writeToFile(allCodes.toString(), extractedCommentsFile);
                     } catch (IOException ex) {
@@ -74,7 +75,7 @@ public class TraversalFiles {
                     }
                 } else if(ext.equals("html")) {
                     try {
-                        System.out.println(" => extracted");
+//                        System.out.println(" => extracted");
 
                         //Get extracted file location and add it to output file name,
                         //in order to avoid files in different folder
@@ -88,15 +89,16 @@ public class TraversalFiles {
                         } 
                         
                         //extract useful javadoc
-                        ExtractHTMLContent extractJavadoc = new ExtractHTMLContent(f, usefulJavadocFile, ifGeneral, libraryTypeCondition, documentWordsCountList, usefulJavadocFile);
+                        ExtractHTMLContent extractJavadoc = new ExtractHTMLContent(f, usefulJavadocFile, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList, usefulJavadocFile);
                         extractJavadoc.extractHTMLContent();
                     } catch (IOException ex) {
                         Logger.getLogger(TraversalFiles.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 } else {
-                   System.out.println(" isn't a java file or html file.");
+                    System.out.println(f.getPath());
+                    System.out.println(" isn't a java file or html file.");
                 } 
-                fileList(f, node, path, outputFilePath, ifGeneral, libraryTypeCondition, documentWordsCountList);
+                fileList(f, node, path, outputFilePath, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList);
             }
             path.remove(node - 1);
         }

@@ -66,6 +66,7 @@ public class PreProcessServlet extends HttpServlet {
             throws ServletException, IOException {
         String programRootPath = getServletContext().getInitParameter("program-root-path");
         boolean isGeneral = false;
+        String copyrightStoplist = "";
         // Add timestamp to folder name.
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS");
         Timestamp currentTimeStamp = new Timestamp(System.currentTimeMillis());
@@ -160,13 +161,7 @@ public class PreProcessServlet extends HttpServlet {
                 while (i.hasNext()) {
                     FileItem fi = (FileItem) i.next();
                     if (!fi.isFormField()) {
-                        // 获取上传文件的参数
-//                    String fieldName = fi.getFieldName();
                         String fileName = fi.getName();
-//                    String contentType = fi.getContentType();
-//                    boolean isInMemory = fi.isInMemory();
-//                    long sizeInBytes = fi.getSize();
-                        // 写入文件
                         file = new File(inputRootFilePath
                                 + fileName.replace('/', '-'));//replace all / to -
                         fi.write(file);
@@ -187,11 +182,11 @@ public class PreProcessServlet extends HttpServlet {
                                 libraryTypeCondition.remove("Modeling");
                                 libraryTypeCondition.put("Modeling", true);
                             }
+                        } else if(fieldName.equals("copyrightInfoContent")) {
+                            String copyrightInfoContent = fieldValue;
+                            copyrightStoplist = copyrightInfoContent.toLowerCase().replaceAll("/|\\*|\n|[0-9]|,|;|:|\\.|`|'|\"", "");
+                            copyrightStoplist = copyrightStoplist.replaceAll("\\(|\\)|-|//", " ");
                         }
-//                        out.println("<p>");
-//                        out.println(fieldName + ":");
-//                        out.println(fieldValue);
-//                        out.println("</p>");
                     }
                 }
                 
@@ -207,7 +202,7 @@ public class PreProcessServlet extends HttpServlet {
 
             }
 
-            PreProcessTool preProcessTool = new PreProcessTool(inputRootFilePath, outputFilePath, isGeneral, libraryTypeCondition);
+            PreProcessTool preProcessTool = new PreProcessTool(inputRootFilePath, outputFilePath, isGeneral, libraryTypeCondition, copyrightStoplist);
             preProcessTool.preProcess();
 
             out.println("</div>");
