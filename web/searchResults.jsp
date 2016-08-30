@@ -59,6 +59,8 @@
 
 <div class="container marketing">
     <div class="row featurette show_divider">
+        <p class="illustrate">If you want to search other key words, please click <a href="search.html">here</a></p>
+        <br/>
         <h4>Your search query:</h4>
         <p><%= request.getParameter("searchQuery")%>
         </p>
@@ -105,6 +107,9 @@
                                 TopicPhraseHandler handler = new TopicPhraseHandler(topicIndex);
                                 saxParser.parse(phraseLabelFilePath, handler);
                                 String phrasesLabels = handler.getMatchedPhrases();
+                                for (String str : searchQuery.split(" |,|;")) {
+                                    phrasesLabels = phrasesLabels.replaceAll(str, "<b style='color:red'>" + str + "</b>");
+                                }
 
                         %>
                         <%=phrasesLabels%>
@@ -130,6 +135,9 @@
                                 while ((line = reader.readLine()) != null) {
                                     int index = Integer.parseInt(line.split("\t| ")[0]);
                                     if (index == topicIndex) {
+                                        for (String str : searchQuery.split(" |,|;")) {
+                                            line = line.replaceAll(str, "<b style='color:red'>" + str + "</b>");
+                                        }
                     %>
                     <p>
                         <b>Topic: </b>
@@ -154,14 +162,27 @@
                         String[] topDocuments = topDocumentList.get(topicIndex);
                     %>
                     <p>
-                        <b>Top 3 Relative Documents:</b>
+                        <b>Top 3 Documents: </b>
                         <%
+                            int index = 0;
                             for (String document : topDocuments) {
                                 String[] nameParts = document.split("/");
-                                String fileName = nameParts[nameParts.length - 1];
+                                String textName = nameParts[nameParts.length - 1];
+                                String fileName = "";
+                                int lastIndexOfStrigula = textName.lastIndexOf('-');
+                                if (lastIndexOfStrigula >= 0) {
+                                    fileName = textName.substring(0, lastIndexOfStrigula);
+                                    String link = "http://localhost:8080/static/JSEA/upload/" + fileName;
+                                    index++;
                         %>
-                        <%--<a href="./search/preprocess/<%=fileName%>"><%=fileName%></a>;--%>
-                        <%=fileName%>;
+                        <a href="<%=link%>" target="_blank"><%=fileName%>
+                        </a>;
+                        <%
+                                }
+                            }
+                            if (index < 3) {
+                        %>
+                        no more file...
                         <%
                             }
                         %>

@@ -45,13 +45,12 @@ public class TraversalFiles {
                         //Get extracted file location and add it to output file name,
                         //in order to avoid files in different folder 
                         //have the same name.
-                        String extractedCommentsFilePath = outputFilePath + "/preprocess/" + f.getName() + "-comments.txt";
-//                        System.out.println(extractedCommentsFilePath);
+                        String extractedCodeFilePath = outputFilePath + "/preprocess/" + f.getName() + "-src.txt";
                         
                         //create output file for extracted comments
-                        File extractedCommentsFile = new File(extractedCommentsFilePath);
-                        if(extractedCommentsFile.createNewFile()) {
-                            System.out.println("Create successful: " + extractedCommentsFile.getName());
+                        File extractedCodeFile = new File(extractedCodeFilePath);
+                        if(extractedCodeFile.createNewFile()) {
+                            System.out.println("Create successful: " + extractedCodeFile.getName());
                         } 
                         
                         //extract comments
@@ -67,36 +66,38 @@ public class TraversalFiles {
                                 allCodes.append(line);
                             }
                         }
-                        ParseWords parseWords = new ParseWords(allCodes, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList, extractedCommentsFile);
+                        ParseWords parseWords = new ParseWords(allCodes, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList, extractedCodeFile);
                         allCodes = parseWords.parseAllWords();
-                        writeToFile(allCodes.toString(), extractedCommentsFile);
+                        writeToFile(allCodes.toString(), extractedCodeFile);
                     } catch (IOException ex) {
                         Logger.getLogger(TraversalFiles.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if(ext.equals("html")) {
-                    try {
-//                        System.out.println(" => extracted");
-
-                        //Get extracted file location and add it to output file name,
-                        //in order to avoid files in different folder
-                        //have the same name.
-                        String usefulJavadocFilePath = outputFilePath + "/preprocess/" + f.getName() + "-javadoc.txt";
-                        
-                        //create output file for usefuljavadoc
-                        File usefulJavadocFile = new File(usefulJavadocFilePath);
-                        if(usefulJavadocFile.createNewFile()) {
-                            System.out.println("Create successful: " + usefulJavadocFile.getName());
-                        } 
-                        
-                        //extract useful javadoc
-                        ExtractHTMLContent extractJavadoc = new ExtractHTMLContent(f, usefulJavadocFile, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList, usefulJavadocFile);
-                        extractJavadoc.extractHTMLContent();
-                    } catch (IOException ex) {
-                        Logger.getLogger(TraversalFiles.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    //extract information from javadoc
+//                } else if(ext.equals("html")) {
+//                    try {
+////                        System.out.println(" => extracted");
+//
+//                        //Get extracted file location and add it to output file name,
+//                        //in order to avoid files in different folder
+//                        //have the same name.
+//                        String usefulJavadocFilePath = outputFilePath + "/preprocess/" + f.getName() + "-javadoc.txt";
+//
+//                        //create output file for usefuljavadoc
+//                        File usefulJavadocFile = new File(usefulJavadocFilePath);
+//                        if(usefulJavadocFile.createNewFile()) {
+//                            System.out.println("Create successful: " + usefulJavadocFile.getName());
+//                        }
+//
+//                        //extract useful javadoc
+//                        ExtractHTMLContent extractJavadoc = new ExtractHTMLContent(f, usefulJavadocFile, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList, usefulJavadocFile);
+//                        extractJavadoc.extractHTMLContent();
+//                    } catch (IOException ex) {
+//                        Logger.getLogger(TraversalFiles.class.getName()).log(Level.SEVERE, null, ex);
+//                    }
                 } else {
                     System.out.println(f.getPath());
-                    System.out.println(" isn't a java file or html file.");
+//                    System.out.println(" isn't a java file or html file.");
+                    System.out.println(" isn't a java file.");
                 } 
                 fileList(f, node, path, outputFilePath, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList);
             }

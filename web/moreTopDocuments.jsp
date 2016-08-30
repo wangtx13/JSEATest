@@ -80,10 +80,10 @@
                         if (!docsLine.equals("#topic doc name proportion ...")) {
                             String[] linePart = docsLine.split("\t| ");
                             int topicIndex = Integer.parseInt(linePart[0]);
-                            if(topicIndex == checkCountLabel && !checked) {
+                            if (topicIndex == checkCountLabel && !checked) {
                                 documentCount = documentCountIndex;
                                 checked = true;
-                                topDocuments.put(topicIndex-1, allFileName);
+                                topDocuments.put(topicIndex - 1, allFileName);
                                 allFileName = "";
                                 documentCountIndex = 0;
                             }
@@ -126,19 +126,25 @@
                     <p>
                             <%
                         String[] documentsStr = topDocuments.get(i).split("\n");
-                        int index = 1;
-                        for(String name:documentsStr) {
-                    %>
-                    <p><%=topicIndex%>-<%=index%>: <%=name%>
-                    </p>
+                        int index = 0;
+                        for(String document:documentsStr) {
+                        String[] nameParts = document.split("/");
+                                String textName = nameParts[nameParts.length - 1];//textName eg. src-org-jhotdraw-app-AbstractApplication.java-src.txt
+                                int lastIndexOfStrigula = textName.lastIndexOf('-');
+                                if (lastIndexOfStrigula >= 0) {
+                                    String fileNameWithPath = textName.substring(0, lastIndexOfStrigula);//fileNameWithPath eg. src-org-jhotdraw-app-AbstractApplication.java
+                                    String fileName = fileNameWithPath.substring(fileNameWithPath.lastIndexOf('-')+1, lastIndexOfStrigula);//fileName eg. AbstractApplication.java
+                                    String link = "http://localhost:8080/static/JSEA/upload/" + fileNameWithPath;
+
+                    %><a href="<%=link%>" target="_blank"><%=fileName%>
+                    </a>,
                     <%
-                            index++;
+                            }
                         }
                     %>
                 </td>
             </tr>
             <%
-                    topicIndex++;
                 }
             %>
         </table>

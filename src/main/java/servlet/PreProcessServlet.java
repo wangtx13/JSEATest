@@ -8,9 +8,6 @@ package servlet;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -26,6 +23,8 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import preprocess.PreProcessTool;
 
 import static utility.Tools.createDirectoryIfNotExisting;
+import static utility.Tools.deleteFolderContent;
+
 /**
  *
  * @author apple
@@ -50,6 +49,10 @@ public class PreProcessServlet extends HttpServlet {
     public void init() {
         // 获取文件将被存储的位置
         uploadRootPath = getServletContext().getInitParameter("file-upload");
+        File upload = new File(uploadRootPath);
+        if(upload.exists()) {
+            deleteFolderContent(upload);
+        }
         createDirectoryIfNotExisting(uploadRootPath);
     }
 
@@ -68,8 +71,8 @@ public class PreProcessServlet extends HttpServlet {
         boolean isGeneral = false;
         String copyrightStoplist = "";
         // Add timestamp to folder name.
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS");
-        Timestamp currentTimeStamp = new Timestamp(System.currentTimeMillis());
+//        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS");
+//        Timestamp currentTimeStamp = new Timestamp(System.currentTimeMillis());
 //        String timeStamp = dateFormat.format(currentTimeStamp);
 
         // Create a new folder.
@@ -79,6 +82,10 @@ public class PreProcessServlet extends HttpServlet {
 
 //        String outputFilePath = programRootPath + "output/PreProcessTool-" + timeStamp;
         String outputFilePath = programRootPath + "preprocessOutput/PreProcessTool";
+        File outputFile = new File(outputFilePath);
+        if(outputFile.exists()) {
+            deleteFolderContent(outputFile);
+        }
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {

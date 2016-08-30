@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.util.ArrayList;
 
 
 /**
@@ -40,6 +41,7 @@ public class SearchServlet extends HttpServlet {
             request.setAttribute("program-root-path", programRootPath);
             String searchQuery = request.getParameter("searchQuery");
             String[] searchQueryList = searchQuery.split(" |,|;");
+            ArrayList<Integer> matchedTopicIndex = new ArrayList<>();
 
             try {
                 File topicsKey = new File(programRootPath + "showFile/keys.txt");
@@ -54,10 +56,14 @@ public class SearchServlet extends HttpServlet {
                         topicCount++;
 //                        topicBuffer = topicBuffer.append(line + "\n");
                         for(String str:searchQueryList) {
-                            if (line.contains(str)) {
+                            if(line.contains(str)) {
                                 String[] strPart = line.split("\t| ");
-                                matchedQueryBuffer = matchedQueryBuffer.append(strPart[0] + "::[TOPIC]::" + line + "\n");//x::line
-                                findMatchedQuery = true;
+                                int topicIndex = Integer.parseInt(strPart[0]);
+                                if (!matchedTopicIndex.contains(topicIndex)) {
+                                    matchedTopicIndex.add(topicIndex);
+                                    matchedQueryBuffer = matchedQueryBuffer.append(topicIndex + "::[TOPIC]::" + line + "\n");//topic index::[TOPIC]::line
+                                    findMatchedQuery = true;
+                                }
                             }
                         }
                     }
@@ -68,7 +74,8 @@ public class SearchServlet extends HttpServlet {
                 String[] allPhraseLabels = extractPhraseLabels.getAllPhraseLabels(phraseLabelFilePath, topicCount);
                 for(int i = 0; i < allPhraseLabels.length; ++i) {
                     for(String str:searchQueryList) {
-                        if (allPhraseLabels[i].contains(str)) {
+                        if (allPhraseLabels[i].contains(str) && !matchedTopicIndex.contains(i)) {
+                            matchedTopicIndex.add(i);
                             matchedQueryBuffer = matchedQueryBuffer.append(i + "::[LABEL]::" + allPhraseLabels[i] + "\n");
                             findMatchedQuery = true;
                         }
