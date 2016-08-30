@@ -42,9 +42,9 @@ public class GenerateViewServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             String programRootPath = getServletContext().getInitParameter("program-root-path");
             String viewContent = request.getParameter("viewContent");
-            String phraseLabelFilePath = programRootPath + "search/show_file/topic-phrases.xml";
+            String phraseLabelFilePath = programRootPath + "showFile/topic-phrases.xml";
 
-            File topicKeysFile = new File(programRootPath + "search/show_file/keys.txt");
+            File topicKeysFile = new File(programRootPath + "showFile/keys.txt");
             File phraseLabelFile = new File(phraseLabelFilePath);
 
             if (!topicKeysFile.exists() || !phraseLabelFile.exists()) {
@@ -80,10 +80,10 @@ public class GenerateViewServlet extends HttpServlet {
                     request.setAttribute("labels", allPhraseLabels);
                     request.setAttribute("program-root-path", programRootPath);
                     request.getRequestDispatcher("./top3Documents.jsp").forward(request, response);
-                } else if (viewContent.equals("Topics, Labels and Top 100 Documents")) {
+                } else if (viewContent.equals("Topics, Labels and More Top Documents")) {
                     request.setAttribute("labels", allPhraseLabels);
                     request.setAttribute("program-root-path", programRootPath);
-                    request.getRequestDispatcher("./top100Documents.jsp").forward(request, response);
+                    request.getRequestDispatcher("./moreTopDocuments.jsp").forward(request, response);
                 }
             }
         }

@@ -28,14 +28,14 @@
         <description>Location to store uploaded file</description>
         <param-name>file-upload</param-name>
         <param-value>
-            /Users/wangtianxia1/Documents/apache-tomcat-9.0.0.M4/data/
+            /Users/wangtianxia1/wtx-project/JSEA/upload/
         </param-value>
     </context-param>
     <context-param>
         <description>The location of the program</description>
         <param-name>program-root-path</param-name>
         <param-value>
-            /Users/wangtianxia1/IdeaProjects/NewProgrammerAssistor/
+            /Users/wangtianxia1/wtx-project/JSEA/
         </param-value>
     </context-param>
     <session-config>

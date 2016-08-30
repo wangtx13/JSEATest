@@ -24,17 +24,6 @@
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]>
-    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
     <!-- Custom styles for this template -->
     <link href="./css/show.css" rel="stylesheet">
 </head>
@@ -75,7 +64,7 @@
                 String[] topicsArray = topics.split("\n");
                 String[] labelsArray = (String[]) request.getAttribute("labels");
                 String programRootPath = request.getAttribute("program-root-path").toString();
-                File compositionFile = new File(programRootPath + "search/show_file/composition.txt");
+                File compositionFile = new File(programRootPath + "showFile/composition.txt");
                 MatrixReader docTopicMatrixReader = new DocumentTopicMatrixReader(compositionFile, topicsArray.length);
                 Map<Integer, String[]> topDocumentList = docTopicMatrixReader.getTopList();
 
@@ -97,12 +86,28 @@
                     <p>
                         <b>Top 3 Documents: </b>
                         <%
+                            int index = 0;
                             for (String document : topDocuments) {
                                 String[] nameParts = document.split("/");
-                                String fileName = nameParts[nameParts.length - 1];
+                                String textName = nameParts[nameParts.length - 1];
+                                String fileName = "";
+                                int lastIndexOfStrigula = textName.lastIndexOf('-');
+                                if (lastIndexOfStrigula >= 0) {
+                                    fileName = textName.substring(0, lastIndexOfStrigula);
+                                    String link = "http://localhost:8080/static/JSEA/upload/" + fileName;
+                                    index++;
                         %>
-                        <%=fileName%>;
-                        <%}%>
+                        <a href="<%=link%>" target="_blank"><%=fileName%>
+                        </a>;
+                        <%
+                                }
+                            }
+                            if (index < 3) {
+                        %>
+                        no more file...
+                        <%
+                            }
+                        %>
                     </p>
                 </td>
             </tr>

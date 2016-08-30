@@ -19,7 +19,7 @@ public class ParseWords {
     private StringBuffer originalWords;
     private boolean ifGeneral;
     private Map<String, Boolean> libraryTypeCondition;
-    private String copyrightInfoContent;
+    private String copyrightStopwordList;
     private Map<String, Integer> documentWordsCountList;
     private File extractedFile;
 
@@ -27,7 +27,7 @@ public class ParseWords {
         this.originalWords = originalWords;
         this.ifGeneral = ifGeneral;
         this.libraryTypeCondition = libraryTypeCondition;
-        this.copyrightInfoContent = copyrightInfoContent;
+        this.copyrightStopwordList = copyrightInfoContent;
         this.documentWordsCountList = documentWordsCountList;
         this.extractedFile = extractedFile;
     }
@@ -177,7 +177,7 @@ public class ParseWords {
 
 
     private String removeCopyrightInfo(String word) {
-        word = processAWord(copyrightInfoContent, word);
+        word = processAWord(copyrightStopwordList, word);
 
         return word;
     }

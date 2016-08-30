@@ -22,17 +22,6 @@
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]>
-    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
     <!-- Custom styles for this template -->
     <link href="./css/show.css" rel="stylesheet">
 </head>
@@ -75,7 +64,7 @@
             String[] labelsArray = (String[]) request.getAttribute("labels");
             String programRootPath = request.getAttribute("program-root-path").toString();
 
-            File topDocumentsFile = new File(programRootPath + "search/show_file/topic-docs.txt");
+            File topDocumentsFile = new File(programRootPath + "showFile/topic-docs.txt");
             Map<Integer, String> topDocuments = new HashMap<>();
             try {
                 try (
@@ -83,19 +72,29 @@
                         BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
                     String docsLine = "";
                     String allFileName = "";
+                    int documentCountIndex = 0;
                     int documentCount = 0;
+                    int checkCountLabel = 1;
+                    boolean checked = false;
                     while ((docsLine = reader.readLine()) != null) {
                         if (!docsLine.equals("#topic doc name proportion ...")) {
                             String[] linePart = docsLine.split("\t| ");
-                            int topicNewIndex = Integer.parseInt(linePart[0]);
+                            int topicIndex = Integer.parseInt(linePart[0]);
+                            if(topicIndex == checkCountLabel && !checked) {
+                                documentCount = documentCountIndex;
+                                checked = true;
+                                topDocuments.put(topicIndex-1, allFileName);
+                                allFileName = "";
+                                documentCountIndex = 0;
+                            }
                             String[] nameParts = linePart[2].split("/");
                             String fileName = nameParts[nameParts.length - 1];
                             allFileName = allFileName + fileName + "\n";
-                            documentCount++;
-                            if (documentCount == 100) {
-                                topDocuments.put(topicNewIndex, allFileName);
+                            documentCountIndex++;
+                            if (documentCountIndex == documentCount) {
+                                topDocuments.put(topicIndex, allFileName);
                                 allFileName = "";
-                                documentCount = 0;
+                                documentCountIndex = 0;
                             }
                         }
                     }
@@ -123,7 +122,7 @@
                         <%=labelsArray[i]%>
                     </p>
                     <p>
-                        <b>Top 100 Documents: </b>
+                        <b>More Top Documents: </b>
                     <p>
                             <%
                         String[] documentsStr = topDocuments.get(i).split("\n");

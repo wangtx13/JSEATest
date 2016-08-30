@@ -70,13 +70,15 @@ public class PreProcessServlet extends HttpServlet {
         // Add timestamp to folder name.
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS");
         Timestamp currentTimeStamp = new Timestamp(System.currentTimeMillis());
-        String timeStamp = dateFormat.format(currentTimeStamp);
+//        String timeStamp = dateFormat.format(currentTimeStamp);
 
         // Create a new folder.
-        String inputRootFilePath = uploadRootPath + timeStamp + "/";
-        createDirectoryIfNotExisting(inputRootFilePath);
+//        String inputRootFilePath = uploadRootPath + timeStamp + "/";
+        String inputRootFilePath = uploadRootPath;
+//        createDirectoryIfNotExisting(inputRootFilePath);
 
-        String outputFilePath = programRootPath + "output/PreProcessTool-" + timeStamp;
+//        String outputFilePath = programRootPath + "output/PreProcessTool-" + timeStamp;
+        String outputFilePath = programRootPath + "preprocessOutput/PreProcessTool";
 
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -129,7 +131,8 @@ public class PreProcessServlet extends HttpServlet {
             out.println("<div class=\"row featurette files\" id=\"fileList\">");
             out.println("<h3>MALLET import data directory: </h3>");
             out.println("<p>");
-            out.println("./output/PreProcessTool-" + timeStamp);
+//            out.println("./output/PreProcessTool-" + timeStamp);
+            out.println(programRootPath + "preprocessOutput/PreProcessTool");
             out.println("</p>");
             out.println("<h3>Uploaded Files: </h3>");
 

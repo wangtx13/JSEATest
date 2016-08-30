@@ -42,7 +42,7 @@ public class SearchServlet extends HttpServlet {
             String[] searchQueryList = searchQuery.split(" |,|;");
 
             try {
-                File topicsKey = new File(programRootPath + "search/show_file/keys.txt");
+                File topicsKey = new File(programRootPath + "showFile/keys.txt");
                 int topicCount = 0;
                 StringBuffer matchedQueryBuffer = new StringBuffer();
                 StringBuffer topicBuffer = new StringBuffer();
@@ -63,7 +63,7 @@ public class SearchServlet extends HttpServlet {
                     }
                 }
 
-                String phraseLabelFilePath = programRootPath + "search/show_file/topic-phrases.xml";
+                String phraseLabelFilePath = programRootPath + "showFile/topic-phrases.xml";
                 ExtractPhraseLabels extractPhraseLabels = new ExtractPhraseLabels(topicCount);
                 String[] allPhraseLabels = extractPhraseLabels.getAllPhraseLabels(phraseLabelFilePath, topicCount);
                 for(int i = 0; i < allPhraseLabels.length; ++i) {

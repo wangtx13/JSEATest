@@ -72,10 +72,10 @@
                 String programRootPath = request.getAttribute("program-root-path").toString();
                 String[] tableResults = request.getAttribute("matchedQuery").toString().split("\n");
 
-                String topicsFilePath = programRootPath + "search/show_file/keys.txt";
-                String phraseLabelFilePath = programRootPath + "search/show_file/topic-phrases.xml";
+                String topicsFilePath = programRootPath + "showFile/keys.txt";
+                String phraseLabelFilePath = programRootPath + "showFile/topic-phrases.xml";
 
-                File compositionFile = new File(programRootPath + "search/show_file/composition.txt");
+                File compositionFile = new File(programRootPath + "showFile/composition.txt");
                 MatrixReader docTopicMatrixReader = new DocumentTopicMatrixReader(compositionFile, topicCount);
                 Map<Integer, String[]> topDocumentList = docTopicMatrixReader.getTopList();
 
