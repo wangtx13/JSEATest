@@ -5,7 +5,7 @@ import org.apache.commons.math3.linear.RealMatrix;
 import java.util.HashMap;
 import java.util.Map;
 
-import static utility.Tools.sortMapStringKey;
+import static utility.Tools.sortMapByValueWithStringKey;
 
 
 /**
@@ -41,7 +41,7 @@ public class ReRankingKeywords {
             System.out.println(keywordsList[i] + " " + KR2);
         }
 
-        sortedKeywordsKR2 = sortMapStringKey(keywordsKR2);
+        sortedKeywordsKR2 = sortMapByValueWithStringKey(keywordsKR2);
         for(Map.Entry<String, Double> entry:sortedKeywordsKR2.entrySet()) {
             sortedTopicLine += entry.getKey() + " ";
         }
@@ -61,7 +61,7 @@ public class ReRankingKeywords {
             keywordsKR0.put(keywordsList[i], KR0);
         }
 
-        sortedKeywordsKR0 = sortMapStringKey(keywordsKR0);
+        sortedKeywordsKR0 = sortMapByValueWithStringKey(keywordsKR0);
         for(Map.Entry<String, Double> entry:sortedKeywordsKR0.entrySet()) {
             sortedTopicLine += entry.getKey() + " ";
         }
@@ -81,7 +81,7 @@ public class ReRankingKeywords {
             keywordsKR1.put(keywordsList[i], KR1);
         }
 
-        sortedKeywordsKR1 = sortMapStringKey(keywordsKR1);
+        sortedKeywordsKR1 = sortMapByValueWithStringKey(keywordsKR1);
         for(Map.Entry<String, Double> entry:sortedKeywordsKR1.entrySet()) {
             sortedTopicLine += entry.getKey() + " ";
         }

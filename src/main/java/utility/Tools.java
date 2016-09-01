@@ -77,7 +77,8 @@ public class Tools {
 
     }
 
-    public static Map<String, Double> sortMapStringKey(Map<String, Double> unsortMap) {
+    //sort map in terms of value in descending order
+    public static Map<String, Double> sortMapByValueWithStringKey(Map<String, Double> unsortMap) {
 
         // Convert Map to List
         List<Map.Entry<String, Double>> list =
@@ -101,7 +102,7 @@ public class Tools {
     }
 
     //sort map in terms of value in descending order
-    public static Map<Integer, Double> sortMapIntegerKey(Map<Integer, Double> unsortMap) {
+    public static Map<Integer, Double> sortMapByValueWithIntegerKey(Map<Integer, Double> unsortMap) {
 
         // Convert Map to List
         List<Map.Entry<Integer, Double>> list =
@@ -121,6 +122,67 @@ public class Tools {
             Map.Entry<Integer, Double> entry = it.next();
             sortedMap.put(entry.getKey(), entry.getValue());
         }
+        return sortedMap;
+    }
+
+    //sort map in terms of value in descending order
+    public static Map<String, Integer> sortMapByValueWithStringInteger(Map<String, Integer> unsortMap) {
+
+        // Convert Map to List
+        List<Map.Entry<String, Integer>> list =
+                new LinkedList<Map.Entry<String, Integer>>(unsortMap.entrySet());
+
+        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+            private Integer getTopicIndex(String key) {
+                String topicIndex = key.substring(0, key.indexOf("\t"));
+                return new Integer(topicIndex);
+            }
+
+            public int compare(Map.Entry<String, Integer> o1,
+                               Map.Entry<String, Integer> o2) {
+                return getTopicIndex(o1.getKey()).compareTo(getTopicIndex(o2.getKey()));
+            }
+        });
+
+        // Sort list with comparator, to compare the Map values
+        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+            public int compare(Map.Entry<String, Integer> o1,
+                               Map.Entry<String, Integer> o2) {
+                return (o2.getValue()).compareTo(o1.getValue());
+            }
+        });
+
+        // Convert sorted map back to a Map
+        Map<String, Integer> sortedMap = new LinkedHashMap<>();
+        for (Iterator<Map.Entry<String, Integer>> it = list.iterator(); it.hasNext();) {
+            Map.Entry<String, Integer> entry = it.next();
+            sortedMap.put(entry.getKey(), entry.getValue());
+        }
+
+        return sortedMap;
+    }
+
+
+    //sort map by key in ascending order
+    public static Map<Integer, String> sortMapByKey (Map<Integer, String> map) {
+        Map<Integer, String> sortedMap = new TreeMap<Integer, String>(
+                new Comparator<Integer>() {
+
+                    @Override
+                    public int compare(Integer o1, Integer o2) {
+                        return o2.compareTo(o1);
+                    }
+
+                });
+
+	    /* For Java 8, try this lambda
+		Map<Integer, String> treeMap = new TreeMap<>(
+		                (Comparator<Integer>) (o1, o2) -> o2.compareTo(o1)
+		        );
+		*/
+        sortedMap.putAll(map);
+
+
         return sortedMap;
     }
 }

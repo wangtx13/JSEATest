@@ -12,7 +12,7 @@ import org.apache.commons.math3.util.FastMath;
 import java.util.HashMap;
 import java.util.Map;
 
-import static utility.Tools.sortMapStringKey;
+import static utility.Tools.sortMapByValueWithStringKey;
 
 public class TopicSimilarity {
 
@@ -31,7 +31,7 @@ public class TopicSimilarity {
     public void generateTopicSimilarity() {
         int topicsCount = topicWordMatrix.getRowDimension();
         similarities = calculateSimilarities(topicWordMatrix, topicsCount);
-        similarities = sortMapStringKey(similarities);
+        similarities = sortMapByValueWithStringKey(similarities);
         generateTopicSequence(similarities);
     }
 

@@ -5,8 +5,6 @@
  */
 package servlet;
 
-import matrixreader.DocumentTopicMatrixReader;
-import matrixreader.MatrixReader;
 import xml.parse.ExtractPhraseLabels;
 
 import javax.servlet.ServletException;
@@ -15,6 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import static utility.Tools.sortMapByValueWithStringInteger;
 
 
 /**
@@ -47,25 +49,37 @@ public class SearchServlet extends HttpServlet {
                 File topicsKey = new File(programRootPath + "showFile/keys.txt");
                 int topicCount = 0;
                 StringBuffer matchedQueryBuffer = new StringBuffer();
-                StringBuffer topicBuffer = new StringBuffer();
+                Map<String, Integer> matchedTopics = new HashMap<>();
                 try (
                         InputStream inTopicKeys = new FileInputStream(topicsKey.getPath());
                         BufferedReader readerTopicKeys = new BufferedReader(new InputStreamReader(inTopicKeys))) {
                     String line = "";
                     while ((line = readerTopicKeys.readLine()) != null) {
                         topicCount++;
-//                        topicBuffer = topicBuffer.append(line + "\n");
-                        for(String str:searchQueryList) {
+
+                        int matchedDegree = 0;
+                        for(String str : searchQueryList) {
                             if(line.contains(str)) {
-                                String[] strPart = line.split("\t| ");
-                                int topicIndex = Integer.parseInt(strPart[0]);
-                                if (!matchedTopicIndex.contains(topicIndex)) {
-                                    matchedTopicIndex.add(topicIndex);
-                                    matchedQueryBuffer = matchedQueryBuffer.append(topicIndex + "::[TOPIC]::" + line + "\n");//topic index::[TOPIC]::line
-                                    findMatchedQuery = true;
-                                }
+                                matchedDegree++;
                             }
                         }
+
+                        if(matchedDegree > 0) {
+                            matchedTopics.put(line, matchedDegree);
+                        }
+                    }
+                }
+
+                Map<String, Integer> sortedMatchedTopics = sortMapByValueWithStringInteger(matchedTopics);
+                for(Map.Entry<String, Integer> entry:sortedMatchedTopics.entrySet()) {
+                    String matchedTopicsString = entry.getKey();
+                    int matchedDegree = entry.getValue();
+                    String[] strPart = matchedTopicsString.split("\t| ");
+                    int topicIndex = Integer.parseInt(strPart[0]);
+                    if (!matchedTopicIndex.contains(topicIndex)) {
+                        matchedTopicIndex.add(topicIndex);
+                        matchedQueryBuffer = matchedQueryBuffer.append(topicIndex + "::[TOPIC]::" + matchedTopicsString + "\n");//topic index::[TOPIC]::line
+                        findMatchedQuery = true;
                     }
                 }
 

@@ -204,7 +204,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p class="pull-right affix-top"><a href="#">Back to top</a></p>
         <p>2016 @Tianxia, Wang</p>
     </footer>
 

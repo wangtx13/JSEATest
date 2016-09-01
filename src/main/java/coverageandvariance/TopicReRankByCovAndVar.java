@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import static utility.Tools.sortMapIntegerKey;
+import static utility.Tools.sortMapByValueWithIntegerKey;
 
 /**
  * Created by wangtianxia1 on 16/7/24.
@@ -44,7 +44,7 @@ public class TopicReRankByCovAndVar {
             double topicRankValue = coverageAndVariance.calculateTopicRankValue(1, 1);
             topicRankValues.put(i, topicRankValue);
         }
-        topicRankValues = sortMapIntegerKey(topicRankValues);
+        topicRankValues = sortMapByValueWithIntegerKey(topicRankValues);
         topicRankSequence = generateTopicSequence(topicRankValues);
     }
 
