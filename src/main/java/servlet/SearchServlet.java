@@ -41,7 +41,7 @@ public class SearchServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             String programRootPath = getServletContext().getInitParameter("program-root-path");
             request.setAttribute("program-root-path", programRootPath);
-            String searchQuery = request.getParameter("searchQuery");
+            String searchQuery = request.getParameter("searchQuery").toLowerCase();
             String[] searchQueryList = searchQuery.split(" |,|;");
             ArrayList<Integer> matchedTopicIndex = new ArrayList<>();
 

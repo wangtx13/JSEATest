@@ -69,7 +69,7 @@
         <br/>
         <table class="table table-striped">
             <%
-                String searchQuery = request.getParameter("searchQuery");
+                String searchQuery = request.getParameter("searchQuery").toLowerCase();
                 int topicCount = (Integer) request.getAttribute("topicCount");
                 String programRootPath = request.getAttribute("program-root-path").toString();
                 String[] tableResults = request.getAttribute("matchedQuery").toString().split("\n");
