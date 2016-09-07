@@ -70,123 +70,53 @@
         <table class="table table-striped">
             <%
                 String searchQuery = request.getParameter("searchQuery").toLowerCase();
-                int topicCount = (Integer) request.getAttribute("topicCount");
-                String programRootPath = request.getAttribute("program-root-path").toString();
-                String[] tableResults = request.getAttribute("matchedQuery").toString().split("\n");
-
-                String topicsFilePath = programRootPath + "showFile/keys.txt";
-                String phraseLabelFilePath = programRootPath + "showFile/topic-phrases.xml";
-
-                File compositionFile = new File(programRootPath + "showFile/composition.txt");
-                MatrixReader docTopicMatrixReader = new DocumentTopicMatrixReader(compositionFile, topicCount);
-                Map<Integer, String[]> topDocumentList = docTopicMatrixReader.getTopList();
+                String[] tableResults = request.getAttribute("matchedQuery").toString().split("\\|");
 
                 for (String topicLine : tableResults) {
-                    for (String str : searchQuery.split(" |,|;")) {
-                        topicLine = topicLine.replaceAll(str, "<b style='color:red'>" + str + "</b>");
-                    }
             %>
             <tr>
                 <td>
                     <%
-                        String[] topicLinePart = topicLine.split("::");
-                        int topicIndex = Integer.parseInt(topicLinePart[0]);
-                        if (topicLinePart[1].equals("[TOPIC]")) {
-                    %>
-                    <p>
-                        <b>Topic: </b>
-                        <%=topicLinePart[2]%>
-                    </p>
-                    <p>
-                        <b>Labels: </b>
-                        <%
-                            try {
-
-                                SAXParserFactory factory = SAXParserFactory.newInstance();
-                                SAXParser saxParser = factory.newSAXParser();
-                                TopicPhraseHandler handler = new TopicPhraseHandler(topicIndex);
-                                saxParser.parse(phraseLabelFilePath, handler);
-                                String phrasesLabels = handler.getMatchedPhrases();
-                                for (String str : searchQuery.split(" |,|;")) {
-                                    phrasesLabels = phrasesLabels.replaceAll(str, "<b style='color:red'>" + str + "</b>");
-                                }
-
-                        %>
-                        <%=phrasesLabels%>
-                        <%
-
-                            } catch (SAXException e) {
-                                e.printStackTrace();
-                            } catch (ParserConfigurationException e) {
-                                e.printStackTrace();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-
-                        %>
-                    </p>
-                    <%
-                    } else if (topicLinePart[1].equals("[LABEL]")) {
-                        try {
-                            try (
-                                    InputStream in = new FileInputStream(topicsFilePath);
-                                    BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
-                                String line = "";
-                                while ((line = reader.readLine()) != null) {
-                                    int index = Integer.parseInt(line.split("\t| ")[0]);
-                                    if (index == topicIndex) {
-                                        for (String str : searchQuery.split(" |,|;")) {
-                                            line = line.replaceAll(str, "<b style='color:red'>" + str + "</b>");
-                                        }
-                    %>
-                    <p>
-                        <b>Topic: </b>
-                        <%=line%>
-                    </p>
-                    <%
-                                    }
-                                }
-
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    %>
-                    <p>
-                        <b>Labels: </b>
-                        <%=topicLinePart[2]%>
-                    </p>
-                    <%
-                        }
-
-                        String[] topDocuments = topDocumentList.get(topicIndex);
+                        String[] allLine = topicLine.split("\n");
+                        for (String line : allLine) {
+                            if (line.contains("Top 3 Documents: ")) {
                     %>
                     <p>
                         <b>Top 3 Documents: </b>
-                        <%
-                            int index = 0;
-                            for (String document : topDocuments) {
-                                String[] nameParts = document.split("/");
-                                String textName = nameParts[nameParts.length - 1];
-                                String fileName = "";
-                                int lastIndexOfStrigula = textName.lastIndexOf('-');
-                                if (lastIndexOfStrigula >= 0) {
-                                    fileName = textName.substring(0, lastIndexOfStrigula);
+                    <%
+                                line = line.replace("Top 3 Documents: ", "");
+                                String[] documents = line.split("\t");
+                                int index = 0;
+                                for (String fileName : documents) {
                                     String link = "http://localhost:8080/static/JSEA/upload/" + fileName;
+                                    for (String str : searchQuery.split(" |,|;")) {
+                                        fileName = fileName.replaceAll(str, "<b style='color:red'>" + str + "</b>");
+                                    }
                                     index++;
-                        %>
-                        <a href="<%=link%>" target="_blank"><%=fileName%>
-                        </a>;
-                        <%
-                                }
-                            }
-                            if (index < 3) {
-                        %>
-                        no more file...
-                        <%
-                            }
-                        %>
+                    %>
+                    <a href="<%=link%>" target="_blank"><%=fileName%>
+                    </a>;
+                    <%
+                        }
+                        if (index < 3) {
+                    %>
+                    no more file...
+                    <%
+                        }
+                    %>
                     </p>
+                    <%
+                    } else {
+                        for (String str : searchQuery.split(" |,|;")) {
+                            line = line.replaceAll(str, "<b style='color:red'>" + str + "</b>");
+                        }
+                    %>
+                    <p><%=line%>
+                    </p>
+                    <%
+                            }
+                        }
+                    %>
                 </td>
             </tr>
             <%

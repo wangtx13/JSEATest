@@ -194,12 +194,15 @@ public class PreProcessServlet extends HttpServlet {
                             }
                         } else if(fieldName.equals("copyrightInfoContent")) {
                             String copyrightInfoContent = fieldValue;
-                            copyrightStoplist = copyrightInfoContent.toLowerCase().replaceAll("/|\\*|\n|[0-9]|,|;|:|\\.|`|'|\"", "");
-                            copyrightStoplist = copyrightStoplist.replaceAll("\\(|\\)|-|//", " ");
+                            copyrightInfoContent = copyrightInfoContent.replaceAll(".java", "java");
+                            copyrightStoplist = copyrightInfoContent.toLowerCase().replaceAll("\\*|\n|[0-9]|,|;|`|'|\"", "");
+                            copyrightStoplist = copyrightStoplist.replaceAll("\\(|\\)|-|//|:|~|/|\\.", " ");
+
                         }
                     }
                 }
-                
+
+//                out.println("<p>"+ copyrightStoplist.toString() +"</p>");
                 out.println("<h2 id = \"success\" class=\"fileHead\"> Successful Uploading!</h2>");
                 out.println("<h2 id = \"success\" class=\"fileHead\"> Successful Preprocessing!</h2>");
 

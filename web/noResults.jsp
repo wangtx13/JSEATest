@@ -51,6 +51,7 @@
                 <p>Tips: </p>
                 <ul>
                     <li>Please check whether the words are spelled correctly</li>
+                    <li>Please select more search type: Topics, Labels, Top 3 Documents</li>
                     <li>Please try another query words</li>
                     <li>Please reduce the number of query words</li>
                 </ul>

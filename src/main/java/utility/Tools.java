@@ -126,7 +126,7 @@ public class Tools {
     }
 
     //sort map in terms of value in descending order
-    public static Map<String, Integer> sortMapByValueWithStringInteger(Map<String, Integer> unsortMap) {
+    public static Map<String, Integer> sortMapByValueForTopicLine(Map<String, Integer> unsortMap) {
 
         // Convert Map to List
         List<Map.Entry<String, Integer>> list =
@@ -156,6 +156,37 @@ public class Tools {
         Map<String, Integer> sortedMap = new LinkedHashMap<>();
         for (Iterator<Map.Entry<String, Integer>> it = list.iterator(); it.hasNext();) {
             Map.Entry<String, Integer> entry = it.next();
+            sortedMap.put(entry.getKey(), entry.getValue());
+        }
+
+        return sortedMap;
+    }
+
+    public static Map<Integer, Integer> sortMapByValueForTopics(Map<Integer, Integer> unsortMap) {
+
+        // Convert Map to List
+        List<Map.Entry<Integer, Integer>> list =
+                new LinkedList<Map.Entry<Integer, Integer>>(unsortMap.entrySet());
+
+        Collections.sort(list, new Comparator<Map.Entry<Integer, Integer>>() {
+            public int compare(Map.Entry<Integer, Integer> o1,
+                               Map.Entry<Integer, Integer> o2) {
+                return o1.getKey().compareTo(o2.getKey());
+            }
+        });
+
+        // Sort list with comparator, to compare the Map values
+        Collections.sort(list, new Comparator<Map.Entry<Integer, Integer>>() {
+            public int compare(Map.Entry<Integer, Integer> o1,
+                               Map.Entry<Integer, Integer> o2) {
+                return (o2.getValue()).compareTo(o1.getValue());
+            }
+        });
+
+        // Convert sorted map back to a Map
+        Map<Integer, Integer> sortedMap = new LinkedHashMap<>();
+        for (Iterator<Map.Entry<Integer, Integer>> it = list.iterator(); it.hasNext();) {
+            Map.Entry<Integer, Integer> entry = it.next();
             sortedMap.put(entry.getKey(), entry.getValue());
         }
 
