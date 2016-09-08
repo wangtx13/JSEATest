@@ -46,15 +46,15 @@ public class PreProcessServlet extends HttpServlet {
         }
     };
 
-    public void init() {
-        // 获取文件将被存储的位置
-        uploadRootPath = getServletContext().getInitParameter("file-upload");
-        File upload = new File(uploadRootPath);
-        if(upload.exists()) {
-            deleteFolderContent(upload);
-        }
-        createDirectoryIfNotExisting(uploadRootPath);
-    }
+//    public void init() {
+//        // 获取文件将被存储的位置
+//        uploadRootPath = getServletContext().getInitParameter("file-upload");
+//        File upload = new File(uploadRootPath);
+//        if(upload.exists()) {
+//            deleteFolderContent(upload);
+//        }
+//        createDirectoryIfNotExisting(uploadRootPath);
+//    }
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -67,6 +67,12 @@ public class PreProcessServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        uploadRootPath = getServletContext().getInitParameter("file-upload");
+        File upload = new File(uploadRootPath);
+        if(upload.exists()) {
+            deleteFolderContent(upload);
+        }
+        createDirectoryIfNotExisting(uploadRootPath);
         String programRootPath = getServletContext().getInitParameter("program-root-path");
         boolean isGeneral = false;
         String copyrightStoplist = "";
@@ -157,13 +163,13 @@ public class PreProcessServlet extends HttpServlet {
             factory.setRepository(new File(programRootPath, "temp"));
 
             // 创建一个新的文件上传处理程序
-            ServletFileUpload upload = new ServletFileUpload(factory);
+            ServletFileUpload uploadProcess = new ServletFileUpload(factory);
             // 允许上传的文件大小的最大值
-            upload.setSizeMax(maxFileSize);
+            uploadProcess.setSizeMax(maxFileSize);
 
             try {
                 // 解析请求，获取文件项
-                List fileItems = upload.parseRequest(request);
+                List fileItems = uploadProcess.parseRequest(request);
 
                 // 处理上传的文件项
                 Iterator i = fileItems.iterator();

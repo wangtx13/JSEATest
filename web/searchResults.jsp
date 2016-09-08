@@ -90,7 +90,11 @@
                                 for (String fileName : documents) {
                                     String link = "http://localhost:8080/static/JSEA/upload/" + fileName;
                                     for (String str : searchQuery.split(" |,|;")) {
-                                        fileName = fileName.replaceAll(str, "<b style='color:red'>" + str + "</b>");
+                                        String fileNameToMatch = fileName.toLowerCase();
+                                        if(fileNameToMatch.contains(str)) {
+                                            fileName = "<b style='color:red'>" + fileName + "</b>";
+                                        }
+//                                        fileName = fileName.replaceAll("(?i)" + str, "<b style='color:red'>" + str + "</b>");
                                     }
                                     index++;
                     %>

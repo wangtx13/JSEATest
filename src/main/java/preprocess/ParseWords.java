@@ -35,8 +35,8 @@ public class ParseWords {
     public StringBuffer parseAllWords() {
         StringBuffer outputWords = new StringBuffer();
 
-        /*分隔符：空格、引号"、左小括号(、右小括号)、左中括号[、有中括号]、点.、&、冒号:、分号;、换行符号\r\n、逗号、"-"、"_"、"//"、"*"、@ */
-        String[] allWords = originalWords.toString().split(" |\"|\\(|\\)|\\[|\\]|\\.|&|:|;|\r\n|\\\\r\\\\n|\n|\\\\n|,|-|_|//|\\*|$|@");
+        /*分隔符：空格、引号"、左小括号(、右小括号)、左中括号[、有中括号]、点.、&、冒号:、分号;、换行符号\r\n、逗号、"-"、"_"、"//"、"/"、"*"、"@" */
+        String[] allWords = originalWords.toString().split(" |\"|\\(|\\)|\\[|\\]|\\.|&|:|;|\r\n|\\\\r\\\\n|\n|\\\\n|\t|\\\\t|,|-|_|//|/|\\*|$|@|\\{|\\}|'");
 
         int wordCount = 0;
         for (String word : allWords) {

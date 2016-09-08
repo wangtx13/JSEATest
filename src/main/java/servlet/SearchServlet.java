@@ -155,10 +155,12 @@ public class SearchServlet extends HttpServlet {
                             findMatchedQuery = true;
                         }
                     }
-                } else if(hasLabels) {
+                }
+
+                if(hasLabels) {
                     for (int i = 0; i < allPhraseLabels.length; ++i) {
                         for (String str : searchQueryList) {
-                            if (allPhraseLabels[i].contains(str) && !matchedTopicIndex.contains(i)) {
+                            if (allPhraseLabels[i].toLowerCase().contains(str) && !matchedTopicIndex.contains(i)) {
                                 matchedTopicIndex.add(i);
                                 String relativeTopics = topics.get(i);
                                 String relativeDocuments = topThreeDocuments.get(i);
@@ -171,13 +173,16 @@ public class SearchServlet extends HttpServlet {
                             }
                         }
                     }
-                } else if(hasDocuments) {
+                }
+
+                if(hasDocuments) {
                     for(Map.Entry<Integer, String> entry : topThreeDocuments.entrySet()) {
                         int index = entry.getKey();
                         if(!matchedTopicIndex.contains(index)) {
                             String documents = entry.getValue();
+                            String documentsToMatch = documents.toLowerCase();
                             for (String str : searchQueryList) {
-                                if (documents.contains(str)) {
+                                if (documentsToMatch.contains(str)) {
                                     String relativeTopics = topics.get(index);
                                     String relativeLabels = allPhraseLabels[index];
                                     matchedQueryBuffer = matchedQueryBuffer.append("<b>Topics: </b>" + relativeTopics + "\n");
