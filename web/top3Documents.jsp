@@ -5,9 +5,10 @@
 --%>
 
 <%@ page import="java.util.Map" %>
-<%@ page import="java.io.File" %>
 <%@ page import="matrixreader.MatrixReader" %>
 <%@ page import="matrixreader.DocumentTopicMatrixReader" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.io.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,14 +65,53 @@
                 String[] topicsArray = topics.split("\n");
                 String[] labelsArray = (String[]) request.getAttribute("labels");
                 String programRootPath = request.getAttribute("program-root-path").toString();
-                File compositionFile = new File(programRootPath + "showFile/composition.txt");
-                MatrixReader docTopicMatrixReader = new DocumentTopicMatrixReader(compositionFile, topicsArray.length);
-                Map<Integer, String[]> topDocumentList = docTopicMatrixReader.getTopList();
+
+                File topDocumentsFile = new File(programRootPath + "showFile/topic-docs.txt");
+                Map<Integer, String> topThreeDocuments = new HashMap<>();
+
+                try (
+                        InputStream inTopicDocs = new FileInputStream(topDocumentsFile.getPath());
+                        BufferedReader readerTopicsDocs = new BufferedReader(new InputStreamReader(inTopicDocs))) {
+                    String docsLine = "";
+                    String threeFileName = "";
+                    int documentCountIndex = 0;
+                    int documentCount = 0;
+                    int checkCountLabel = 1;
+                    boolean checked = false;
+                    while ((docsLine = readerTopicsDocs.readLine()) != null) {
+                        if (!docsLine.equals("#topic doc name proportion ...")) {
+                            String[] linePart = docsLine.split("\t| ");
+                            int topicIndex = Integer.parseInt(linePart[0]);
+                            if (topicIndex == checkCountLabel && !checked) {
+                                documentCount = documentCountIndex;
+                                checked = true;
+                                topThreeDocuments.put(topicIndex - 1, threeFileName);
+                                threeFileName = "";
+                                documentCountIndex = 0;
+                            }
+                            if(documentCountIndex < 3) {
+                                String[] nameParts = linePart[2].split("/");
+                                String textName = nameParts[nameParts.length - 1];
+                                int lastIndexOfStrigula = textName.lastIndexOf('-');
+                                if (lastIndexOfStrigula >= 0) {
+                                    String fileName = textName.substring(0, lastIndexOfStrigula);
+                                    threeFileName = threeFileName + fileName + "\t";
+                                }
+                            }
+                            documentCountIndex++;
+                            if (documentCountIndex == documentCount) {
+                                topThreeDocuments.put(topicIndex, threeFileName);
+                                threeFileName = "";
+                                documentCountIndex = 0;
+                            }
+                        }
+                    }
+                }
 
                 for (int i = 0; i < topicsArray.length; ++i) {
                     String[] strPart = topicsArray[i].split("\t| ");
                     int topicIndex = Integer.parseInt(strPart[0]);
-                    String[] topDocuments = topDocumentList.get(topicIndex);
+
             %>
             <tr>
                 <td>
@@ -86,21 +126,16 @@
                     <p>
                         <b>Top 3 Documents: </b>
                         <%
+                            String[] documents = topThreeDocuments.get(topicIndex).split("\t");
                             int index = 0;
-                            for (String document : topDocuments) {
-                                String[] nameParts = document.split("/");
-                                String textName = nameParts[nameParts.length - 1];
-                                String fileName = "";
-                                int lastIndexOfStrigula = textName.lastIndexOf('-');
-                                if (lastIndexOfStrigula >= 0) {
-                                    fileName = textName.substring(0, lastIndexOfStrigula);
-                                    String link = "http://localhost:8080/static/JSEA/upload/" + fileName;
-                                    index++;
+                            for (String fileName : documents) {
+                                String link = "http://localhost:8080/static/JSEA/upload/" + fileName;
+                                index++;
                         %>
                         <a href="<%=link%>" target="_blank"><%=fileName%>
                         </a>;
                         <%
-                                }
+
                             }
                             if (index < 3) {
                         %>
