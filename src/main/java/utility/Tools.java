@@ -5,6 +5,7 @@
  */
 package utility;
 
+import org.apache.commons.lang3.StringUtils;
 import preprocess.ParseJavaComments;
 
 import java.io.BufferedWriter;
@@ -215,5 +216,10 @@ public class Tools {
 
 
         return sortedMap;
+    }
+
+    public static String highlightKeywords(String source, List<String> keywords) {
+        String regex = "(?i)(" + StringUtils.join(keywords, "|") + ")";
+        return source.replaceAll(regex, "<b style=\"color:red\">$1</b>");
     }
 }

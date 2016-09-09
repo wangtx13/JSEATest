@@ -13,6 +13,9 @@
 <%@ page import="org.xml.sax.SAXException" %>
 <%@ page import="javax.xml.parsers.ParserConfigurationException" %>
 <%@ page import="java.io.*" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="static utility.Tools.highlightKeywords" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,6 +75,11 @@
                 String searchQuery = request.getParameter("searchQuery").toLowerCase();
                 String[] tableResults = request.getAttribute("matchedQuery").toString().split("\\|");
 
+                List<String> searchQueriesList = new ArrayList<>();
+                for(String str : searchQuery.split(" |,|;")) {
+                    searchQueriesList.add(str);
+                }
+
                 for (String topicLine : tableResults) {
             %>
             <tr>
@@ -89,13 +97,15 @@
                                 int index = 0;
                                 for (String fileName : documents) {
                                     String link = "http://localhost:8080/static/JSEA/upload/" + fileName;
-                                    for (String str : searchQuery.split(" |,|;")) {
-                                        String fileNameToMatch = fileName.toLowerCase();
-                                        if(fileNameToMatch.contains(str)) {
-                                            fileName = "<b style='color:red'>" + fileName + "</b>";
-                                        }
-//                                        fileName = fileName.replaceAll("(?i)" + str, "<b style='color:red'>" + str + "</b>");
-                                    }
+                                    fileName = highlightKeywords(fileName, searchQueriesList);
+//                                    for (String str : searchQuery.split(" |,|;")) {
+//                                        String fileNameToMatch = fileName.toLowerCase();
+//                                        if(fileNameToMatch.contains(str)) {
+//
+//                                            fileName = "<b style='color:red'>" + fileName + "</b>";
+//                                        }
+////                                        fileName = fileName.replaceAll("(?i)" + str, "<b style='color:red'>" + str + "</b>");
+//                                    }
                                     index++;
                     %>
                     <a href="<%=link%>" target="_blank"><%=fileName%>
