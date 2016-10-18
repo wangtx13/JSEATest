@@ -18,7 +18,7 @@
         <meta name="author" content="">
         <link rel="icon" href="./image/analysis.jpg">
 
-        <title>JSEA·Java Software Engineers Assister</title>
+        <title>JSEA·Java Software Engineers Assistant</title>
 
         <!-- Bootstrap core CSS -->
         <link href="./css/bootstrap.min.css" rel="stylesheet">
