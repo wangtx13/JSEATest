@@ -148,7 +148,7 @@ public class SearchServlet extends HttpServlet {
                             String relativeDocuments = topThreeDocuments.get(topicIndex);
 
                             matchedQueryBuffer = matchedQueryBuffer.append("<b>Topics: </b>" + matchedTopicsString + "\n");
-                            matchedQueryBuffer = matchedQueryBuffer.append("<b>Labels: </b>" + relativeLabels + "\n");
+                            matchedQueryBuffer = matchedQueryBuffer.append("<b>Phrases: </b>" + relativeLabels + "\n");
                             matchedQueryBuffer = matchedQueryBuffer.append("Top 3 Documents: " + relativeDocuments);
                             matchedQueryBuffer = matchedQueryBuffer.append("|");//another topic
 
@@ -165,7 +165,7 @@ public class SearchServlet extends HttpServlet {
                                 String relativeTopics = topics.get(i);
                                 String relativeDocuments = topThreeDocuments.get(i);
                                 matchedQueryBuffer = matchedQueryBuffer.append("<b>Topics: </b>" + relativeTopics + "\n");
-                                matchedQueryBuffer = matchedQueryBuffer.append("<b>Labels: </b>" + allPhraseLabels[i] + "\n");
+                                matchedQueryBuffer = matchedQueryBuffer.append("<b>Phrases: </b>" + allPhraseLabels[i] + "\n");
                                 matchedQueryBuffer = matchedQueryBuffer.append("Top 3 Documents: " + relativeDocuments);
                                 matchedQueryBuffer = matchedQueryBuffer.append("|");//another topic
 
@@ -186,7 +186,7 @@ public class SearchServlet extends HttpServlet {
                                     String relativeTopics = topics.get(index);
                                     String relativeLabels = allPhraseLabels[index];
                                     matchedQueryBuffer = matchedQueryBuffer.append("<b>Topics: </b>" + relativeTopics + "\n");
-                                    matchedQueryBuffer = matchedQueryBuffer.append("<b>Labels: </b>" + relativeLabels + "\n");
+                                    matchedQueryBuffer = matchedQueryBuffer.append("<b>Phrases: </b>" + relativeLabels + "\n");
                                     matchedQueryBuffer = matchedQueryBuffer.append("Top 3 Documents: " + documents);
                                     matchedQueryBuffer = matchedQueryBuffer.append("|");//another topic
 

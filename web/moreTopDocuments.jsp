@@ -118,7 +118,7 @@
                         <%=topicsArray[i]%>
                     </p>
                     <p>
-                        <b>Labels: </b>
+                        <b>Phrases: </b>
                         <%=labelsArray[i]%>
                     </p>
                     <p>

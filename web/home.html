@@ -63,9 +63,8 @@
                         <div class="carousel-caption">
                             <h1>JSEA · Java Software Engineers Assister</h1>
                             <p>
-                                JSEA·Java Software Engineers Assister can help you to understand source code more easily and quickly by generating
-                                some topics with the help of Mallet. You need to upload source code and javadoc, chang to 
-                                the Mallet directory and run the command.
+                                JSEA·Java Software Engineers Assister can help you to read and understand source code
+                                more easily and effectively by generating some topics through MALLET.
                             </p>
                             <p><a class="btn btn-lg btn-primary" href="#process" role="button">Start Processing</a></p>
                         </div>
@@ -138,10 +137,10 @@
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" name="general">
-                                Remove words about general Base Class Library.
+                                Remove words about Basic Library.
                             </label>
                             <p class="help-block illustrate">
-                                You can select it to remove words about general Base Class Library, such as 'lang', 'util' and so on. (Advice: Select it.)
+                                You can select it to remove words about Basic library, such as 'lang', 'util' and so on. (Advice: Select it.)
                             </p>
                         </div>
                     </div>
@@ -149,10 +148,10 @@
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" onclick="enableList(this)" name="special">
-                                Remove words about special Base Class Library. 
+                                Remove words about Functional Library.
                             </label>
                             <p class="help-block illustrate">
-                                Example: For JHotDraw, which is a program about drawing, so you can select 'Drawing' in the following list to remove useless words about drawing like 'swing' and so on. (Advice: Select it.)
+                                Example: JHotDraw is a Java GUI framework, so it is related to drawing and it uses libraries that can be used to draw graphics or interfaces. You can select 'Drawing' in the following list to remove Functional Library about drawing like 'swing' and so on. (Advice: Select it.)
                             </p>
                         </div>
                     </div>
@@ -172,11 +171,30 @@
                     <div class="form-group">
                         <div class="checkbox">
                             <label>
+                                <input type="checkbox" onclick="enableTextArea(this)" name="customizePackageInfo">
+                                Remove words about Customized Package.
+                            </label>
+                            <p class="help-block illustrate">
+                                Please input package names that developers written in the source code, such as “org”, “jhotdraw”, “cc” and so on for JHotDraw, then you can remove words about customized package. (Advice: Select it and input right customized package names)
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <textarea class="form-control" id="customizePackage" name="customizePackageInfoContent" rows="1" placeholder="Please input customized package names into this filed..." disabled="true"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
                                 <input type="checkbox" onclick="enableTextArea(this)" name="copyrightInfo">
                                 Remove words about Copyright information.
                             </label>
                             <p class="help-block illustrate">
-                                Please copy the copyright information into this input filed, then you can select it to remove words about copyright information. (Advice: Select it and input right copyright information)
+                                Please copy the copyright information into this input filed, then you can remove words about copyright information. (Advice: Select it and input right copyright information)
                             </p>
                         </div>
                     </div>

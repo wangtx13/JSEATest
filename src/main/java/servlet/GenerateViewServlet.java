@@ -73,14 +73,14 @@ public class GenerateViewServlet extends HttpServlet {
                 request.setAttribute("topics", topicBuffer.toString());
                 if (viewContent.equals("Topics")) {
                     request.getRequestDispatcher("./topics.jsp").forward(request, response);
-                } else if (viewContent.equals("Topics and Labels")) {
+                } else if (viewContent.equals("Topics and Phrases")) {
                     request.setAttribute("labels", allPhraseLabels);
                     request.getRequestDispatcher("./labels.jsp").forward(request, response);
-                } else if (viewContent.equals("Topics, Labels and Top 3 Documents (Recommended)")) {
+                } else if (viewContent.equals("Topics, Phrases and Top 3 Documents (Recommended)")) {
                     request.setAttribute("labels", allPhraseLabels);
                     request.setAttribute("program-root-path", programRootPath);
                     request.getRequestDispatcher("./top3Documents.jsp").forward(request, response);
-                } else if (viewContent.equals("Topics, Labels and More Top Documents")) {
+                } else if (viewContent.equals("Topics, Phrases and More Top Documents")) {
                     request.setAttribute("labels", allPhraseLabels);
                     request.setAttribute("program-root-path", programRootPath);
                     request.getRequestDispatcher("./moreTopDocuments.jsp").forward(request, response);
