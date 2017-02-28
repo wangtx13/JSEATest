@@ -47,7 +47,6 @@ public class PreProcessServlet extends HttpServlet {
     };
 
 //    public void init() {
-//        // 获取文件将被存储的位置
 //        uploadRootPath = getServletContext().getInitParameter("file-upload");
 //        File upload = new File(uploadRootPath);
 //        if(upload.exists()) {
@@ -76,17 +75,9 @@ public class PreProcessServlet extends HttpServlet {
         String programRootPath = getServletContext().getInitParameter("program-root-path");
         boolean isGeneral = false;
         String copyrightStoplist = "";
-        // Add timestamp to folder name.
-//        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS");
-//        Timestamp currentTimeStamp = new Timestamp(System.currentTimeMillis());
-//        String timeStamp = dateFormat.format(currentTimeStamp);
+        String customizedPackageList = "";
 
-        // Create a new folder.
-//        String inputRootFilePath = uploadRootPath + timeStamp + "/";
         String inputRootFilePath = uploadRootPath;
-//        createDirectoryIfNotExisting(inputRootFilePath);
-
-//        String outputFilePath = programRootPath + "output/PreProcessTool-" + timeStamp;
         String outputFilePath = programRootPath + "preprocessOutput/PreProcessTool";
         File outputFile = new File(outputFilePath);
         if(outputFile.exists()) {
@@ -106,7 +97,7 @@ public class PreProcessServlet extends HttpServlet {
                     + "<meta name=\"description\" content=\"\">"
                     + "<meta name=\"author\" content=\"\">"
                     + "<link rel=\"icon\" href=\"./image/analysis.jpg\">"
-                    + "<title>Programmer Assistor</title>"
+                    + "<title>JSEA</title>"
                     + "<link href=\"./css/bootstrap.min.css\" rel=\"stylesheet\">"
                     + "<script src=\"./js/ie-emulation-modes-warning.js\">"
                     + "</script><!-- Custom styles for this template -->"
@@ -144,12 +135,10 @@ public class PreProcessServlet extends HttpServlet {
             out.println("<div class=\"row featurette files\" id=\"fileList\">");
             out.println("<h3>MALLET import data directory: </h3>");
             out.println("<p>");
-//            out.println("./output/PreProcessTool-" + timeStamp);
             out.println(programRootPath + "preprocessOutput/PreProcessTool");
             out.println("</p>");
             out.println("<h3>Uploaded Files: </h3>");
 
-            // 检查有一个文件上传请求
             isMultipart = ServletFileUpload.isMultipartContent(request);
 
             if (!isMultipart) {
@@ -157,21 +146,16 @@ public class PreProcessServlet extends HttpServlet {
                 return;
             }
             DiskFileItemFactory factory = new DiskFileItemFactory();
-            // 文件大小的最大值将被存储在内存中
             factory.setSizeThreshold(maxMemSize);
             // Location to save data that is larger than maxMemSize.
             factory.setRepository(new File(programRootPath, "temp"));
 
-            // 创建一个新的文件上传处理程序
             ServletFileUpload uploadProcess = new ServletFileUpload(factory);
-            // 允许上传的文件大小的最大值
             uploadProcess.setSizeMax(maxFileSize);
 
             try {
-                // 解析请求，获取文件项
                 List fileItems = uploadProcess.parseRequest(request);
 
-                // 处理上传的文件项
                 Iterator i = fileItems.iterator();
 
                 while (i.hasNext()) {
@@ -198,6 +182,11 @@ public class PreProcessServlet extends HttpServlet {
                                 libraryTypeCondition.remove("Modeling");
                                 libraryTypeCondition.put("Modeling", true);
                             }
+                        } else if(fieldName.equals("customizePackageInfoContent")) {
+                            String customizePackageInfoContent = fieldValue;
+                            customizedPackageList = customizePackageInfoContent.toLowerCase().replaceAll("\\*|\n|[0-9]|,|;|`|'|\"", "");
+                            customizedPackageList = customizedPackageList.replaceAll("\\(|\\)|-|//|:|~|/|\\.", " ");
+
                         } else if(fieldName.equals("copyrightInfoContent")) {
                             String copyrightInfoContent = fieldValue;
                             copyrightInfoContent = copyrightInfoContent.replaceAll(".java", "java");
@@ -221,7 +210,7 @@ public class PreProcessServlet extends HttpServlet {
 
             }
 
-            PreProcessTool preProcessTool = new PreProcessTool(inputRootFilePath, outputFilePath, isGeneral, libraryTypeCondition, copyrightStoplist);
+            PreProcessTool preProcessTool = new PreProcessTool(inputRootFilePath, outputFilePath, isGeneral, libraryTypeCondition, copyrightStoplist, customizedPackageList);
             preProcessTool.preProcess();
 
             out.println("</div>");

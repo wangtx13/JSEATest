@@ -134,7 +134,7 @@
                                 if (lastIndexOfStrigula >= 0) {
                                     String fileNameWithPath = textName.substring(0, lastIndexOfStrigula);//fileNameWithPath eg. src-org-jhotdraw-app-AbstractApplication.java
                                     String fileName = fileNameWithPath.substring(fileNameWithPath.lastIndexOf('-')+1, lastIndexOfStrigula);//fileName eg. AbstractApplication.java
-                                    String link = "http://localhost:8080/static/JSEA/upload/" + fileNameWithPath;
+                                    String link = "http://localhost:8080/static/JSEA-store-data/upload/" + fileNameWithPath;
 
                     %><a href="<%=link%>" target="_blank"><%=fileName%>
                     </a>,

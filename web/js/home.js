@@ -16,6 +16,14 @@ function checkFiles() {
     document.getElementById("upload_form").submit();
 }
 
+function enableCustomizePackage(para) {
+    if (para.checked) {
+        document.getElementById("customizePackage").disabled = false;
+    } else {
+        document.getElementById("customizePackage").disabled = true;
+    }
+}
+
 function enableTextArea(para) {
     if (para.checked) {
         document.getElementById("textarea").disabled = false;

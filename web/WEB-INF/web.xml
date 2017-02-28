@@ -28,14 +28,14 @@
         <description>Location to store uploaded file</description>
         <param-name>file-upload</param-name>
         <param-value>
-            /Users/wangtianxia1/wtx-project/JSEA/upload/
+            /Users/wangtianxia1/IdeaProjects/NewProgrammerAssistor/JSEA-store-data/upload/
         </param-value>
     </context-param>
     <context-param>
         <description>The location of the program</description>
         <param-name>program-root-path</param-name>
         <param-value>
-            /Users/wangtianxia1/wtx-project/JSEA/
+            /Users/wangtianxia1/IdeaProjects/NewProgrammerAssistor/JSEA-store-data/
         </param-value>
     </context-param>
     <session-config>

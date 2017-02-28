@@ -37,15 +37,17 @@ public class ParseJavaComments {
     private boolean ifGeneral;
     private Map<String, Boolean> libraryTypeCondition;
     private String copyrightInfoContent;
+    private String customizedPackageList;
     private Map<String, Integer> documentWordsCountList;
     private File extractedFile;
 
-    public ParseJavaComments(File inputFile, File outputFile, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, String copyrightInfoContent, Map<String, Integer> documentWordsCountList, File extractedFile) {
+    public ParseJavaComments(File inputFile, File outputFile, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, String copyrightInfoContent, String customizedPackageList, Map<String, Integer> documentWordsCountList, File extractedFile) {
         this.inputFile = inputFile;
         this.outputFile = outputFile;
         this.ifGeneral = ifGeneral;
         this.libraryTypeCondition = libraryTypeCondition;
         this.copyrightInfoContent = copyrightInfoContent;
+        this.customizedPackageList = customizedPackageList;
         this.documentWordsCountList = documentWordsCountList;
         this.extractedFile = extractedFile;
     }
@@ -76,7 +78,7 @@ public class ParseJavaComments {
             allComments.append(commentVisitor.getAllComments().toString());
         }
 
-        ParseWords parseWords = new ParseWords(allComments, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList, extractedFile);
+        ParseWords parseWords = new ParseWords(allComments, ifGeneral, libraryTypeCondition, copyrightInfoContent, customizedPackageList, documentWordsCountList, extractedFile);
         allComments = parseWords.parseAllWords();
         writeToFile(allComments.toString(), outputFile);
     }

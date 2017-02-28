@@ -96,7 +96,7 @@
                                 String[] documents = line.split("\t");
                                 int index = 0;
                                 for (String fileName : documents) {
-                                    String link = "http://localhost:8080/static/JSEA/upload/" + fileName;
+                                    String link = "http://localhost:8080/static/JSEA-store-data/upload/" + fileName;
                                     fileName = highlightKeywords(fileName, searchQueriesList);
 //                                    for (String str : searchQuery.split(" |,|;")) {
 //                                        String fileNameToMatch = fileName.toLowerCase();

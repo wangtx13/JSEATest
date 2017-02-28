@@ -27,16 +27,18 @@ public class PreProcessTool {
     private String inputRootFilePath;
     private String outputFilePath;
     private String copyrightInfoContent;
+    private String customizedPackageList;
     private boolean ifGeneral;
     private Map<String, Boolean> libraryTypeCondition;
     private Map<String, Integer> documentWordsCountList;
 
-    public PreProcessTool(String inputRootFilePath, String outputFilePath, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, String copyrightInfoContent) {
+    public PreProcessTool(String inputRootFilePath, String outputFilePath, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, String copyrightInfoContent, String customizedPackageList) {
         this.inputRootFilePath = inputRootFilePath;
         this.outputFilePath = outputFilePath;
         this.ifGeneral = ifGeneral;
         this.libraryTypeCondition = libraryTypeCondition;
         this.copyrightInfoContent = copyrightInfoContent;
+        this.customizedPackageList = customizedPackageList;
         documentWordsCountList = new HashMap<>();
     }
     
@@ -52,7 +54,7 @@ public class PreProcessTool {
         if(!inputRootFile.isDirectory()) {
             System.out.println("Please input a extisted directory.");
         } else {
-            TraversalFiles.fileList(inputRootFile, 0, path, outputFilePath, ifGeneral, libraryTypeCondition, copyrightInfoContent, documentWordsCountList);
+            TraversalFiles.fileList(inputRootFile, 0, path, outputFilePath, ifGeneral, libraryTypeCondition, copyrightInfoContent, customizedPackageList, documentWordsCountList);
         }
 
         File documentWordsCountFile = new File(outputFilePath + "/documentsWordsCount.txt");

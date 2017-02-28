@@ -129,7 +129,7 @@
                             String[] documents = topThreeDocuments.get(topicIndex).split("\t");
                             int index = 0;
                             for (String fileName : documents) {
-                                String link = "http://localhost:8080/static/JSEA/upload/" + fileName;
+                                String link = "http://localhost:8080/static/JSEA-store-data/upload/" + fileName;
                                 index++;
                         %>
                         <a href="<%=link%>" target="_blank"><%=fileName%>

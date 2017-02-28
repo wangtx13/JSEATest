@@ -20,14 +20,16 @@ public class ParseWords {
     private boolean ifGeneral;
     private Map<String, Boolean> libraryTypeCondition;
     private String copyrightStopwordList;
+    private String customizedPackageList;
     private Map<String, Integer> documentWordsCountList;
     private File extractedFile;
 
-    public ParseWords(StringBuffer originalWords, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, String copyrightInfoContent, Map<String, Integer> documentWordsCountList, File extractedFile) {
+    public ParseWords(StringBuffer originalWords, boolean ifGeneral, Map<String, Boolean> libraryTypeCondition, String copyrightInfoContent, String customizedPackageList, Map<String, Integer> documentWordsCountList, File extractedFile) {
         this.originalWords = originalWords;
         this.ifGeneral = ifGeneral;
         this.libraryTypeCondition = libraryTypeCondition;
         this.copyrightStopwordList = copyrightInfoContent;
+        this.customizedPackageList =customizedPackageList;
         this.documentWordsCountList = documentWordsCountList;
         this.extractedFile = extractedFile;
     }
@@ -35,33 +37,20 @@ public class ParseWords {
     public StringBuffer parseAllWords() {
         StringBuffer outputWords = new StringBuffer();
 
-        /*分隔符：空格、引号"、左小括号(、右小括号)、左中括号[、有中括号]、点.、&、冒号:、分号;、换行符号\r\n、逗号、"-"、"_"、"//"、"/"、"*"、"@" */
         String[] allWords = originalWords.toString().split(" |\"|\\(|\\)|\\[|\\]|\\.|&|:|;|\r\n|\\\\r\\\\n|\n|\\\\n|\t|\\\\t|,|-|_|//|/|\\*|$|@|\\{|\\}|'");
 
         int wordCount = 0;
         for (String word : allWords) {
             if (!word.equals("")) {
                 String[] splitWords = splitCamelWords(word);
-                /*若word被拆分，将原词也加入*/
-//                if (splitWords.length > 1) {
-//                    String parsedWords = removeStopWords(word.toLowerCase());
-//                    if(parsedWords != null)
-//                        parsedWords = removeClassLibrary(parsedWords.toLowerCase());
-//                    if (parsedWords != null)
-//                        parsedWords = removeCopyrightInfo(parsedWords.toLowerCase());
-//                    if (parsedWords != null) {
-//                        outputWords.append(word.toLowerCase());
-//                        outputWords.append(parsedWords);
-//                        outputWords.append(" ");
-//                        wordCount++;
-//                    }
-//                }
 
                 /*若word被拆分，将拆分后的词加入*/
                 for (String aSplitWord : splitWords) {
                     String parsedWords = removeStopWords(aSplitWord);
                     if (parsedWords != null)
                         parsedWords = removeClassLibrary(parsedWords.toLowerCase());
+                    if (parsedWords != null)
+                        parsedWords = removeCustomizedPackageInfo(parsedWords.toLowerCase());
                     if (parsedWords != null)
                         parsedWords = removeCopyrightInfo(parsedWords.toLowerCase());
                     if (parsedWords != null) {
@@ -78,30 +67,24 @@ public class ParseWords {
     }
 
     private String[] splitCamelWords(String word) {
-//        if (!word.contains("_")) {
-            /*XML、DOM、JHotDraw、ID不分割*/
         word = word.replace("XML", "Xml");
         word = word.replace("DOM", "Dom");
         word = word.replace("JHotDraw", "Jhotdraw");
         word = word.replace("ID", "Id");
 
-            /*正则表达式：分隔符为大写字母*/
         String regEx = "[A-Z]";
         Pattern p1 = Pattern.compile(regEx);
         Matcher m1 = p1.matcher(word);
 
-            /*判断首字母是否大写*/
         boolean startWithUpper = false;
         startWithUpper = Pattern.matches("[A-Z].*", word);
 
-            /*按照句子结束符分割句子，并存入list*/
         String[] words = p1.split(word);
         List<String> list = new ArrayList<>();
         for (int i = 0; i < words.length; i++) {
             list.add(words[i]);
         }
 
-            /*将句子结束符连接到相应的句子后*/
         int count = 0;
         while (m1.find()) {
             if (count + 1 < words.length) {
@@ -112,24 +95,16 @@ public class ParseWords {
             }
         }
 
-            /*首字母大写且所有字符并非全部大写，去掉list中第一个空字符串*/
         if (startWithUpper && words.length != 0) {
             list.remove(0);
         }
-            
-            /*将list中所有字符串转为小写*/
+
         for (int i = 0; i < list.size(); ++i) {
             list.set(i, list.get(i).toLowerCase());
         }
-            
-            /*拷贝list到一个新数组*/
+
         String[] result = list.toArray(new String[1]);
         return result;
-//        } else {
-//            String[] result = new String[1];
-//            result[0] = word;
-//            return result;
-//        }
     }
 
     private String removeStopWords(String word) {
@@ -156,8 +131,6 @@ public class ParseWords {
         String stopList_common = "util lang";
         boolean general = ifGeneral;
         String stopList_draw = "javax swing awt org jhotdraw";
-//        String stopList_draw = "org jhotdraw";
-//        String stopList_draw = "javax swing awt";
         boolean draw = libraryTypeCondition.get("Drawing");
         String stopList_modeling = "cc grmm fst";
         boolean modeling = libraryTypeCondition.get("Modeling");
@@ -177,6 +150,11 @@ public class ParseWords {
         return word;
     }
 
+    private String removeCustomizedPackageInfo(String word) {
+        word = processAWord(customizedPackageList, word);
+
+        return word;
+    }
 
     private String removeCopyrightInfo(String word) {
         word = processAWord(copyrightStopwordList, word);

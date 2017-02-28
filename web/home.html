@@ -89,9 +89,11 @@
                     <h2>Preprocessing</h2>
                     <p>
                         Preprocessing in JSEA including:
-                        (1) Decompose programmer-defined names in terms and original words also in the corpus;
-                        (2) Remove custom stopwords and copyright information;
-                        (3) Extraxt comments from source code and useful content from javadoc.
+                        (1) Remove programming language information;
+                        (2) Split words;
+                        (3) Remove stop words;
+                        (4) Remove copyright information;
+                        (5) Remove nondescript information.
                     </p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
@@ -121,10 +123,10 @@
 
                 <form action="PreProcessServlet" method="POST" id="upload_form" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label id="uploadFile">Upload the directory including source code and javadoc that need to process.</label>
+                        <label id="uploadFile">Upload the directory of source code that need to process.</label>
                     </div>
                     <p class="help-block illustrate">
-                        You'd better put <b>both source code and javadoc</b> in a folfer and upload it. Otherwise, the results will be bad.
+                        You'd better upload <b>source code with comments</b>.
                     </p>
                     <div class="form-group illustrate">
                         <div class="row">
@@ -171,7 +173,7 @@
                     <div class="form-group">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" onclick="enableTextArea(this)" name="customizePackageInfo">
+                                <input type="checkbox" onclick="enableCustomizePackage(this)" name="customizePackageInfoContent">
                                 Remove words about Customized Package.
                             </label>
                             <p class="help-block illustrate">
